@@ -1,0 +1,163 @@
+@import "../../node_modules//bootstrap/scss/bootstrap.scss";
+
+//Johnson use this to import font
+// @import "./harmburger";
+// @font-face {
+//   font-family: "MuseoSansVeryBold";
+//   src: url("/fonts/MuseoSans_700.otf");
+// }
+
+// @font-face {
+//   font-family: "MuseosansBold";
+//   src: url("/fonts/MuseoSans_500.otf");
+// }
+
+// @font-face {
+//   font-family: "MuseosansRegular";
+//   src: url("/fonts/MuseoSans-300.otf");
+// }
+
+// @font-face {
+//   font-family: "MuseosansLight";
+//   src: url("/fonts/MuseoSans-100.otf");
+// }
+
+@import "./nprogress";
+
+html,
+body,
+#app,
+main {
+  min-height: 100%;
+  min-height: 100vh;
+  min-width: 100%;
+  font-family: "MuseosansLight" !important;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "MuseoSansVeryBold" !important;
+  font-weight: 700;
+}
+
+h4,
+h5,
+h6 {
+  font-family: "MuseoSansBold";
+  font-weight: 500;
+}
+
+p {
+  font-family: "MuseosansLight" !important;
+}
+
+.lead {
+  font-size: 1.286rem;
+  line-height: 1.52;
+  font-family: "MuseoSansRegular" !important;
+}
+
+h1,
+.h1 {
+  font-size: 3.282rem;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+h2,
+.h2 {
+  font-size: 2.53rem;
+  letter-spacing: -1px;
+}
+
+h3,
+.h3 {
+  font-size: 1.943rem;
+  line-height: 1;
+}
+
+h4,
+.h4 {
+  // font-family: "Ubuntu", Nunito, sans-serif;
+  font-size: 1.718rem;
+  line-height: 1;
+}
+
+h5,
+.h5 {
+  font-size: 1.286rem;
+  line-height: 1.15;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.z-index-5 {
+  z-index: 5;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+  border-color: #7342fa;
+}
+
+.form-control {
+  height: calc(2.6875rem + 2px);
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+
+.form-control-lg {
+  height: calc(2.6875rem + 2px);
+  padding: 1.58rem 1.25rem;
+  font-size: 1.09rem;
+  border-radius: 0.38rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-justify-100 {
+  max-width: 200px;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.bd {
+  // position: absolute;
+  border-bottom: 0px 5px solid#2560fb;
+  // width: 0%;
+  // opacity: 0;
+}
+
+.bd.border-active {
+  border-bottom: 2px solid#2560fb;
+  transition: border-bottom 0.7s;
+
+  // width: 100%;
+}
+
+.input,
+select,
+textarea {
+  font-size: 16px !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
