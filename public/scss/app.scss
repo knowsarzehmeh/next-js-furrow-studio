@@ -1,26 +1,59 @@
+// theming bootstrap
+$theme-colors: (
+  "primary": #f3356c,
+  "secondary": #303090,
+);
+
+$body-bg: #fbf0ff;
+$body-color: #111;
+$blue: #303090;
+$pink: #f3356c;
+$colors: (
+  "blue": #303090,
+  "pink": #f3356c,
+) !default;
+
+.primary-color {
+  color: $pink;
+}
+
+.secondary-color {
+  color: $blue;
+}
+
+.primary-bg {
+  background: $pink;
+}
+
+.secondary-bg {
+  background: $blue;
+}
+
 @import "../../node_modules//bootstrap/scss/bootstrap.scss";
+@font-face {
+  font-family: "font-regular";
+  src: url("/fonts/Raleway-Regular.ttf");
+}
 
-//Johnson use this to import font
-// @import "./harmburger";
-// @font-face {
-//   font-family: "MuseoSansVeryBold";
-//   src: url("/fonts/MuseoSans_700.otf");
-// }
+@font-face {
+  font-family: "font-light";
+  src: url("/fonts/Raleway-Light.ttf");
+}
 
-// @font-face {
-//   font-family: "MuseosansBold";
-//   src: url("/fonts/MuseoSans_500.otf");
-// }
+@font-face {
+  font-family: "font-medium";
+  src: url("/fonts/Raleway-Medium.ttf");
+}
 
-// @font-face {
-//   font-family: "MuseosansRegular";
-//   src: url("/fonts/MuseoSans-300.otf");
-// }
+@font-face {
+  font-family: "font-bold";
+  src: url("/fonts/Raleway-Bold.ttf");
+}
 
-// @font-face {
-//   font-family: "MuseosansLight";
-//   src: url("/fonts/MuseoSans-100.otf");
-// }
+@font-face {
+  font-family: "font-black";
+  src: url("/fonts/Raleway-Black.ttf");
+}
 
 @import "./nprogress";
 
@@ -31,7 +64,7 @@ main {
   min-height: 100%;
   min-height: 100vh;
   min-width: 100%;
-  font-family: "MuseosansLight" !important;
+  font-family: "font-light" !important;
 }
 
 b,
@@ -42,25 +75,47 @@ strong {
 h1,
 h2,
 h3 {
-  font-family: "MuseoSansVeryBold" !important;
+  font-family: "font-bold" !important;
   font-weight: 700;
 }
 
 h4,
 h5,
 h6 {
-  font-family: "MuseoSansBold";
+  font-family: "font-bold";
   font-weight: 500;
 }
 
 p {
-  font-family: "MuseosansLight" !important;
+  font-family: "font-light" !important;
+}
+
+div {
+  font-family: "font-light" !important;
+}
+
+.font-light {
+  font-family: "font-light" !important; // jezzkid add this to any class to use the font
+}
+
+.font-regular {
+  font-family: "font-regular" !important; // // jezzkid add this to any class to to make font a bit bolder
+}
+
+.font-bold {
+  font-family: "font-bold" !important;
 }
 
 .lead {
   font-size: 1.286rem;
   line-height: 1.52;
-  font-family: "MuseoSansRegular" !important;
+  font-family: "font-regular" !important;
+}
+
+.lead-large {
+  font-size: 1.6rem;
+  line-height: 1.52;
+  font-family: "font-regular" !important;
 }
 
 h1,

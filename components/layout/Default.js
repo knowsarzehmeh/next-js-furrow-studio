@@ -9,7 +9,7 @@ export default function (props) {
   return (
     <div className="">
       <Navbar />
-      <div className="width-full overflow-auto">{props.children}</div>
+      <div className="">{props.children}</div>
       <Footer />
 
       <style jsx>{`
