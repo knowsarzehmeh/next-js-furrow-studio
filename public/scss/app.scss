@@ -1,7 +1,7 @@
 // theming bootstrap
 $theme-colors: (
-  "primary": #f3356c,
-  "secondary": #303090,
+  'primary': #f3356c,
+  'secondary': #303090,
 );
 
 $body-bg: #fff;
@@ -9,8 +9,8 @@ $body-color: #111;
 $blue: #303090;
 $pink: #f3356c;
 $colors: (
-  "blue": #303090,
-  "pink": #f3356c,
+  'blue': #303090,
+  'pink': #f3356c,
 ) !default;
 
 .primary-color {
@@ -29,32 +29,57 @@ $colors: (
   background: $blue;
 }
 
-@import "../../node_modules//bootstrap/scss/bootstrap.scss";
+@import '../../node_modules//bootstrap/scss/bootstrap.scss';
 @font-face {
-  font-family: "font-regular";
-  src: url("/fonts/Raleway-Regular.ttf");
+  font-family: 'font-regular';
+  src: url('/fonts/Raleway-Regular.ttf');
 }
 
 @font-face {
-  font-family: "font-light";
-  src: url("/fonts/Raleway-Light.ttf");
+  font-family: 'font-light';
+  src: url('/fonts/Raleway-Light.ttf');
 }
 
 @font-face {
-  font-family: "font-medium";
-  src: url("/fonts/Raleway-Medium.ttf");
+  font-family: 'font-medium';
+  src: url('/fonts/Raleway-Medium.ttf');
 }
 
 @font-face {
-  font-family: "font-bold";
-  src: url("/fonts/Raleway-Bold.ttf");
+  font-family: 'font-bold';
+  src: url('/fonts/Raleway-Bold.ttf');
 }
 
 @font-face {
-  font-family: "font-black";
-  src: url("/fonts/Raleway-Black.ttf");
+  font-family: 'font-black';
+  src: url('/fonts/Raleway-Black.ttf');
 }
 
+@import '../../node_modules//bootstrap/scss/bootstrap.scss';
+
+//Johnson use this to import font
+// @import "./harmburger";
+// @font-face {
+//   font-family: "MuseoSansVeryBold";
+//   src: url("/fonts/MuseoSans_700.otf");
+// }
+
+// @font-face {
+//   font-family: "MuseosansBold";
+//   src: url("/fonts/MuseoSans_500.otf");
+// }
+
+// @font-face {
+//   font-family: "MuseosansRegular";
+//   src: url("/fonts/MuseoSans-300.otf");
+// }
+
+// @font-face {
+//   font-family: "MuseosansLight";
+//   src: url("/fonts/MuseoSans-100.otf");
+// }
+
+/*
 @import "./nprogress";
 
 html,
@@ -64,7 +89,7 @@ main {
   min-height: 100%;
   min-height: 100vh;
   min-width: 100%;
-  font-family: "font-light" !important;
+  font-family: "MuseosansLight" !important;
 }
 
 b,
@@ -75,47 +100,25 @@ strong {
 h1,
 h2,
 h3 {
-  font-family: "font-bold" !important;
+  font-family: "MuseoSansVeryBold" !important;
   font-weight: 700;
 }
 
 h4,
 h5,
 h6 {
-  font-family: "font-bold";
+  font-family: "MuseoSansBold";
   font-weight: 500;
 }
 
 p {
-  font-family: "font-light";
-}
-
-div {
-  font-family: "font-light";
-}
-
-.font-light {
-  font-family: "font-light" !important; // jezzkid add this to any class to use the font
-}
-
-.font-regular {
-  font-family: "font-regular" !important; // // jezzkid add this to any class to to make font a bit bolder
-}
-
-.font-bold {
-  font-family: "font-bold" !important;
+  font-family: "MuseosansLight" !important;
 }
 
 .lead {
   font-size: 1.286rem;
   line-height: 1.52;
-  font-family: "font-regular" !important;
-}
-
-.lead-large {
-  font-size: 1.6rem;
-  line-height: 1.52;
-  font-family: "font-regular" !important;
+  font-family: "MuseoSansRegular" !important;
 }
 
 h1,
@@ -215,4 +218,50 @@ textarea {
   textarea {
     font-size: 16px !important;
   }
+}
+
+*/
+
+.hrd-1,
+.hrd-2 {
+  text-align: center;
+}
+
+.p-1,
+.p-2 {
+  text-align: center;
+}
+
+.ex-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  background-color: #303090;
+  border: transparent;
+  border-radius: 10px;
+  height: 60px;
+  width: 200px;
+}
+
+.bac-back {
+  background-color: #eef3fa;
+  width: 100%;
+  min-height: 55vh;
+}
+
+.item-right {
+  float: right;
+}
+
+.line {
+  width: 100%;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: 0.2px solid #70707056;
+}
+
+li {
+  list-style: none;
 }
