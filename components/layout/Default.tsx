@@ -1,15 +1,31 @@
 // import Link from "next/link";
 
-import Navbar from "../Navbar";
-import Footer from "../Footer";
-
+import { useState, useEffect } from 'react';
+import AppBar from '../AppBar';
+import Navbar from '../Navbar';
+import Footer from '../Footer';
 
 export default function (props) {
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener('scroll', scrollAction);
+    return () => window.removeEventListener('scroll', scrollAction);
+  }, []);
 
+  const scrollAction = () => {
+    const offset = window.scrollY;
+    console.log(offset);
+    if (offset > 20) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  };
   return (
-    <div className="">
+    <div className=''>
+      <AppBar showBox={scroll} />
       <Navbar />
-      <div className="">{props.children}</div>
+      <div className='mt-5 pt-5'>{props.children}</div>
       <Footer />
 
       <style jsx>{`
@@ -38,7 +54,6 @@ export default function (props) {
       `}</style>
     </div>
   );
-};
+}
 
 // export const Layout = page => <Default>{page}</Default>;
-
