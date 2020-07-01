@@ -25,7 +25,7 @@ export default function (props) {
     <div className=''>
       <AppBar showBox={scroll} />
       <Navbar />
-      <div className='mt-5 pt-5'>{props.children}</div>
+      <div className='mt-lg-5 pt-lg-3'>{props.children}</div>
       <Footer />
 
       <style jsx>{`
