@@ -9,16 +9,17 @@ $body-color: #111;
 $blue: #303090;
 $pink: #f3356c;
 $colors: (
+  "primaryColor": #303090,
   "blue": #303090,
   "pink": #f3356c,
 ) !default;
 
 .primary-color {
-  color: $pink;
+  color: $pink !important;
 }
 
 .secondary-color {
-  color: $blue;
+  color: $blue !important;
 }
 
 .primary-bg {
