@@ -31,6 +31,7 @@ $colors: (
 }
 
 @import "../../node_modules//bootstrap/scss/bootstrap.scss";
+
 @font-face {
   font-family: "font-regular";
   src: url("/fonts/Raleway-Regular.ttf");
@@ -217,4 +218,22 @@ textarea {
   textarea {
     font-size: 16px !important;
   }
+}
+
+@include media-breakpoint-down(xs) {
+}
+@include media-breakpoint-down(sm) {
+  // h2 {
+  //   font-size: 1.7rem !important;
+  //   letter-spacing: 0.5px !important;
+  // }
+}
+@include media-breakpoint-down(md) {
+  h2 {
+    font-size: 1.6rem !important;
+    letter-spacing: 0.3px !important;
+    font-weight: 100 !important;
+  }
+}
+@include media-breakpoint-down(lg) {
 }

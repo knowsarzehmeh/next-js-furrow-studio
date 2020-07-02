@@ -23,7 +23,7 @@ export default function (props) {
   };
   return (
     <div className="">
-      <AppBar showBox={scroll} />
+      {/* <AppBar showBox={scroll} /> */}
       <Navbar />
       <div className="mt-lg-5 pt-lg-3">{props.children}</div>
       <Footer />
