@@ -55,9 +55,9 @@ export default function Footer(props) {
         .padding-container {
           padding: 0 calc(10vw - 10rem);
           padding-top: 0px;
-          padding-right: calc(10vw - 10rem);
+          padding-right: calc(13vw - 10rem);
           padding-bottom: 0px;
-          padding-left: calc(10vw - 10rem);
+          padding-left: calc(13vw - 10rem);
         }
         li.nav-item a {
           color: var(--primaryColor);
