@@ -7,17 +7,17 @@ import Footer from "../Footer";
 
 export default function (props) {
   const [scroll, setScroll] = useState(false);
-  const [navState, setNavState] = useState(false);
+  const [navStateProps, setNavStateProps] = useState(false);
 
-  interface ParentCompProps {
-    clickFunction: (data: boolean) => void;
-  }
+  // interface ParentCompProps {
+  //   clickFunction: (data: boolean) => void;
+  // }
   const setNavStateAction = (childp) => {
-    setNavState(childp);
-    // alert(childp);
-    // return childp;
+    setNavStateProps(childp);
+    return;
   };
   useEffect(() => {
+    setNavStateProps(true)
     window.addEventListener("scroll", scrollAction);
     return () => window.removeEventListener("scroll", scrollAction);
   }, []);
@@ -39,11 +39,23 @@ export default function (props) {
         showBox={scroll}
         setStatePropsMethod={setNavStateAction}
       />
-      {navState && <div className="mt-lg-5 pt-lg-5">{props.children}</div>}
+      <div
+        className={`${
+          !navStateProps ? "opacity-none" : "opacity-1"
+          } mt-lg-5 pt-lg-5`}
+      >
+        {props.children}
+      </div>
 
       <Footer />
 
       <style jsx>{`
+        .opacity-none {
+          opacity: 0;
+        }
+        .opacity-1 {
+          opacity: 1;
+        }
         #nav-container {
           // position: fixed;
           font-size: 5px;

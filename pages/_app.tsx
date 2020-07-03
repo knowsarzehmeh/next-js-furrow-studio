@@ -49,8 +49,9 @@ function MyApp({ Component, pageProps }) {
         </title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
+      <DefaultSeo {...SEO} />
       <Layout>
-        <DefaultSeo {...SEO} />
+        {console.log(pageProps)}
         <Component {...pageProps} />
       </Layout>
     </>

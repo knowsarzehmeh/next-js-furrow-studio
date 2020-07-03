@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import Harmburger from './Harmburger';
-import { useState } from 'react';
+import Link from "next/link";
+import Harmburger from "./Harmburger";
+import { useState } from "react";
 
 export default function Navbar(props) {
   const [active, setActive] = useState(false);
@@ -8,23 +8,23 @@ export default function Navbar(props) {
   return (
     <div
       className={`container-fluid header-container mb-5 ${
-        showBox ? 'box-shadow-shade' : ''
+        showBox ? "box-shadow-shade" : ""
       }`}
     >
-      <div className='py-2'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-lg-12'>
+      <div className="my-3">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
               <img
-                src='images/exemblar-logo.png'
-                className='img-fluid logo'
-                alt='logo'
+                src="images/exemblar-logo.png"
+                className="img-fluid logo"
+                alt="logo"
               />
 
               <div
-                className='item-right z-index-10 '
-                onClick={() => {
-                  setActive(!active);
+                className="item-right z-index-10 "
+                onClick={async () => {
+                  await setActive(!active);
                   props.setStatePropsMethod(active);
                 }}
               >
