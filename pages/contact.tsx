@@ -26,7 +26,6 @@ export default function Custom404() {
           </div>
         </div>
       </div>
-
       <div className="row mt-2 mt-lg-3">
         <div className="col-12 lead">
           <div className="mx-auto d-flex justify-content-center flex-column">
