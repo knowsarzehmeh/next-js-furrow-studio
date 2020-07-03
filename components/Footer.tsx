@@ -49,11 +49,25 @@ export default function Footer() {
         </div>
       </div>
 
-      {/*
+      
             <style jsx>{`
+
+.line {
+  width: 100%;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: 0.2px solid #70707056;
+}
+
+li {
+  list-style: none;
+}
+
        
       `}</style>
 
+{/*
             <style jsx global>{`
        
       `}</style>
