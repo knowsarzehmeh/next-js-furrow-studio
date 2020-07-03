@@ -30,14 +30,10 @@ export default function Custom404() {
         <div className="col-12 lead">
           <div className="mx-auto d-flex justify-content-center flex-column">
             <p className="mx-auto lead">
-              {" "}
               Do you have an enquiry to make or questions to ask, please fill
               the form below{" "}
             </p>
-            <p className="mx-lg-auto lead">
-              {" "}
-              And we will get right back to you{" "}
-            </p>
+            <p className="mx-lg-auto lead">And we will get right back to you</p>
           </div>
         </div>
       </div>
