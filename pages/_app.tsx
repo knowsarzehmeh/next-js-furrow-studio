@@ -1,12 +1,12 @@
 // import App from 'next/app'
-import SEO from "../seo.config";
-import { DefaultSeo } from "next-seo";
-import Head from "next/head";
-import Router from "next/router";
-import nprogress from "nprogress";
-import "../public/scss/app.scss";
+import SEO from '../seo.config';
+import { DefaultSeo } from 'next-seo';
+import Head from 'next/head';
+import Router from 'next/router';
+import nprogress from 'nprogress';
+import '../public/scss/app.scss';
 
-import Default from "../components/layout/Default";
+import Default from '../components/layout/Default';
 
 let progressBarTimeout = null;
 
@@ -33,7 +33,7 @@ const stopProgressBar = () => {
   nprogress.done();
 };
 
-Router.events.on("routeChangeStart", (url) => {
+Router.events.on('routeChangeStart', (url) => {
   console.log(`Loading: ${url}`);
   startProgressBar();
 });
@@ -47,7 +47,7 @@ function MyApp({ Component, pageProps }) {
           Exemblar - Brand Indentity, User Experience Design & Web & App
           development
         </title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <DefaultSeo {...SEO} />
       <Layout>
