@@ -7,6 +7,9 @@ import Button from '../components/Button';
 
 const Service: React.FunctionComponent = () => {
   const [activeTab, setActiveTab] = useState<string>('1');
+  const toggleTab = (tab: string) => {
+    if (activeTab !== tab) setActiveTab(tab);
+  };
 
   return (
     <main>
@@ -42,8 +45,8 @@ const Service: React.FunctionComponent = () => {
                 carefully <br /> building amazing solutions
               </p>
             </div>
-            {/* </div>
-          <div className='row pt-5'> */}
+          </div>
+          <div className='row pt-5'>
             <div className='col-md-3 col-sm-6'>
               <div className='workflow__sub-section-avatar'></div>
               <h5 className='my-4'>Test</h5>
@@ -90,19 +93,48 @@ const Service: React.FunctionComponent = () => {
           <div className='row'>
             <div className='container'>
               <div className='tabs text-center'>
-                <div className='tabs__title pr-3 ' role='button'>
+                <div
+                  className={
+                    activeTab === '1'
+                      ? 'tabs__title-border tabs__title pr-3'
+                      : 'tabs__title pr-3 '
+                  }
+                  role='button'
+                  onClick={() => toggleTab('1')}
+                >
                   <p className='font-weight-bold'>Design</p>
                 </div>
                 <div
-                  className='tabs__title pr-3 tabs__title-border'
+                  className={
+                    activeTab === '2'
+                      ? 'tabs__title-border tabs__title pr-3'
+                      : 'tabs__title pr-3 '
+                  }
                   role='button'
+                  onClick={() => toggleTab('2')}
                 >
                   <p className='font-weight-bold'>Frontend</p>
                 </div>
-                <div className='tabs__title pr-3' role='button'>
+                <div
+                  className={
+                    activeTab === '3'
+                      ? 'tabs__title-border tabs__title pr-3'
+                      : 'tabs__title pr-3 '
+                  }
+                  role='button'
+                  onClick={() => toggleTab('3')}
+                >
                   <p className='font-weight-bold'>Serverside</p>
                 </div>
-                <div className='tabs__title pr-3' role='button'>
+                <div
+                  className={
+                    activeTab === '4'
+                      ? 'tabs__title-border tabs__title pr-3'
+                      : 'tabs__title pr-3 '
+                  }
+                  role='button'
+                  onClick={() => toggleTab('4')}
+                >
                   <p className='font-weight-bold'>Deployment</p>
                 </div>
               </div>
@@ -111,12 +143,12 @@ const Service: React.FunctionComponent = () => {
               <TabContent activeTab={activeTab}>
                 <TabPane tabId='1'>
                   <div className='row py-5'>
-                    <div className='col-4'>
+                    <div className='col-12 col-md-4'>
                       <div className='h-100' style={{ background: 'pink' }}>
-                        Image Asset
+                        Image Asset 1
                       </div>
                     </div>
-                    <div className='col-8'>
+                    <div className='col-12 col-md-8'>
                       <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing
                         elit. Perspiciatis, nulla vero. Minima explicabo unde
@@ -131,10 +163,64 @@ const Service: React.FunctionComponent = () => {
                   </div>
                 </TabPane>
                 <TabPane tabId='2'>
-                  <p>Tab 2</p>
+                  <div className='row py-5'>
+                    <div className='col-12 col-md-4'>
+                      <div className='h-100' style={{ background: 'pink' }}>
+                        Image Asset 2
+                      </div>
+                    </div>
+                    <div className='col-12 col-md-8'>
+                      <p>
+                        Nostrum iure maiores reiciendis perspiciatis rerum alias
+                        dolore, eos aspernatur omnis adipisci tempora, eaque
+                        culpa iusto officiis vero tenetur distinctio! Illo eum
+                        nulla similique temporibus qui voluptates in.Lorem ipsum
+                        dolor sit amet consectetur, adipisicing elit.
+                        Perspiciatis, nulla vero. Minima explicabo unde omnis
+                        esse necessitatibus illo debitis error nam accusantium.
+                      </p>
+                    </div>
+                  </div>
                 </TabPane>
                 <TabPane tabId='3'>
-                  <p>Tab 3</p>
+                  <div className='row py-5'>
+                    <div className='col-12 col-md-4'>
+                      <div className='h-100' style={{ background: 'pink' }}>
+                        Image Asset
+                      </div>
+                    </div>
+                    <div className='col-12 col-md-8'>
+                      <p>
+                        Minima explicabo unde omnis esse necessitatibus illo
+                        debitis error nam accusantium. Lorem ipsum dolor sit
+                        amet consectetur, adipisicing elit. Perspiciatis, nulla
+                        vero.Nostrum iure maiores reiciendis perspiciatis rerum
+                        alias dolore, eos aspernatur omnis adipisci tempora,
+                        eaque culpa iusto officiis vero tenetur distinctio! Illo
+                        eum nulla similique temporibus qui voluptates in.
+                      </p>
+                    </div>
+                  </div>
+                </TabPane>
+                <TabPane tabId='4'>
+                  <div className='row py-5'>
+                    <div className='col-12 col-md-4'>
+                      <div className='h-100' style={{ background: 'pink' }}>
+                        Image Asset
+                      </div>
+                    </div>
+                    <div className='col-12 col-md-8'>
+                      <p>
+                        Illo eum nulla similique temporibus qui voluptates in.
+                        Nostrum iure maiores reiciendis perspiciatis rerum alias
+                        dolore, eos aspernatur omnis adipisci tempora, eaque
+                        culpa iusto officiis vero tenetur distinctio! Lorem
+                        ipsum dolor sit amet consectetur, adipisicing elit.
+                        Perspiciatis, nulla vero. Minima explicabo unde omnis
+                        esse necessitatibus illo debitis error nam accusantium.
+                      </p>
+                    </div>
+                  </div>
                 </TabPane>
               </TabContent>
             </div>
@@ -151,7 +237,10 @@ const Service: React.FunctionComponent = () => {
           $grey: #eef3fa;
           .workflow {
             background-color: $grey;
-            height: 100vh;
+
+            @media (min-width: 1190px) {
+              height: 100vh;
+            }
           }
           .workflow__header {
             line-height: 1.4;
@@ -172,6 +261,10 @@ const Service: React.FunctionComponent = () => {
 
           .tabs__title {
             border-bottom: 4px solid $blue;
+
+            &:hover {
+              color: $pink;
+            }
           }
           .tabs__title-border {
             border-bottom: 4px solid $pink !important;
