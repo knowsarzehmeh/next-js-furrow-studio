@@ -21,10 +21,10 @@ export default function Home() {
             <h3 className='hrd-1'>
               We <span className="primary-color">design</span> <span className="other">&</span> <span className="primary-color">build</span> digital <br></br> experiences{' '}
             </h3>
+               
+                 <img src='images/arrow.svg' className="img-fluid arrow"/>
             <p className='p-1'>
-              <span>
-                <img src='' />
-              </span>
+               
               We design, build and launch websites and products that <br></br>{' '}
               are simple, beautiful and helps businesses grow.
             </p>
@@ -103,6 +103,7 @@ export default function Home() {
          font-size:18px;
          line-height:32px;
          margin-bottom:35px;
+         margin-top:-130px;
 
        }
        
@@ -113,10 +114,22 @@ export default function Home() {
          color: white;
          background-color: #303090;
          border: transparent;
-         border-radius: 10px;
+         font-weight:700;
          height: 60px;
          width: 200px;
        }
+
+       .ex-btn:hover{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        color:black;
+        background-color:#F3356C;
+        border: transparent;
+        font-weight:700;
+        height: 60px;
+        width: 200px;
+      }
        
        .bac-back {
          background-color: #eef3fa;
@@ -137,6 +150,11 @@ export default function Home() {
          list-style: none;
        }
        
+       .arrow{
+width:51px;
+margin-left:240px;
+margin-bottom:50px
+       }
 
       `}</style>
 
