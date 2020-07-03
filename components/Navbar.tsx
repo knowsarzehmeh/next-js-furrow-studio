@@ -1,89 +1,90 @@
-import Link from 'next/link';
-
+import Link from "next/link";
 
 export default function Navbar() {
   return (
     <div>
       <div className="mrg-head">
-      <div className='container'>
-        <div className='row'>
-          <div className='col-lg-12'>
-            <img src='images/exe-logo.png' className="img-fluid logo" alt='logo' />
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <img
+                src="images/exe-logo.png"
+                className="img-fluid logo"
+                alt="logo"
+              />
 
-            <div className='item-right'>
-              <div id='wrapper'>
-                <header id='header'>
-                  <div className='inner'>
-                    <nav>
-                      <ul>
-                        <li>
-                          <a href='#menu'>Menu</a>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                </header>
+              <div className="item-right">
+                <div id="wrapper">
+                  <header id="header">
+                    <div className="inner">
+                      <nav>
+                        <ul>
+                          <li>
+                            <Link href="#menu">Menu</Link>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </header>
 
-                <nav id='menu'>
-                  <ul>
-                    <li>
-                      <a href='index.html' className='font-menu'>
-                        HOME
-                      </a>
-                    </li>
-                    <li>
-                      <a href='about.html' className='font-menu'>
-                        ABOUT
-                      </a>
-                    </li>
-                    <li>
-                      <a href='services.html' className='font-menu'>
-                        SERVICES
-                      </a>
-                    </li>
-                    <li>
-                      <a href='#' className='font-menu'>
-                        PARTNERS
-                      </a>
-                    </li>
-                    <li>
-                      <a href='contact.html' className='font-menu'>
-                        GET IN TOUCH
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
+                  <nav id="menu">
+                    <ul>
+                      <li>
+                        <Link href="/">
+                          <a className="font-menu">HOME</a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/about">
+                          <a className="font-menu">ABOUT</a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/services">
+                          {" "}
+                          <a className="font-menu">SERVICES</a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/partners">
+                          {" "}
+                          <a className="font-menu">PARTNERS</a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/contact">
+                          {" "}
+                          <a className="font-menu">GET IN TOUCH</a>
+                        </Link>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
               </div>
-            </div>
 
-            <div className='item-right'>
-              <p>USA</p>
+              <div className="item-right">
+                <p>USA</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-</div>
-    
-            <style jsx>{`
+      <style jsx>{`
+        .item-right {
+          float: right;
+        }
 
-.item-right {
-  float: right;
-}
+        .logo {
+          width: 170px;
+          float: left;
+        }
 
-
-.logo{
-width: 170px;
-float: left; 
-}
-
-.mrg-head{
-  margin-top:30px
-}
-
-       
+        .mrg-head {
+          margin-top: 30px;
+        }
       `}</style>
-{/*
+      {/*
             <style jsx global>{`
        
       `}</style>
