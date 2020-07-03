@@ -19,12 +19,12 @@ export default function Home() {
         <div className='row'>
           <div className='col-lg-12'>
             <h3 className='hrd-1'>
-              We design & build digital <br></br> experiences{' '}
+              We <span className="primary-color">design</span> <span className="other">&</span> <span className="primary-color">build</span> digital <br></br> experiences{' '}
             </h3>
+               
+                 <img src='images/arrow.svg' className="img-fluid arrow"/>
             <p className='p-1'>
-              <span>
-                <img src='' />
-              </span>
+               
               We design, build and launch websites and products that <br></br>{' '}
               are simple, beautiful and helps businesses grow.
             </p>
@@ -76,16 +76,94 @@ export default function Home() {
 
       {/**end */}
 
-      {/*
+    
       <style jsx>{`
        
+       .hrd-1,
+        {
+
+       text-align:center;  
+         font-size:50px;
+         line-height:60px;
+         font-weight:bold;
+         margin-bottom:30px;
+         color:#303090;
+
+       }
+
+       .hrd-2{
+        text-align: center;
+       }
+       
+       .p-1,
+       .p-2 {
+         text-align: center;
+         color:black;
+         font-weight:700;
+         font-size:18px;
+         line-height:32px;
+         margin-bottom:35px;
+         margin-top:-130px;
+
+       }
+       
+       .ex-btn {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         color: white;
+         background-color: #303090;
+         border: transparent;
+         font-weight:700;
+         height: 60px;
+         width: 200px;
+       }
+
+       .ex-btn:hover{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        color:black;
+        background-color:#F3356C;
+        border: transparent;
+        font-weight:700;
+        height: 60px;
+        width: 200px;
+      }
+       
+       .bac-back {
+         background-color: #eef3fa;
+         width: 100%;
+         min-height: 55vh;
+       }
+       
+     
+       .line {
+         width: 100%;
+         border-top: transparent;
+         border-left: transparent;
+         border-right: transparent;
+         border-bottom: 0.2px solid #70707056;
+       }
+       
+       li {
+         list-style: none;
+       }
+       
+       .arrow{
+width:51px;
+margin-left:240px;
+margin-bottom:50px
+       }
+
       `}</style>
 
+{/*
       <style jsx global>{`
       
       `}</style>
-
 */}
+
     </div>
   );
 }
