@@ -8,22 +8,30 @@ const Harmburger = (props) => {
   return (
     <div className=" background-transparent">
       {/* <div className="hamburger-wrap"> */}
-      <button
-        className={`pb-1 hamburger hamburger--collapse hamburger--accessible js-hamburger ${
+      <div
+        className={`btn btn-outline-primary my-auto pb-1 border-none hamburger hamburger--collapse hamburger--accessible js-hamburger ${
           props.activeState ? "is-active" : ""
         }`}
-        type="button"
       >
         <span className="hamburger-box">
           <span className="hamburger-inner"></span>
         </span>
-        {/* <span className="hamburger-label">
-            <span>Menu</span>
-          </span> */}
-      </button>
+        <span className="hamburger-label primary-color">MENU</span>
+      </div>
       {/* </div> */}
 
       <style jsx>{`
+        .hamburger-label {
+          font-weight: 600;
+          display: inline-block;
+          margin-left: 5px;
+          vertical-align: top;
+          text-transform: uppercase;
+        }
+
+        .border-none {
+          border: none !important;
+        }
         .hamburger-wrap {
           text-align: center;
         }
@@ -67,7 +75,7 @@ const Harmburger = (props) => {
         .hamburger.is-active .hamburger-inner,
         .hamburger.is-active .hamburger-inner::before,
         .hamburger.is-active .hamburger-inner::after {
-          background-color: var(--blue);
+          background-color: var(--pink);
         }
 
         .hamburger-box {
@@ -87,7 +95,7 @@ const Harmburger = (props) => {
         .hamburger-inner::after {
           width: 40px;
           height: 4px;
-          background-color: var(--blue);
+          background-color: var(--pink);
           border-radius: 4px;
           position: absolute;
           transition-property: transform;

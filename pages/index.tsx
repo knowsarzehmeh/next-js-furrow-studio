@@ -10,12 +10,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NextSeo
-        title="Page Meta Title"
         description="This will be the page meta description"
         canonical="https://www.canonicalurl.ie/"
         openGraph={{
           url: "https://www.exemblar.com.ng/",
-          title: "Open Graph Title",
+
           description: "Open Graph Description",
           images: [
             {
@@ -57,7 +56,7 @@ export default function Home() {
               Discover Our Process <img src="" />
             </button>
 
-            <img src="" />
+            <img src="images/imgcenter.png" className="img-fluid imgcenter" />
           </div>
         </div>
       </div>
@@ -66,6 +65,18 @@ export default function Home() {
       {/**second section */}
 
       <div className="bac-back">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <h3 className="com">
+                Communicate your designs like never before
+              </h3>
+              <p className="com-1">
+                We build great products that help<br></br> businesses grow
+              </p>
+            </div>
+          </div>
+        </div>
         <div className="container">
           <div className="row">
             <div className="col-lg-4"></div>
@@ -82,11 +93,11 @@ export default function Home() {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <h3 className="hrd-2">
+            <h3 className="">
               You'll be in good <br></br> company
             </h3>
 
-            <p className="p-2">
+            <p className="">
               We build great products that help <br></br>
               businesses grow
             </p>
@@ -155,22 +166,25 @@ export default function Home() {
           min-height: 55vh;
         }
 
-        .line {
-          width: 100%;
-          border-top: transparent;
-          border-left: transparent;
-          border-right: transparent;
-          border-bottom: 0.2px solid #70707056;
-        }
-
-        li {
-          list-style: none;
-        }
-
         .arrow {
           width: 51px;
           margin-left: 240px;
           margin-bottom: 50px;
+        }
+
+        .imgcenter {
+          width: 1000px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .com {
+          margin-top: 100px;
+        }
+        .com-1 {
+          margin-top: 30px;
+          line-height: 25px;
         }
       `}</style>
 
