@@ -8,7 +8,7 @@ export default function Navbar() {
           <div className="row">
             <div className="col-lg-12">
               <img
-                src="images/exe-logo.png"
+                src="images/exemblar-logo.png"
                 className="img-fluid logo"
                 alt="logo"
               />
@@ -20,7 +20,7 @@ export default function Navbar() {
                       <nav>
                         <ul>
                           <li>
-                            <Link href="#menu">Menu</Link>
+                            <a href="#menu">Menu</a>
                           </li>
                         </ul>
                       </nav>
@@ -41,19 +41,16 @@ export default function Navbar() {
                       </li>
                       <li>
                         <Link href="/services">
-                          {" "}
                           <a className="font-menu">SERVICES</a>
                         </Link>
                       </li>
                       <li>
                         <Link href="/partners">
-                          {" "}
                           <a className="font-menu">PARTNERS</a>
                         </Link>
                       </li>
                       <li>
                         <Link href="/contact">
-                          {" "}
                           <a className="font-menu">GET IN TOUCH</a>
                         </Link>
                       </li>
