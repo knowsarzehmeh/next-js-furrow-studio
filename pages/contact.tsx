@@ -1,46 +1,49 @@
-
-import Head from 'next/head'
+import Head from 'next/head';
 
 export default function Custom404() {
-    return (
-        <div className="container-fluid">
-            <Head>
-                <title>exemblar contact us</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+  return (
+    <div className='container-fluid'>
+      <Head>
+        <title>exemblar|contact us</title>
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
 
-            <div className="row">
-                <div className="col-12">
-                    <div className="d-flex justify-content-center flex-column text-black">
-                        <h2 className="mx-auto"> <span className="secondary-color">You're</span>
-                            <span className="primary-color"> welcome to get in </span>
-                            <span className=" text-black">{'touch &'}</span>
-
-
-                        </h2>
-                        <h2 className="mx-auto"> <span className="text-black">say </span> <span className="secondary-color">"hello"</span></h2>
-                        {/* <h2 className="secondary-color mx-auto">
+      <div className='row'>
+        <div className='col-12'>
+          <div className='d-flex justify-content-center flex-column text-black'>
+            <h2 className='mx-auto'>
+              {' '}
+              <span className='secondary-color'>You're</span>
+              <span className='primary-color'> welcome to get in </span>
+              <span className=' text-black'>{'touch &'}</span>
+            </h2>
+            <h2 className='mx-auto'>
+              {' '}
+              <span className='text-black'>say </span>{' '}
+              <span className='secondary-color'>"hello"</span>
+            </h2>
+            {/* <h2 className="secondary-color mx-auto">
                             <span>experiences </span> </h2> */}
-                    </div>
-                </div>
-            </div>
-
-            <div className="row mt-2 mt-lg-3">
-                <div className="col-12 lead">
-                    <div className="mx-auto d-flex justify-content-center flex-column">
-                        <p className="mx-auto"> Do you have an enquiry to make or questions to ask, please fill the form below </p>
-                        <p className="mx-lg-auto"> And we will get right back to you </p>
-                    </div>
-                </div>
-            </div>
-
-            <style jsx>{`
-       
-      `}</style>
-
-            <style jsx global>{`
-       
-      `}</style>
+          </div>
         </div>
-    )
+      </div>
+
+      <div className='row mt-2 mt-lg-3'>
+        <div className='col-12 lead'>
+          <div className='mx-auto d-flex justify-content-center flex-column'>
+            <p className='mx-auto'>
+              {' '}
+              Do you have an enquiry to make or questions to ask, please fill
+              the form below{' '}
+            </p>
+            <p className='mx-lg-auto'> And we will get right back to you </p>
+          </div>
+        </div>
+      </div>
+
+      <style jsx>{``}</style>
+
+      <style jsx global>{``}</style>
+    </div>
+  );
 }
