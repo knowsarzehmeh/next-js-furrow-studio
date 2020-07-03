@@ -47,7 +47,9 @@ export default function (props) {
         {props.children}
       </div>
 
-      <Footer />
+      <Footer className={`${
+        !navStateProps ? "opacity-none" : "opacity-1"
+        } mt-lg-5 pt-lg-5`} />
 
       <style jsx>{`
         .opacity-none {
