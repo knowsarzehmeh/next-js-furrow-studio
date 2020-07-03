@@ -1,6 +1,9 @@
 import Link from "next/link";
+import Harmburger from "./Harmburger";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [active, setActive] = useState(false);
   return (
     <div>
       <div className="mrg-head">
@@ -13,50 +16,11 @@ export default function Navbar() {
                 alt="logo"
               />
 
-              <div className="item-right">
-                <div id="wrapper">
-                  <header id="header">
-                    <div className="inner">
-                      <nav>
-                        <ul>
-                          <li>
-                            <a href="#menu">Menu</a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
-                  </header>
-
-                  <nav id="menu">
-                    <ul>
-                      <li>
-                        <Link href="/">
-                          <a className="font-menu">HOME</a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/about">
-                          <a className="font-menu">ABOUT</a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/services">
-                          <a className="font-menu">SERVICES</a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/partners">
-                          <a className="font-menu">PARTNERS</a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/contact">
-                          <a className="font-menu">GET IN TOUCH</a>
-                        </Link>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
+              <div
+                className="item-right z-index-10 "
+                onClick={() => setActive(!active)}
+              >
+                <Harmburger activeState={active} />
               </div>
 
               <div className="item-right">
@@ -68,6 +32,9 @@ export default function Navbar() {
       </div>
 
       <style jsx>{`
+        .z-index-10 {
+          z-index: 10;
+        }
         .item-right {
           float: right;
         }

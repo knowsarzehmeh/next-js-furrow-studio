@@ -9,13 +9,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
-          <script type="text/javascript" src="/assests/js/jquery.min.js" />
-          <script type="text/javascript" src="/assests/js/browser.min.js" />
-          <script type="text/javascript" src="/assests/js/breakpoints.min.js" />
-          <script type="text/javascript" src="/assests/js/util.js" />
-          <script type="text/javascript" src="/assests/js/main.js" />
-        </Head>
+        <Head></Head>
 
         <body>
           <Main />
