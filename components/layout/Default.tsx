@@ -1,15 +1,15 @@
 // import Link from "next/link";
 
-import { useState, useEffect } from 'react';
-import AppBar from '../AppBar';
-import Navbar from '../Navbar';
-import Footer from '../Footer';
+import { useState, useEffect } from "react";
+import AppBar from "../AppBar";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 export default function (props) {
   const [scroll, setScroll] = useState(false);
   useEffect(() => {
-    window.addEventListener('scroll', scrollAction);
-    return () => window.removeEventListener('scroll', scrollAction);
+    window.addEventListener("scroll", scrollAction);
+    return () => window.removeEventListener("scroll", scrollAction);
   }, []);
 
   const scrollAction = () => {
@@ -22,10 +22,10 @@ export default function (props) {
     }
   };
   return (
-    <div className=''>
-      <AppBar showBox={scroll} />
+    <div className="">
+      {/* <AppBar showBox={scroll} /> */}
       <Navbar />
-      <div className='mt-lg-5 pt-lg-3'>{props.children}</div>
+      <div className="mt-lg-5 pt-lg-3">{props.children}</div>
       <Footer />
 
       <style jsx>{`

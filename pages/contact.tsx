@@ -4,7 +4,7 @@ export default function Custom404() {
   return (
     <div className='container-fluid'>
       <Head>
-        <title>exemblar|contact us</title>
+        <title>exemblar contact us</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
@@ -12,13 +12,12 @@ export default function Custom404() {
         <div className='col-12'>
           <div className='d-flex justify-content-center flex-column text-black'>
             <h2 className='mx-auto'>
-              {' '}
               <span className='secondary-color'>You're</span>
               <span className='primary-color'> welcome to get in </span>
-              <span className=' text-black'>{'touch &'}</span>
+              <span className='text-black d-none d-lg-inline'>{'touch &'}</span>
             </h2>
+            <h2 className='text-black mx-auto d-lg-none'>{'touch &'}</h2>
             <h2 className='mx-auto'>
-              {' '}
               <span className='text-black'>say </span>{' '}
               <span className='secondary-color'>"hello"</span>
             </h2>
@@ -27,7 +26,6 @@ export default function Custom404() {
           </div>
         </div>
       </div>
-
       <div className='row mt-2 mt-lg-3'>
         <div className='col-12 lead'>
           <div className='mx-auto d-flex justify-content-center flex-column'>

@@ -10,16 +10,21 @@ $body-color: #111;
 $grey: #eef3fa;
 $pink: #f3356c;
 $colors: (
+  'primaryColor': #303090,
   'blue': #303090,
   'pink': #f3356c,
 ) !default;
 
 .primary-color {
-  color: $pink;
+  color: $pink !important;
 }
 
 .secondary-color {
-  color: $blue;
+  color: $blue !important;
+}
+
+.other {
+  color: $body-color !important;
 }
 
 .primary-bg {
@@ -217,4 +222,22 @@ textarea {
   textarea {
     font-size: 16px !important;
   }
+}
+
+@include media-breakpoint-down(xs) {
+}
+@include media-breakpoint-down(sm) {
+  // h2 {
+  //   font-size: 1.7rem !important;
+  //   letter-spacing: 0.5px !important;
+  // }
+}
+@include media-breakpoint-down(md) {
+  h2 {
+    font-size: 1.6rem !important;
+    letter-spacing: 0.3px !important;
+    font-weight: 100 !important;
+  }
+}
+@include media-breakpoint-down(lg) {
 }
