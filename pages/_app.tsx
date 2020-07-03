@@ -3,6 +3,7 @@ import Router from 'next/router'
 import nprogress from 'nprogress'
 import "../public/scss/app.scss";
 
+
 import Default from "~/components/layout/Default";
 
 let progressBarTimeout = null;

@@ -2,6 +2,7 @@
 $theme-colors: (
   "primary": #f3356c,
   "secondary": #303090,
+ 
 );
 
 $body-bg: #fff;
@@ -20,6 +21,10 @@ $colors: (
 
 .secondary-color {
   color: $blue !important;
+}
+
+.other{
+  color: $body-color !important;
 }
 
 .primary-bg {

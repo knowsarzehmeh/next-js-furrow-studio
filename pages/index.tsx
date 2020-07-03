@@ -19,7 +19,7 @@ export default function Home() {
         <div className='row'>
           <div className='col-lg-12'>
             <h3 className='hrd-1'>
-              We design & build digital <br></br> experiences{' '}
+              We <span className="primary-color">design</span> <span className="other">&</span> <span className="primary-color">build</span> digital <br></br> experiences{' '}
             </h3>
             <p className='p-1'>
               <span>
@@ -76,16 +76,76 @@ export default function Home() {
 
       {/**end */}
 
-      {/*
+    
       <style jsx>{`
        
+       .hrd-1,
+        {
+
+       text-align:center;  
+         font-size:50px;
+         line-height:60px;
+         font-weight:bold;
+         margin-bottom:30px;
+         color:#303090;
+
+       }
+
+       .hrd-2{
+        text-align: center;
+       }
+       
+       .p-1,
+       .p-2 {
+         text-align: center;
+         color:black;
+         font-weight:700;
+         font-size:18px;
+         line-height:32px;
+         margin-bottom:35px;
+
+       }
+       
+       .ex-btn {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         color: white;
+         background-color: #303090;
+         border: transparent;
+         border-radius: 10px;
+         height: 60px;
+         width: 200px;
+       }
+       
+       .bac-back {
+         background-color: #eef3fa;
+         width: 100%;
+         min-height: 55vh;
+       }
+       
+     
+       .line {
+         width: 100%;
+         border-top: transparent;
+         border-left: transparent;
+         border-right: transparent;
+         border-bottom: 0.2px solid #70707056;
+       }
+       
+       li {
+         list-style: none;
+       }
+       
+
       `}</style>
 
+{/*
       <style jsx global>{`
       
       `}</style>
-
 */}
+
     </div>
   );
 }
