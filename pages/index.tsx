@@ -48,7 +48,7 @@ export default function Home() {
 
             <div className="d-flex flex-row justify-content-center">
               <img src="images/arrow.svg" className="img-fluid arrow mr-lg-3" />
-              <p className="p-1 font-weight-bold lead">
+              <p className="p-1  lead">
                 We design, build and launch websites and products that <br></br>{" "}
                 are simple, beautiful and helps businesses grow.
               </p>
