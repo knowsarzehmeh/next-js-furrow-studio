@@ -34,29 +34,35 @@ export default function (props) {
   //  {/* <AppBar showBox={scroll} /> */}
   return (
     <div className="">
+
       <Navbar
-        className="mb-2"
+        className="mb-5 pb-5"
         showBox={scroll}
         setStatePropsMethod={setNavStateAction}
       />
+
       <div
         className={`${
           !navStateProps ? "opacity-none" : "opacity-1"
-          } mt-lg-5 pt-lg-5`}
+          } mt-lg-5 pt-lg-5 margin-top`}
       >
         {props.children}
       </div>
-
-      <Footer className={`${
+      <div className={`${
         !navStateProps ? "opacity-none" : "opacity-1"
-        } mt-lg-5 pt-lg-5`} />
+        } mt-lg-5 pt-lg-5`} >
+        <Footer />
+      </div>
 
       <style jsx>{`
+        .margin-top {
+          margin-top: 6rem !important;
+        }
         .opacity-none {
-          opacity: 0;
+          opacity: 0 !important;
         }
         .opacity-1 {
-          opacity: 1;
+          opacity: 1 !important;
         }
         #nav-container {
           // position: fixed;
@@ -81,7 +87,7 @@ export default function (props) {
           min-height: 100vh;
         }
       `}</style>
-    </div>
+    </div >
   );
 }
 
