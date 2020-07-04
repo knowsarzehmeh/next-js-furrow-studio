@@ -46,11 +46,13 @@ export default function Home() {
               experiences{" "}
             </h3>
 
-            <img src="images/arrow.svg" className="img-fluid arrow" />
-            <p className="p-1 lead">
-              We design, build and launch websites and products that <br></br>{" "}
-              are simple, beautiful and helps businesses grow.
-            </p>
+            <div className="d-flex flex-row justify-content-center">
+              <img src="images/arrow.svg" className="img-fluid arrow mr-lg-3" />
+              <p className="p-1 font-weight-bold lead">
+                We design, build and launch websites and products that <br></br>{" "}
+                are simple, beautiful and helps businesses grow.
+              </p>
+            </div>
 
             <button className="ex-btn">
               Discover Our Process <img src="" />
@@ -121,16 +123,16 @@ export default function Home() {
           text-align: center;
         }
 
-        .p-1,
-        .p-2 {
-          text-align: center;
-          color: black;
-          font-weight: 700;
-          font-size: 18px;
-          line-height: 32px;
-          margin-bottom: 35px;
-          margin-top: -130px;
-        }
+        //.p-1,
+        //.p-2 {
+        //text-align: center;
+        //color: black;
+        //font-weight: 700;
+        //font-size: 18px;
+        // line-height: 32px;
+        // margin-bottom: 35px;
+        // margin-top: -130px;
+        // }
 
         .ex-btn {
           display: block;
@@ -166,7 +168,7 @@ export default function Home() {
 
         .arrow {
           width: 51px;
-          margin-left: 240px;
+          // margin-left: 240px;
           margin-bottom: 50px;
         }
 
