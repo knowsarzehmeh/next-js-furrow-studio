@@ -16,7 +16,7 @@ const Harmburger = (props) => {
         <span className="hamburger-box">
           <span className="hamburger-inner"></span>
         </span>
-        <span className="hamburger-label primary-color">MENU</span>
+        <span className="hamburger-label primary-color">Menu</span>
       </div>
       {/* </div> */}
 
