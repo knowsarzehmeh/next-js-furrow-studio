@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
+import { Context } from "../pages/_app";
 
 // import { Sidebar } from "semantic-ui-react";
 
@@ -7,11 +8,19 @@ import Link from "next/link";
 
 const NavItems = (props) => {
   const { path } = props;
+  const [state, dispatch] = useContext(Context);
   return (
     <div className="">
       <div className="list-group p-1">
         <Link href="/">
           <a
+            onClick={async () => {
+              await dispatch({
+                type: "FLIP_ACTIVE_NAV", // The name of the reducer
+                payload: "", // Notice in this reducer, the string is appended to the todos array
+              });
+              props.setStatePropsMethod2(true);
+            }}
             className={`${
               path == "/" ? "active" : ""
             } list-group-item list-group-item-action mt-2 border-none mx-auto`}
@@ -24,6 +33,13 @@ const NavItems = (props) => {
 
         <Link href="/about-us">
           <a
+            onClick={async () => {
+              await dispatch({
+                type: "FLIP_ACTIVE_NAV", // The name of the reducer
+                payload: "", // Notice in this reducer, the string is appended to the todos array
+              });
+              props.setStatePropsMethod2(true);
+            }}
             className={`${
               path.includes("about-us") ? "active" : ""
             } list-group-item list-group-item-action mt-2 border-none mx-auto`}
@@ -36,6 +52,13 @@ const NavItems = (props) => {
 
         <Link href="/service">
           <a
+            onClick={async () => {
+              await dispatch({
+                type: "FLIP_ACTIVE_NAV", // The name of the reducer
+                payload: "", // Notice in this reducer, the string is appended to the todos array
+              });
+              props.setStatePropsMethod2(true);
+            }}
             className={`${
               path.includes("service") ? "active" : ""
             } list-group-item list-group-item-action mt-2 border-none mx-auto`}
@@ -48,6 +71,13 @@ const NavItems = (props) => {
 
         <Link href="/contact">
           <a
+            onClick={async () => {
+              await dispatch({
+                type: "FLIP_ACTIVE_NAV", // The name of the reducer
+                payload: "", // Notice in this reducer, the string is appended to the todos array
+              });
+              props.setStatePropsMethod2(true);
+            }}
             className={`${
               path.includes("contact") ? "active" : ""
             } list-group-item list-group-item-action mt-2 border-none mx-auto`}

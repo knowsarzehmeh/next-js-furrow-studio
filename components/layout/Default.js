@@ -1,15 +1,18 @@
 // import Link from "next/link";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import AppBar from "../AppBar";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import NavItems from "../NavItems";
+import { Context } from "../../pages/_app";
 
 export default function (props) {
   const [scroll, setScroll] = useState(false);
   const [navStateProps, setNavStateProps] = useState(false);
   const { path } = props;
+  const [state, dispatch] = useContext(Context)
+
   // interface ParentCompProps {
   //   clickFunction: (data: boolean) => void;
   // }
@@ -18,6 +21,7 @@ export default function (props) {
     return;
   };
   useEffect(() => {
+    console.log(state)
     setNavStateProps(true)
     window.addEventListener("scroll", scrollAction);
     return () => window.removeEventListener("scroll", scrollAction);
@@ -35,7 +39,6 @@ export default function (props) {
   //  {/* <AppBar showBox={scroll} /> */}
   return (
     <div className="">
-
       <Navbar
         className="mb-5 pb-5"
         showBox={scroll}
@@ -45,7 +48,7 @@ export default function (props) {
       <div className={`${
         navStateProps ? "d-none" : "d-block"
         } mt-lg-5 pt-lg-5 margin-top`}>
-        <NavItems path={path} />
+        <NavItems setStatePropsMethod2={setNavStateAction} path={path} />
       </div>
 
       <div
@@ -63,7 +66,7 @@ export default function (props) {
 
       <style jsx>{`
         .margin-top {
-          margin-top: 6rem !important;
+          margin-top: 5rem !important;
         }
         .opacity-none {
           opacity: 0 !important;

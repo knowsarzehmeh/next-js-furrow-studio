@@ -38,25 +38,51 @@ Router.events.on("routeChangeStart", (url) => {
   startProgressBar();
 });
 
-function MyApp({ Component, pageProps, router }) {
+const initialState: any = {
+  activeNav: false,
+};
+
+//pure reducer function
+const Reducer = (state, action) => {
+  switch (action.type) {
+    case "MUTATE_ACTIVE_NAV":
+      return { ...state, activeNav: action.payload };
+    case "CLOSE":
+      return { ...state, activeNav: false };
+    case "FLIP_ACTIVE_NAV":
+      return { ...state, activeNav: !state.activeNav };
+    default:
+      return state;
+  }
+};
+
+import React, { createContext, useReducer } from "react";
+
+const MyApp = ({ Component, pageProps, router }) => {
+  const [state, dispatch] = useReducer(Reducer, initialState);
   const Layout = Default;
+
   return (
     <>
       <Head>
-        <title>
+        {/* <title>
           Exemblar - Brand Indentity, User Experience Design & Web & App
           development
-        </title>
+        </title> */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <DefaultSeo {...SEO} />
-      <Layout path={router.route}>
-        <Component {...pageProps} />
-      </Layout>
+
+      <Context.Provider value={[state, dispatch]}>
+        <Layout path={router.route}>
+          <Component {...pageProps} />
+        </Layout>
+      </Context.Provider>
     </>
   );
-}
-
+};
+export const Context = createContext(initialState);
+export default MyApp;
 // Only uncomment this method if you have blocking data requirements for
 // every single page in your application. This disables the ability to
 // perform automatic static optimization, causing every page in your app to
@@ -68,5 +94,3 @@ function MyApp({ Component, pageProps, router }) {
 //
 //   return { ...appProps }
 // }
-
-export default MyApp;

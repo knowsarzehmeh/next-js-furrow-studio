@@ -16,7 +16,9 @@ const Harmburger = (props) => {
         <span className="hamburger-box">
           <span className="hamburger-inner"></span>
         </span>
-        <span className="hamburger-label primary-color">Menu</span>
+        <span className="hamburger-label primary-color">
+          {!props.activeState ? "MENU" : "CLOSE"}
+        </span>
       </div>
       {/* </div> */}
 
