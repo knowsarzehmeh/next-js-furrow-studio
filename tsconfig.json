@@ -22,6 +22,7 @@
     "components/AppBar.jsx",
     "components/layout/Default.js",
     "pages/_app.tsx",
-    "pages/_document.tsx"
+    "pages/_document.tsx",
+    "components/ContextInterface.x"
   ]
 }

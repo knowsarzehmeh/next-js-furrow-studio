@@ -11,16 +11,16 @@ export default function Custom404() {
       <div className="row">
         <div className="col-12">
           <div className="d-flex justify-content-center flex-column text-black">
-            <h2 className="mx-auto">
+            <h1 className="mx-auto">
               <span className="secondary-color">You're</span>
               <span className="primary-color"> welcome to get in </span>
               <span className="text-black d-none d-lg-inline">{"touch &"}</span>
-            </h2>
-            <h2 className="text-black mx-auto d-lg-none">{"touch &"}</h2>
-            <h2 className="mx-auto">
+            </h1>
+            <h1 className="text-black mx-auto d-lg-none">{"touch &"}</h1>
+            <h1 className="mx-auto">
               <span className="text-black">say </span>{" "}
               <span className="secondary-color">"hello"</span>
-            </h2>
+            </h1>
             {/* <h2 className="secondary-color mx-auto">
                             <span>experiences </span> </h2> */}
           </div>

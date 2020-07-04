@@ -1,15 +1,16 @@
 import Link from "next/link";
 import Harmburger from "./Harmburger";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { Context } from "../pages/_app";
 
 export default function Navbar(props) {
-  const [active, setActive] = useState(false);
+  const [state, dispatch] = useContext(Context);
   const { showBox, path } = props;
   return (
     <div
       className={`container-fluid header-container background-black mb-5
        ${showBox ? "box-shadow-shade" : ""}   ${
-        active ? "background-black" : ""
+        state.activeNav ? "background-black" : ""
       }`}
     >
       <div className="my-3">
@@ -27,11 +28,14 @@ export default function Navbar(props) {
             <div
               className="item-right z-index-10 "
               onClick={async () => {
-                await setActive(!active);
-                props.setStatePropsMethod(active);
+                await dispatch({
+                  type: "FLIP_ACTIVE_NAV", // The name of the reducer
+                  payload: "", // Notice in this reducer, the string is appended to the todos array
+                });
+                props.setStatePropsMethod(state.activeNav);
               }}
             >
-              <Harmburger activeState={active} />
+              <Harmburger activeState={state.activeNav} />
             </div>
 
             {/* <div className="item-right">
@@ -52,7 +56,7 @@ export default function Navbar(props) {
           }
         }
         .background-black {
-          background: ${active ? "#111 !important" : "inherit"};
+          background: ${state.activeNav ? "#111 !important" : "inherit"};
         }
         .header-container {
           position: fixed;
