@@ -15,12 +15,15 @@ export default function Navbar(props) {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <img
-                src="images/exemblar-logo.png"
-                className="img-fluid logo"
-                alt="logo"
-              />
-
+              <Link href="/">
+                <a>
+                  <img
+                    src="images/exemblar-logo.png"
+                    className="img-fluid logo"
+                    alt="logo"
+                  />
+                </a>
+              </Link>
               <div
                 className="item-right z-index-10 "
                 onClick={async () => {
@@ -49,6 +52,7 @@ export default function Navbar(props) {
           z-index: 10;
           padding-bottom: 0.8rem;
           padding-top: 0.8rem;
+
           height: auto;
           box-shadow: 0 0 1.8rem transparent;
           // box-shadow: 0 0 1.8rem rgba(0, 0, 0, 0.15);
@@ -60,6 +64,7 @@ export default function Navbar(props) {
         }
 
         .header {
+          margin-bottom: 30rem !important;
           align-items: center;
           display: flex;
           flex-wrap: wrap;

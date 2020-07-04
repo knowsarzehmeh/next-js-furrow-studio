@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import Head from 'next/head';
+import { useState } from "react";
+import Head from "next/head";
 
 // import '~/components/Button';
-import { TabContent, TabPane } from 'reactstrap';
-import Button from '../components/Button';
+import { TabContent, TabPane } from "reactstrap";
+import Button from "../components/Button";
 
 const Service: React.FunctionComponent = () => {
-  const [activeTab, setActiveTab] = useState<string>('1');
+  const [activeTab, setActiveTab] = useState<string>("1");
   const toggleTab = (tab: string) => {
     if (activeTab !== tab) setActiveTab(tab);
   };
@@ -18,63 +18,63 @@ const Service: React.FunctionComponent = () => {
       </Head>
 
       {/* Body Section */}
-      <section className='container'>
-        <div className='row pb-5'>
-          <div className='col-12 text-center'>
-            <h1 className='secondary-color'>
-              Designing, building great solutions for startups{' '}
-              <span className='primary-color'>& </span>companies
+      <section className="container">
+        <div className="row pb-5">
+          <div className="col-12 text-center">
+            <h1 className="secondary-color">
+              Designing, building great solutions for startups{" "}
+              <span className="primary-color">& </span>companies
             </h1>
-            <p className='font-weight-bold my-5'>
+            <p className="font-weight-bold my-5 lead">
               We work with amazing companies, startups and people <br /> to
               build great things
             </p>
-            <Button label='Projects' />
+            <Button label="Projects" />
           </div>
         </div>
       </section>
-      <section className='workflow'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-12 text-center mt-5'>
-              <h1 className='my-4 workflow__header'>
+      <section className="workflow">
+        <div className="container">
+          <div className="row">
+            <div className="col-12 text-center mt-5">
+              <h1 className="my-4 workflow__header">
                 Our Workflow <br /> Designed for you.
               </h1>
-              <p>
+              <p className="lead">
                 Helping you achieve <br /> greateness is what we strive for by
                 carefully <br /> building amazing solutions
               </p>
             </div>
           </div>
-          <div className='row pt-5'>
-            <div className='col-md-3 col-sm-6'>
-              <div className='workflow__sub-section-avatar'></div>
-              <h5 className='my-4'>Test</h5>
-              <p>
+          <div className="row pt-5">
+            <div className="col-md-3 col-sm-6">
+              <div className="workflow__sub-section-avatar"></div>
+              <h5 className="my-4">Test</h5>
+              <p className="lead">
                 Helping you achieve greateness is what we strive for by
                 carefully building amazing solutions
               </p>
             </div>
-            <div className='col-md-3 col-sm-6'>
-              <div className='workflow__sub-section-avatar'></div>
-              <h5 className='my-4'>Test</h5>
-              <p>
+            <div className="col-md-3 col-sm-6">
+              <div className="workflow__sub-section-avatar"></div>
+              <h5 className="my-4">Test</h5>
+              <p className="lead">
                 Helping you achieve greateness is what we strive for by
                 carefully building amazing solutions
               </p>
             </div>
-            <div className='col-md-3 col-sm-6'>
-              <div className='workflow__sub-section-avatar'></div>
-              <h5 className='my-4'>Test</h5>
-              <p>
+            <div className="col-md-3 col-sm-6">
+              <div className="workflow__sub-section-avatar"></div>
+              <h5 className="my-4">Test</h5>
+              <p className="lead">
                 Helping you achieve greateness is what we strive for by
                 carefully building amazing solutions
               </p>
             </div>
-            <div className='col-md-3 col-sm-6'>
-              <div className='workflow__sub-section-avatar'></div>
-              <h5 className='my-4'>Test</h5>
-              <p>
+            <div className="col-md-3 col-sm-6">
+              <div className="workflow__sub-section-avatar"></div>
+              <h5 className="my-4">Test</h5>
+              <p className="lead">
                 Helping you achieve greateness is what we strive for by
                 carefully building amazing solutions
               </p>
@@ -83,73 +83,73 @@ const Service: React.FunctionComponent = () => {
         </div>
       </section>
 
-      <section className='technologies'>
-        <div className='container'>
-          <div className='row py-5'>
-            <div className='col-12'>
-              <h3 className='text-center'>Technologies</h3>
+      <section className="technologies">
+        <div className="container">
+          <div className="row py-5">
+            <div className="col-12">
+              <h3 className="text-center">Technologies</h3>
             </div>
           </div>
-          <div className='row'>
-            <div className='container'>
-              <div className='tabs text-center'>
+          <div className="row">
+            <div className="container">
+              <div className="tabs text-center">
                 <div
                   className={
-                    activeTab === '1'
-                      ? 'tabs__title-border tabs__title pr-3'
-                      : 'tabs__title pr-3 '
+                    activeTab === "1"
+                      ? "tabs__title-border tabs__title pr-3"
+                      : "tabs__title pr-3 "
                   }
-                  role='button'
-                  onClick={() => toggleTab('1')}
+                  role="button"
+                  onClick={() => toggleTab("1")}
                 >
-                  <p className='font-weight-bold'>Design</p>
+                  <p className="font-weight-bold lead-large">Design</p>
                 </div>
                 <div
                   className={
-                    activeTab === '2'
-                      ? 'tabs__title-border tabs__title pr-3'
-                      : 'tabs__title pr-3 '
+                    activeTab === "2"
+                      ? "tabs__title-border tabs__title pr-3"
+                      : "tabs__title pr-3 "
                   }
-                  role='button'
-                  onClick={() => toggleTab('2')}
+                  role="button"
+                  onClick={() => toggleTab("2")}
                 >
-                  <p className='font-weight-bold'>Frontend</p>
+                  <p className="font-weight-bold lead-large">Frontend</p>
                 </div>
                 <div
                   className={
-                    activeTab === '3'
-                      ? 'tabs__title-border tabs__title pr-3'
-                      : 'tabs__title pr-3 '
+                    activeTab === "3"
+                      ? "tabs__title-border tabs__title pr-3"
+                      : "tabs__title pr-3 "
                   }
-                  role='button'
-                  onClick={() => toggleTab('3')}
+                  role="button"
+                  onClick={() => toggleTab("3")}
                 >
-                  <p className='font-weight-bold'>Serverside</p>
+                  <p className="font-weight-bold lead-large">Serverside</p>
                 </div>
                 <div
                   className={
-                    activeTab === '4'
-                      ? 'tabs__title-border tabs__title pr-3'
-                      : 'tabs__title pr-3 '
+                    activeTab === "4"
+                      ? "tabs__title-border tabs__title pr-3"
+                      : "tabs__title pr-3 "
                   }
-                  role='button'
-                  onClick={() => toggleTab('4')}
+                  role="button"
+                  onClick={() => toggleTab("4")}
                 >
-                  <p className='font-weight-bold'>Deployment</p>
+                  <p className="font-weight-bold lead-large">Deployment</p>
                 </div>
               </div>
 
               {/* Tab contents */}
               <TabContent activeTab={activeTab}>
-                <TabPane tabId='1'>
-                  <div className='row py-5'>
-                    <div className='col-12 col-md-4'>
-                      <div className='h-100' style={{ background: 'pink' }}>
+                <TabPane tabId="1">
+                  <div className="row py-5">
+                    <div className="col-12 col-md-4">
+                      <div className="h-100" style={{ background: "pink" }}>
                         Image Asset 1
                       </div>
                     </div>
-                    <div className='col-12 col-md-8'>
-                      <p>
+                    <div className="col-12 col-md-8">
+                      <p className="lead">
                         Lorem ipsum dolor sit amet consectetur, adipisicing
                         elit. Perspiciatis, nulla vero. Minima explicabo unde
                         omnis esse necessitatibus illo debitis error nam
@@ -162,15 +162,15 @@ const Service: React.FunctionComponent = () => {
                     </div>
                   </div>
                 </TabPane>
-                <TabPane tabId='2'>
-                  <div className='row py-5'>
-                    <div className='col-12 col-md-4'>
-                      <div className='h-100' style={{ background: 'pink' }}>
+                <TabPane tabId="2">
+                  <div className="row py-5">
+                    <div className="col-12 col-md-4">
+                      <div className="h-100" style={{ background: "pink" }}>
                         Image Asset 2
                       </div>
                     </div>
-                    <div className='col-12 col-md-8'>
-                      <p>
+                    <div className="col-12 col-md-8">
+                      <p className="lead">
                         Nostrum iure maiores reiciendis perspiciatis rerum alias
                         dolore, eos aspernatur omnis adipisci tempora, eaque
                         culpa iusto officiis vero tenetur distinctio! Illo eum
@@ -182,15 +182,15 @@ const Service: React.FunctionComponent = () => {
                     </div>
                   </div>
                 </TabPane>
-                <TabPane tabId='3'>
-                  <div className='row py-5'>
-                    <div className='col-12 col-md-4'>
-                      <div className='h-100' style={{ background: 'pink' }}>
+                <TabPane tabId="3">
+                  <div className="row py-5">
+                    <div className="col-12 col-md-4">
+                      <div className="h-100" style={{ background: "pink" }}>
                         Image Asset
                       </div>
                     </div>
-                    <div className='col-12 col-md-8'>
-                      <p>
+                    <div className="col-12 col-md-8">
+                      <p className="lead">
                         Minima explicabo unde omnis esse necessitatibus illo
                         debitis error nam accusantium. Lorem ipsum dolor sit
                         amet consectetur, adipisicing elit. Perspiciatis, nulla
@@ -202,15 +202,15 @@ const Service: React.FunctionComponent = () => {
                     </div>
                   </div>
                 </TabPane>
-                <TabPane tabId='4'>
-                  <div className='row py-5'>
-                    <div className='col-12 col-md-4'>
-                      <div className='h-100' style={{ background: 'pink' }}>
+                <TabPane tabId="4">
+                  <div className="row py-5">
+                    <div className="col-12 col-md-4">
+                      <div className="h-100" style={{ background: "pink" }}>
                         Image Asset
                       </div>
                     </div>
-                    <div className='col-12 col-md-8'>
-                      <p>
+                    <div className="col-12 col-md-8">
+                      <p className="lead">
                         Illo eum nulla similique temporibus qui voluptates in.
                         Nostrum iure maiores reiciendis perspiciatis rerum alias
                         dolore, eos aspernatur omnis adipisci tempora, eaque
