@@ -2,7 +2,7 @@ import Head from "next/head";
 
 export default function Custom404() {
   return (
-    <div className="container-fluid">
+    <section className="container mt-5 mt-lg-2 pt-5  pt-lg-0">
       <Head>
         <title>exemblar contact us</title>
         <link rel="icon" href="/favicon.ico" />
@@ -41,6 +41,6 @@ export default function Custom404() {
       <style jsx>{``}</style>
 
       <style jsx global>{``}</style>
-    </div>
+    </section>
   );
 }
