@@ -79,39 +79,46 @@ export default function Home() {
         </div>
         <div className="container">
           <div className="row">
-            <div className="col-lg-4"></div>
-            <div className="col-lg-4"></div>
-            <div className="col-lg-4"></div>
+            <div className="col-lg-4">
+              <div className="card-wat"> </div>
+            </div>
+            <div className="col-lg-4">
+            <div className="card-wat"></div>
+            </div>
+            <div className="col-lg-4">
+            <div className="card-wat"></div>
+            </div>
           </div>
+
+
+
+          <div className="row">
+            <div className="col-lg-4">
+              <div className="card-wat"> </div>
+            </div>
+            <div className="col-lg-4">
+            <div className="card-wat"></div>
+            </div>
+            <div className="col-lg-4">
+            <div className="card-wat"></div>
+            </div>
+          </div>
+
         </div>
+
+        
+        
       </div>
+
+      
 
       {/*end*/}
 
-      {/**third part */}
-
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12">
-            <h3 className="">
-              You'll be in good <br></br> company
-            </h3>
-
-            <p className="">
-              We build great products that help <br></br>
-              businesses grow
-            </p>
-
-            <img src="" />
-            <img src="" />
-            <img src="" />
-          </div>
-        </div>
-      </div>
-
-      {/**end */}
+     
 
       <style jsx>{`
+       
+        
         .hrd-1 {
           text-align: center;
           font-size: 50px;
@@ -119,6 +126,7 @@ export default function Home() {
           font-weight: bold;
           margin-bottom: 30px;
           color: #303090;
+          margin-top:50px;
         }
 
         .hrd-2 {
@@ -136,16 +144,18 @@ export default function Home() {
           margin-top: -130px;
         }
 
-        .ex-btn {
+        .ex-btn{
           display: block;
           margin-left: auto;
           margin-right: auto;
           color: white;
           background-color: #303090;
           border: transparent;
-          font-weight: 700;
+          font-weight:bold;
+          font-size:14px;
           height: 60px;
-          width: 200px;
+          width: 220px;
+          border-radius:35px;
         }
 
         .ex-btn:hover {
@@ -154,14 +164,14 @@ export default function Home() {
           margin-right: auto;
           color: black;
           background-color: #f3356c;
-          border: transparent;
-          font-weight: 700;
+          font-weight:bold;
+          font-size:14px;
           height: 60px;
-          width: 200px;
+          width: 220px;
         }
 
         .bac-back {
-          background-color: #eef3fa;
+          background-color:#303090;
           width: 100%;
           min-height: 55vh;
         }
@@ -181,11 +191,29 @@ export default function Home() {
 
         .com {
           margin-top: 100px;
+          color:white;
         }
         .com-1 {
           margin-top: 30px;
           line-height: 25px;
+          color:white;
         }
+
+        .card-wat{
+          width:85%;
+          min-height:41vh;
+          background-color:white;
+          margin-top:50px;
+          margin-bottom:50px;
+          border: transparent;
+          border-radius:5px;
+          display:block;
+          margin-left:auto;
+          margin-right:auto;
+          
+}
+
+
       `}</style>
 
       {/*
