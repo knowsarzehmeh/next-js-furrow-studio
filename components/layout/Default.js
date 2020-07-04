@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import AppBar from "../AppBar";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-import Middle from "../Middle";
 
 export default function (props) {
   const [scroll, setScroll] = useState(false);
@@ -49,11 +48,7 @@ export default function (props) {
       >
         {props.children}
       </div>
-
-
-      <Middle />
-      <Footer className={`${
-
+      <div className={`${
         !navStateProps ? "opacity-none" : "opacity-1"
         } mt-lg-5 pt-lg-5`} >
         <Footer />
