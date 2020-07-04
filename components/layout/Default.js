@@ -4,11 +4,12 @@ import { useState, useEffect } from "react";
 import AppBar from "../AppBar";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
+import NavItems from "../NavItems";
 
 export default function (props) {
   const [scroll, setScroll] = useState(false);
   const [navStateProps, setNavStateProps] = useState(false);
-
+  const { path } = props;
   // interface ParentCompProps {
   //   clickFunction: (data: boolean) => void;
   // }
@@ -25,7 +26,7 @@ export default function (props) {
   const scrollAction = () => {
     const offset = window.scrollY;
     console.log(offset);
-    if (offset > 20) {
+    if (offset > 40) {
       setScroll(true);
     } else {
       setScroll(false);
@@ -41,15 +42,21 @@ export default function (props) {
         setStatePropsMethod={setNavStateAction}
       />
 
+      <div className={`${
+        navStateProps ? "d-none" : "d-block"
+        } mt-lg-5 pt-lg-5 margin-top`}>
+        <NavItems path={path} />
+      </div>
+
       <div
         className={`${
-          !navStateProps ? "opacity-none" : "opacity-1"
+          !navStateProps ? "d-none" : "d-block"
           } mt-lg-5 pt-lg-5 margin-top`}
       >
         {props.children}
       </div>
       <div className={`${
-        !navStateProps ? "opacity-none" : "opacity-1"
+        !navStateProps ? "d-none" : "d-block"
         } mt-lg-5 pt-lg-5`} >
         <Footer />
       </div>
@@ -85,6 +92,18 @@ export default function (props) {
         .smoke-screen {
           background: #e5e5e5;
           min-height: 100vh;
+        }
+      `}</style>
+
+      <style jsx global>{`
+      html,
+      body,
+      #app,
+      main {
+ 
+        min-height: 100%;
+        background : ${!navStateProps ? '#111 !important' : 'inherit'};
+        
         }
       `}</style>
     </div >

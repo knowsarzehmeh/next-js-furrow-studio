@@ -1,26 +1,26 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Footer() {
   return (
     <div>
-      <div className='container'>
-        <div className='line'></div>
+      <div className="container">
+        <div className="line"></div>
 
-        <div className='row'>
-          <div className='col-lg-3'>
+        <div className="row">
+          <div className="col-lg-3">
             <p>yeah exemblar</p>
           </div>
 
-          <div className='col-lg-9'>
-            <div className='row'>
-              <div className='col-lg-3'>
+          <div className="col-lg-9">
+            <div className="row">
+              <div className="col-lg-3">
                 <h5>Product</h5>
                 <ul>
                   <li>Deployment</li>
                 </ul>
               </div>
 
-              <div className='col-lg-3'>
+              <div className="col-lg-3">
                 <h5>Company</h5>
                 <ul>
                   <li>Work</li>
@@ -29,14 +29,14 @@ export default function Footer() {
                 </ul>
               </div>
 
-              <div className='col-lg-3'>
+              <div className="col-lg-3">
                 <h5>Legal</h5>
                 <ul>
                   <li>Privacy</li>
                   <li>Terms of contract</li>
                 </ul>
               </div>
-              <div className='col-lg-3'>
+              <div className="col-lg-3">
                 <h5>Connect</h5>
                 <ul>
                   <li>Behance</li>
@@ -49,25 +49,21 @@ export default function Footer() {
         </div>
       </div>
 
-      
-            <style jsx>{`
+      <style jsx>{`
+        .line {
+          width: 100%;
+          border-top: transparent;
+          border-left: transparent;
+          border-right: transparent;
+          border-bottom: 0.2px solid #70707056;
+        }
 
-.line {
-  width: 100%;
-  border-top: transparent;
-  border-left: transparent;
-  border-right: transparent;
-  border-bottom: 0.2px solid #70707056;
-}
-
-li {
-  list-style: none;
-}
-
-       
+        li {
+          list-style: none;
+        }
       `}</style>
 
-{/*
+      {/*
             <style jsx global>{`
        
       `}</style>

@@ -4,45 +4,56 @@ import { useState } from "react";
 
 export default function Navbar(props) {
   const [active, setActive] = useState(false);
-  const { showBox } = props;
+  const { showBox, path } = props;
   return (
     <div
-      className={`container-fluid header-container mb-5 ${
-        showBox ? "box-shadow-shade" : ""
+      className={`container-fluid header-container background-black mb-5
+       ${showBox ? "box-shadow-shade" : ""}   ${
+        active ? "background-black" : ""
       }`}
     >
       <div className="my-3">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <Link href="/">
-                <a>
-                  <img
-                    src="images/exemblar-logo.png"
-                    className="img-fluid logo"
-                    alt="logo"
-                  />
-                </a>
-              </Link>
-              <div
-                className="item-right z-index-10 "
-                onClick={async () => {
-                  await setActive(!active);
-                  props.setStatePropsMethod(active);
-                }}
-              >
-                <Harmburger activeState={active} />
-              </div>
+        <div className="row padding-container">
+          <div className="col-lg-12 p-1">
+            <Link href="/">
+              <a>
+                <img
+                  src="images/exemblar-logo.png"
+                  className="img-fluid logo"
+                  alt="logo"
+                />
+              </a>
+            </Link>
+            <div
+              className="item-right z-index-10 "
+              onClick={async () => {
+                await setActive(!active);
+                props.setStatePropsMethod(active);
+              }}
+            >
+              <Harmburger activeState={active} />
+            </div>
 
-              {/* <div className="item-right">
+            {/* <div className="item-right">
                 <p>USA</p>
               </div> */}
-            </div>
           </div>
         </div>
       </div>
 
       <style jsx>{`
+        @media (max-width: 767.98px) {
+          .padding-container {
+            padding: 0 calc(5vw - 5rem);
+            padding-top: 0px;
+            padding-right: calc(2vw) !important;
+            padding-bottom: 0px;
+            padding-left: calc(2vw) !important;
+          }
+        }
+        .background-black {
+          background: ${active ? "#111 !important" : "inherit"};
+        }
         .header-container {
           position: fixed;
           top: 0;
@@ -52,7 +63,6 @@ export default function Navbar(props) {
           z-index: 10;
           padding-bottom: 0.8rem;
           padding-top: 0.8rem;
-
           height: auto;
           box-shadow: 0 0 1.8rem transparent;
           // box-shadow: 0 0 1.8rem rgba(0, 0, 0, 0.15);
@@ -76,9 +86,9 @@ export default function Navbar(props) {
         .padding-container {
           padding: 0 calc(10vw - 10rem);
           padding-top: 0px;
-          padding-right: calc(13vw - 10rem);
+          padding-right: calc(15vw - 10rem);
           padding-bottom: 0px;
-          padding-left: calc(13vw - 10rem);
+          padding-left: calc(15vw - 10rem);
         }
         li.nav-item a {
           color: var(--primaryColor);
