@@ -59,6 +59,7 @@ export default function Navbar(props) {
         z-index-21 {
           z-index: 21 !important;
         }
+
         .background-black {
           background: ${state.activeNav ? "transaparent !important" : "#fff"};
           z-index: ${-20 ? "#111 !important" : "inherit"};

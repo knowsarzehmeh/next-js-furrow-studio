@@ -163,10 +163,10 @@ export default function Footer() {
         }
 
         .bg-grey {
-          background: #0a233b;
+          background: #121233;
         }
         .copyright {
-          border-top: 1px solid #454545;
+          border-top: 1px solid #ffffff;
         }
         footer {
           box-sizing: border-box;
