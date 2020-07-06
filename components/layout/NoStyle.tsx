@@ -1,10 +1,6 @@
 import React from "react";
 
-// import { Sidebar } from "semantic-ui-react";
-
-// import Link from "next/link";
-
-const Default = props => {
+const Default = (props) => {
   return (
     <div className="">
       {props.children}
@@ -19,4 +15,3 @@ const Default = props => {
 };
 
 export default Default;
-// export default connect()(Default);

@@ -11,6 +11,7 @@
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "bootstrap": "^4.5.0",
+    "bootstrap-icons": "^1.0.0-alpha5",
     "dotenv": "^8.2.0",
     "jquery": "^3.5.1",
     "next": "9.4.4",
