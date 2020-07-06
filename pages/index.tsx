@@ -39,7 +39,7 @@ export default function Home() {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <h3 className="hrd-1">
+            <h3 className="hrd-1 tertiary-color">
               We <span className="primary-color">design</span>{" "}
               <span className="other">&</span>{" "}
               <span className="primary-color">build</span> digital <br></br>{" "}
@@ -70,10 +70,10 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <h3 className="com secondary-color">
+              <h3 className="com tertiary-color">
                 Communicate your designs like never before
               </h3>
-              <p className="com-1 secondary-color lead">
+              <p className="com-1 tertiary-color lead">
                 We build great products that help<br></br> businesses grow
               </p>
             </div>
@@ -115,7 +115,7 @@ export default function Home() {
           line-height: 60px;
           font-weight: bold;
           margin-bottom: 30px;
-          color: #303090;
+          //color: #303090;
           margin-top: 50px;
         }
 
@@ -181,12 +181,10 @@ export default function Home() {
 
         .com {
           margin-top: 100px;
-          color: white;
         }
         .com-1 {
           margin-top: 30px;
           line-height: 25px;
-          color: white;
         }
 
         .card-wat {

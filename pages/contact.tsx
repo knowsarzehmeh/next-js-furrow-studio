@@ -11,13 +11,15 @@ export default function Custom404() {
       <div className="row">
         <div className="col-12">
           <div className="d-flex justify-content-center flex-column text-black">
-            <h1 className="mx-auto">
+            <h1 className="mx-auto text-center">
               <span className="secondary-color">You're</span>
               <span className="primary-color"> welcome to get in </span>
               <span className="text-black d-none d-lg-inline">{"touch &"}</span>
             </h1>
-            <h1 className="text-black mx-auto d-lg-none">{"touch &"}</h1>
-            <h1 className="mx-auto">
+            <h1 className="text-black mx-auto d-lg-none text-center">
+              {"touch &"}
+            </h1>
+            <h1 className="mx-auto text-center">
               <span className="text-black">say </span>{" "}
               <span className="secondary-color">"hello"</span>
             </h1>
@@ -29,11 +31,10 @@ export default function Custom404() {
       <div className="row mt-2 mt-lg-3">
         <div className="col-12 lead">
           <div className="mx-auto d-flex justify-content-center flex-column">
-            <p className="mx-auto lead">
+            <p className="mx-auto lead text-center">
               Do you have an enquiry to make or questions to ask, please fill
-              the form below{" "}
+              the form below <br /> And we will get right back to you
             </p>
-            <p className="mx-lg-auto lead">And we will get right back to you</p>
           </div>
         </div>
       </div>

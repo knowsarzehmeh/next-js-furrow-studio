@@ -96,7 +96,7 @@ const NavItems = (props) => {
         // top: 0;
         // }
         a {
-          color: var(--pink) !important;
+          color: #ffffff !important;
         }
         a:hover {
           color: var(--blue) !important;
@@ -106,7 +106,7 @@ const NavItems = (props) => {
           width: fit-content !important;
         }
         .list-group-item.active {
-          color: var(--blue) !important;
+          color: var(--pink) !important;
           background-color: transparent !important;
         }
         .list-group-item:hover {

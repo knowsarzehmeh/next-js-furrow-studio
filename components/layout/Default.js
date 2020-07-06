@@ -105,7 +105,7 @@ export default function (props) {
       main {
  
         min-height: 100%;
-        background : ${!navStateProps ? '#111 !important' : 'inherit'};
+        background : ${!navStateProps ? '#121233 !important' : 'inherit'};
         
         }
       `}</style>
