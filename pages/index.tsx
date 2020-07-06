@@ -70,10 +70,10 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <h3 className="com">
+              <h3 className="com secondary-color">
                 Communicate your designs like never before
               </h3>
-              <p className="com-1">
+              <p className="com-1 secondary-color lead">
                 We build great products that help<br></br> businesses grow
               </p>
             </div>
@@ -161,7 +161,7 @@ export default function Home() {
         }
 
         .bac-back {
-          background-color: #303090;
+          background-color: #edf4ff;
           width: 100%;
           min-height: 55vh;
         }
@@ -191,7 +191,7 @@ export default function Home() {
 
         .card-wat {
           width: 85%;
-          min-height: 41vh;
+          height: 350px;
           background-color: white;
           margin-top: 50px;
           margin-bottom: 50px;
@@ -200,6 +200,7 @@ export default function Home() {
           display: block;
           margin-left: auto;
           margin-right: auto;
+          box-shadow: 0px 20px 40px 0px rgba(12, 0, 46, 0.06);
         }
       `}</style>
 

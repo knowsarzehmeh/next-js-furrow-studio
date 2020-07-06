@@ -20,13 +20,13 @@ export default function Navbar(props) {
               <a>
                 <img
                   src="images/exemblar-logo.png"
-                  className="img-fluid logo"
+                  className="img-fluid logo z-index-21"
                   alt="logo"
                 />
               </a>
             </Link>
             <div
-              className="item-right z-index-10 "
+              className="item-right z-index-21"
               onClick={async () => {
                 await dispatch({
                   type: "FLIP_ACTIVE_NAV", // The name of the reducer
@@ -55,23 +55,27 @@ export default function Navbar(props) {
             padding-left: calc(2vw) !important;
           }
         }
+
+        z-index-21 {
+          z-index: 21 !important;
+        }
         .background-black {
-          background: ${state.activeNav ? "#111 !important" : "inherit"};
+          background: ${state.activeNav ? "transaparent !important" : "#fff"};
+          z-index: ${-20 ? "#111 !important" : "inherit"};
         }
         .header-container {
           position: fixed;
           top: 0;
           left: 0;
           right: 0;
-          background-color: #fff;
           z-index: 10;
           padding-bottom: 0.8rem;
           padding-top: 0.8rem;
           height: auto;
           box-shadow: 0 0 1.8rem transparent;
           // box-shadow: 0 0 1.8rem rgba(0, 0, 0, 0.15);
-          transition: box-shadow 0.3s, color 0.5s, background-color 0.5s;
-          transition-property: box-shadow, color, background-color;
+          transition: box-shadow 0.3s, color 0.5s, background-color 0s;
+          transition-property: box-shadow, color;
           transition-duration: 0.3s, 0.5s, 0.5s;
           transition-timing-function: ease, ease, ease;
           transition-delay: 0s, 0s, 0s;

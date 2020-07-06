@@ -36,6 +36,7 @@ $colors: (
 }
 
 @import "../../node_modules//bootstrap/scss/bootstrap.scss";
+
 @font-face {
   font-family: "font-regular";
   src: url("/fonts/Raleway-Regular.ttf");
@@ -102,6 +103,20 @@ h6 {
 
 p {
   font-family: "font-light";
+}
+
+a {
+  // color: #f3356c;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: #de2156 !important;
+}
+
+a:active {
+  color: #d2a4b1 !important;
 }
 
 div {
@@ -232,8 +247,17 @@ textarea {
 }
 
 @include media-breakpoint-down(xs) {
+  .lead {
+    font-size: 0.956rem !important;
+    line-height: 1.38 !important;
+  }
 }
 @include media-breakpoint-down(sm) {
+  .lead {
+    font-size: 0.956rem;
+    line-height: 1.38;
+  }
+
   // h2 {
   //   font-size: 1.7rem !important;
   //   letter-spacing: 0.5px !important;

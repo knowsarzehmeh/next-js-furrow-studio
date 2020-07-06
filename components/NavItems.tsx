@@ -10,8 +10,8 @@ const NavItems = (props) => {
   const { path } = props;
   const [state, dispatch] = useContext(Context);
   return (
-    <div className="">
-      <div className="list-group p-1">
+    <div className=" mx-auto z-index-20">
+      <div className="list-group p-1 m-auto">
         <Link href="/">
           <a
             onClick={async () => {
@@ -90,6 +90,11 @@ const NavItems = (props) => {
       </div>
 
       <style jsx>{`
+        //.z-index-20 {
+        //  z-index: 20 !important;
+        // position: absolute !important;
+        // top: 0;
+        // }
         a {
           color: var(--pink) !important;
         }
