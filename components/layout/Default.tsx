@@ -11,7 +11,7 @@ export default function (props) {
   const [scroll, setScroll] = useState(false);
   const [navStateProps, setNavStateProps] = useState(false);
   const { path } = props;
-  const [state, dispatch] = useContext(Context)
+  const [state, dispatch] = useContext(Context);
 
   // interface ParentCompProps {
   //   clickFunction: (data: boolean) => void;
@@ -21,15 +21,13 @@ export default function (props) {
     return;
   };
   useEffect(() => {
-    console.log(state)
-    setNavStateProps(true)
+    setNavStateProps(true);
     window.addEventListener("scroll", scrollAction);
     return () => window.removeEventListener("scroll", scrollAction);
   }, []);
 
   const scrollAction = () => {
     const offset = window.scrollY;
-    console.log(offset);
     if (offset > 40) {
       setScroll(true);
     } else {
@@ -45,22 +43,24 @@ export default function (props) {
         setStatePropsMethod={setNavStateAction}
       />
 
-      <div className={`${
-        navStateProps ? "d-none" : "d-block"
-        } mt-lg-5 pt-lg-5 margin-top`}>
+      <div
+        className={`${
+          navStateProps ? "d-none" : "d-block"
+        } mt-lg-5 pt-lg-5 margin-top`}
+      >
         <NavItems setStatePropsMethod2={setNavStateAction} path={path} />
       </div>
 
       <div
         className={`${
           !navStateProps ? "d-none" : "d-block"
-          } mt-lg-5 pt-lg-5 margin-top`}
+        } mt-lg-5 pt-lg-5 margin-top`}
       >
         {props.children}
       </div>
-      <div className={`${
-        !navStateProps ? "d-none" : "d-block"
-        } mt-lg-5 pt-lg-5`} >
+      <div
+        className={`${!navStateProps ? "d-none" : "d-block"} mt-lg-5 pt-lg-5`}
+      >
         <Footer />
       </div>
 
@@ -99,17 +99,15 @@ export default function (props) {
       `}</style>
 
       <style jsx global>{`
-      html,
-      body,
-      #app,
-      main {
- 
-        min-height: 100%;
-        background : ${!navStateProps ? '#121233 !important' : 'inherit'};
-        
+        html,
+        body,
+        #app,
+        main {
+          min-height: 100%;
+          background: ${!navStateProps ? "#121233 !important" : "inherit"};
         }
       `}</style>
-    </div >
+    </div>
   );
 }
 
