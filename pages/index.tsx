@@ -97,10 +97,10 @@ export default function Home() {
                     <h3 className="text-center">Websites Design</h3>
                     <p className="lead mx-auto text-center">
                       We create beautiful responsive and user friendly websites
-                      from scratch to portrays your business ideas and
-                      marketting strategies in a stylish and classy way, <br />
-                      that shows the neccessary information using best
-                      development techniques you think it and we build it.
+                      from scratch to portray your business ideas and marketing
+                      strategies in a stylish and classy way, that shows the
+                      neccessary information using best development techniques
+                      you think it and we build it.
                     </p>
                   </div>
                 </div>
@@ -111,12 +111,9 @@ export default function Home() {
                     <h3>Mobile/Web Application</h3>
                     <p className="lead mx-auto text-center">
                       Using Conventional Technologies and architecture with the
-                      unique logic of the application, combined with a polished{" "}
-                      <br />
+                      unique logic of the application, combined with a polished
                       Ui/Ux to deliver smooth and fast applications that reached
-                      the goals of our clients
-                      <br />
-                      and wins the hearts of users.
+                      the goals of our clients and wins the hearts of users.
                     </p>
                   </div>
                 </div>
@@ -130,11 +127,10 @@ export default function Home() {
                       a company
                       <br />
                       we have experts that creates a range of design service
-                      such as;
+                      such as ;
                       <br /> logo designs , visual identity packages , business
-                      cards, brochure, catalogues
-                      <br />
-                      marketing materials and many more.
+                      cards, brochure, catalogues and marketing materials and
+                      many more.
                     </p>
                   </div>
                 </div>
@@ -181,8 +177,9 @@ export default function Home() {
       <style jsx>{`
         .icon-div {
           border-radius: 50%;
-          height: 80px;
-          width: 80px;
+          height: 90px;
+          width: 90px;
+          margin: 20px;
           // background-color: #fff;
         }
         .bg-color-offwhite {
