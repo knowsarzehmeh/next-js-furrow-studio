@@ -50,8 +50,11 @@ export default function Home() {
             </h3>
 
             <div className="d-flex flex-row justify-content-center">
-              <img src="images/arrow.svg" className="img-fluid arrow mr-lg-3" />
-              <p className="p-1  lead">
+              <img
+                src="images/arrow.svg"
+                className="img-fluid d-none d-md-inline-block arrow mr-lg-3"
+              />
+              <p className="p-1  lead text-center">
                 We design, build and launch websites and products that <br></br>{" "}
                 are simple, beautiful and helps businesses grow.
               </p>
@@ -71,9 +74,9 @@ export default function Home() {
       {/**second section */}
 
       <section className="bac-back">
-        <div className="container-fluid services-flex">
+        <div className="container-fluid px-md-5 px-lg-5 services-flex">
           <div className="row mb-3">
-            <div className="col-lg-9 m-auto">
+            <div className="col-lg-9 m-auto ">
               <h3 className="com tertiary-color">
                 Communicate your designs like never before
               </h3>
@@ -89,7 +92,7 @@ export default function Home() {
                 <div className="card card-wat">
                   <div className="card-body d-flex flex-column justify-content-between p-lg-4 mx-auto align-items-center">
                     <div className="icon-div primary-bg"> </div>
-                    <h3>Websites Design</h3>
+                    <h3 className="text-center">Websites Design</h3>
                     <p className="lead mx-auto text-center">
                       We create beutiful websites from scratch that portrays
                       your business in a stylish and classy way, <br /> you
