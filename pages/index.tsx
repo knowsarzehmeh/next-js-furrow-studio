@@ -276,7 +276,7 @@ export default function Home() {
         .card-wat {
           min-height: 450px;
           border: none !important;
-          background-color: var(--deepBlue);
+          background-color: var(--blue);
           box-shadow: 0px 20px 40px 0px rgba(12, 0, 46, 0.06);
         }
       `}</style>
