@@ -5,12 +5,14 @@ $theme-colors: (
 );
 
 $blue: #303090;
-$body-bg: #fff;
-$body-color: #111;
+$body-bg: #ffffff;
+$body-color: #121233;
 $grey: #eef3fa;
 $pink: #f3356c;
+$deepBlue: #121233;
 $colors: (
-  "primaryColor": #303090,
+  "primaryColor": #5e5e85,
+  "deepBlue": #121233,
   "blue": #303090,
   "pink": #f3356c,
 ) !default;
@@ -23,16 +25,24 @@ $colors: (
   color: $blue !important;
 }
 
+.tertiary-color {
+  color: $deepBlue;
+}
+
 .other {
   color: $body-color !important;
 }
 
 .primary-bg {
-  background: $pink;
+  background-color: $pink;
+}
+
+.tertiary-bg {
+  background-color: $deepBlue;
 }
 
 .secondary-bg {
-  background: $blue;
+  background-color: $blue;
 }
 
 @import "../../node_modules//bootstrap/scss/bootstrap.scss";

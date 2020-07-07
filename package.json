@@ -11,11 +11,12 @@
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "bootstrap": "^4.5.0",
-    "bootstrap-icons": "^1.0.0-alpha5",
     "dotenv": "^8.2.0",
+    "file-loader": "^6.0.0",
     "jquery": "^3.5.1",
     "next": "9.4.4",
     "next-fonts": "^1.1.0",
+    "next-images": "^1.4.0",
     "next-seo": "^4.5.0",
     "nextjs-sitemap-generator": "^1.0.0",
     "node-sass": "^4.14.1",
@@ -24,7 +25,8 @@
     "react-dom": "16.13.1",
     "reactstrap": "^8.4.1",
     "sass": "^1.26.8",
-    "styled-jsx-plugin-sass": "^1.0.0"
+    "styled-jsx-plugin-sass": "^1.0.0",
+    "url-loader": "^4.1.0"
   },
   "devDependencies": {
     "@types/node": "^14.0.14",

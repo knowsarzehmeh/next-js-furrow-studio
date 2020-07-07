@@ -1,6 +1,6 @@
 // const path = require("path");
 const withFonts = require("next-fonts");
-
+const withImages = require('next-images')
 const withCSS = require("@zeit/next-css");
 const withSass = require("@zeit/next-sass");
 const path = require("path");
@@ -18,9 +18,10 @@ require("dotenv").config();
 //     targetDirectory: 'static/'
 // });
 module.exports = withFonts(
-
-    withCSS(
-        withSass({
+    withImages(
+        // withCSS(
+        // withSass(
+        {
             target: 'serverless',
             exportPathMap: function () {
                 return {
@@ -36,6 +37,9 @@ module.exports = withFonts(
             webpack(config, options) {
                 (config.resolve.alias["~"] = path.resolve(__dirname)),
                     config.module.rules.push({
+                        // issuer: {
+                        //     test: /\.\w+(?<!(s?c|sa)ss)$/i,
+                        // },
                         test: /\.(png|jpg|gif|svg|eot|otf|ttf|woff|woff2)$/,
                         use: {
                             loader: "url-loader",
@@ -50,6 +54,8 @@ module.exports = withFonts(
             env: {
                 APPROVAL_KEY: process.env.APPROVAL_KEY
             },
-        })
+        }
     )
+    // )
+    // )
 );

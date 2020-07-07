@@ -2,16 +2,16 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <div>
-      <div className="container-fluid bg-grey px-lg-5">
+      <div className="container-fluid tertiary-bg px-lg-5">
         <div className="row px-lg-5 mx-lg-3 pb-4 mt-5 pt-5 mx-auto">
           <div className="col-12  col-lg-4 d-flex align-items-lg-center flex-column">
             <div className="mt-4 mb-4 mb-lg-0 text-white">
               <Link href="/">
-                <img
-                  src="images/exemblar-logo.png"
-                  className="img logo-footer light mb-4 mb-lg-5 mt-2"
-                  alt="Responsive image"
-                />
+                <a className="logo-wrapper mb-3">
+                  <span className="logo-footer z-index-21 mx-auto mr-2"></span>
+
+                  <h5 className="font-bold font-weight-bold mt-n4">Exemblar</h5>
+                </a>
               </Link>
 
               <p>
@@ -127,19 +127,19 @@ export default function Footer() {
             <div className="mt-4 mb-4 mb-lg-0 text-white d-flex flex-column justify-space-between">
               <h5 className="text-white mb-4">SITEMAP</h5>
               <Link href="/">
-                <a className="mb-3 mb-lg-4">Engineering</a>
+                <a className="mb-3 mb-lg-4">Home</a>
               </Link>
 
-              <Link href="/">
-                <a className="mb-3 mb-lg-4">Designers</a>
+              <Link href="/about-us">
+                <a className="mb-3 mb-lg-4">About us</a>
               </Link>
 
-              <Link href="/">
-                <a className="mb-3 mb-lg-4">Designers</a>
+              <Link href="/service">
+                <a className="mb-3 mb-lg-4">Our Services</a>
               </Link>
 
-              <Link href="/">
-                <a className="mb-3 mb-lg-4">Designers</a>
+              <Link href="/contact">
+                <a className="mb-3 mb-lg-4">Contact us</a>
               </Link>
             </div>
           </div>
@@ -163,10 +163,10 @@ export default function Footer() {
         }
 
         .bg-grey {
-          background: #0a233b;
+          background: #121233;
         }
         .copyright {
-          border-top: 1px solid #454545;
+          border-top: 1px solid #ffffff;
         }
         footer {
           box-sizing: border-box;
@@ -184,14 +184,48 @@ export default function Footer() {
         footer a {
           color: inherit;
         }
+        .logo {
+          width: 60px;
+          float: left;
+        }
+
+        .logo-wrapper {
+          display: flex !important;
+          flex-direction: column;
+          width: 100px !important;
+        }
 
         .logo-footer {
-          display: inline-block;
-          /* background: url(/home/tamoimages-footer-logo.svg) no-repeat transparent; */
-          background-position: left 0px top 0px;
-          width: 144.01px;
-          height: 30px;
-          position: relative;
+          // position: absolute;
+          width: 100%;
+          height: 100px;
+          left: 0;
+          //  z-index: 122222;
+          background: url(/images/exemblar-logo-white.png) no-repeat scroll
+            center top;
+          top: 0;
+          background-size: contain;
+        }
+
+        .logo-wrapper .logo-footer:hover {
+          width: 100%;
+          height: 100px;
+          left: 0;
+          // z-index: 122222;
+          background: url(/images/exemblar-logo.png) no-repeat scroll center top;
+          top: 0;
+          background-size: contain;
+        }
+
+        .logo-wrapper .logo-footer:active {
+          width: 100%;
+          height: 100px;
+          left: 0;
+          // z-index: 122222;
+          background: url(/images/exemblar-logo-black.png) no-repeat scroll
+            center top;
+          top: 0;
+          background-size: contain;
         }
       `}</style>
 

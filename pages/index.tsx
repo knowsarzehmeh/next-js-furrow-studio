@@ -2,6 +2,8 @@ import Head from "next/head";
 import { NextSeo } from "next-seo";
 import { Button } from "reactstrap";
 import Link from "next/link";
+import OurClients from "../components/OurClients";
+import Testimonial from "../components/Testimonial";
 
 export default function Home() {
   return (
@@ -39,7 +41,7 @@ export default function Home() {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <h3 className="hrd-1">
+            <h3 className="hrd-1 tertiary-color">
               We <span className="primary-color">design</span>{" "}
               <span className="other">&</span>{" "}
               <span className="primary-color">build</span> digital <br></br>{" "}
@@ -66,25 +68,24 @@ export default function Home() {
 
       {/**second section */}
 
-      <div className="bac-back">
-        <div className="container">
+      <section className="bac-back">
+        <div className="container services-flex">
           <div className="row">
-            <div className="col-lg-12">
-              <h3 className="com secondary-color">
+            <div className="col">
+              <h3 className="com tertiary-color">
                 Communicate your designs like never before
               </h3>
-              <p className="com-1 secondary-color lead">
+              <p className="com-1 tertiary-color lead">
                 We build great products that help<br></br> businesses grow
               </p>
             </div>
           </div>
-        </div>
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-4">
+
+          <div className="row d-flex justify-content-center ">
+            <div className="col-lg-4 mx-auto">
               <div className="card-wat"> </div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-4 mx-auto">
               <div className="card-wat"></div>
             </div>
             <div className="col-lg-4">
@@ -93,29 +94,48 @@ export default function Home() {
           </div>
 
           <div className="row">
-            <div className="col-lg-4">
+            <div className="col-lg-4 mx-auto">
               <div className="card-wat"> </div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-4 mx-auto">
               <div className="card-wat"></div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-4 mx-auto">
               <div className="card-wat"></div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
+      <section className="my-5 bg-color-offwhite">
+        <h3 className="text-center mt-4 mb-4">
+          Here are some of the things our clients say about us
+        </h3>
+        <Testimonial />
+      </section>
+
+      <section className="py-5 bg-color-offwhite">
+        <OurClients />
+      </section>
       {/*end*/}
 
       <style jsx>{`
+        .bg-color-offwhite {
+          background: #fbfbfd !important;
+        }
+        .services-flex {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
         .hrd-1 {
           text-align: center;
           font-size: 50px;
           line-height: 60px;
           font-weight: bold;
           margin-bottom: 30px;
-          color: #303090;
+          //color: #303090;
           margin-top: 50px;
         }
 
@@ -181,16 +201,14 @@ export default function Home() {
 
         .com {
           margin-top: 100px;
-          color: white;
         }
         .com-1 {
           margin-top: 30px;
           line-height: 25px;
-          color: white;
         }
 
         .card-wat {
-          width: 85%;
+          width: 300px;
           height: 350px;
           background-color: white;
           margin-top: 50px;
@@ -198,6 +216,7 @@ export default function Home() {
           border: transparent;
           border-radius: 5px;
           display: block;
+
           margin-left: auto;
           margin-right: auto;
           box-shadow: 0px 20px 40px 0px rgba(12, 0, 46, 0.06);
