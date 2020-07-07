@@ -200,7 +200,7 @@ export default function Footer() {
           width: 100%;
           height: 100px;
           left: 0;
-          z-index: 122222;
+          //  z-index: 122222;
           background: url(/images/exemblar-logo-white.png) no-repeat scroll
             center top;
           top: 0;
@@ -211,8 +211,19 @@ export default function Footer() {
           width: 100%;
           height: 100px;
           left: 0;
-          z-index: 122222;
+          // z-index: 122222;
           background: url(/images/exemblar-logo.png) no-repeat scroll center top;
+          top: 0;
+          background-size: contain;
+        }
+
+        .logo-wrapper .logo-footer:active {
+          width: 100%;
+          height: 100px;
+          left: 0;
+          // z-index: 122222;
+          background: url(/images/exemblar-logo-black.png) no-repeat scroll
+            center top;
           top: 0;
           background-size: contain;
         }

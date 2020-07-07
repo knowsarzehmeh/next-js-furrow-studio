@@ -1,7 +1,6 @@
 import React from "react";
 
 const Default = (props) => {
-  const img = require("../public/images/masta.png");
   return (
     <div className="container">
       <div className="row mt-3 mt-lg-3">
