@@ -89,10 +89,10 @@ export default function Home() {
           </div>
 
           <div className="row d-flex justify-content-center ">
-            <div className="col-lg-9 m-auto">
-              <div className="card-deck">
-                <div className="card card-wat">
-                  <div className="card-body d-flex flex-column justify-content-between p-lg-3 mx-auto align-items-center text-white">
+            <div className="col-12 col-lg-9 m-auto ">
+              <div className="card-deck flex-column flex-lg-row">
+                <div className="card card-wat mb-md-4">
+                  <div className="card-body d-flex flex-column justify-content-between p-lg-3 mx-auto align-items-center text-white ">
                     <div className="icon-div primary-bg"> </div>
                     <h3 className="text-center">Websites Design</h3>
                     <p className="lead mx-auto text-center">
@@ -105,8 +105,8 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="card card-wat text-center">
-                  <div className="card-body d-flex flex-column justify-content-between p-lg-3 mx-auto align-items-center text-white">
+                <div className="card card-wat text-center mb-md-4">
+                  <div className="card-body d-flex flex-column justify-content-between p-lg-3 mx-auto align-items-center text-white ">
                     <div className="icon-div primary-bg"> </div>
                     <h3>Mobile/Web Application</h3>
                     <p className="lead mx-auto text-center">
@@ -118,16 +118,14 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="card card-wat">
-                  <div className="card-body d-flex flex-column justify-content-between p-lg-3 mx-auto align-items-center text-white">
+                <div className="card card-wat mb-md-4">
+                  <div className="card-body d-flex flex-column justify-content-between p-lg-3 mx-auto align-items-center text-white ">
                     <div className="icon-div primary-bg"> </div>
                     <h3 className="text-center">Graphics Design & Branding</h3>
                     <p className="lead mx-auto text-center text-white">
                       Because a good visual representation is key to success of
-                      a company
-                      <br />
-                      we have experts that creates a range of design service
-                      such as ;
+                      a company we have experts that creates a range of design
+                      service such as;
                       <br /> logo designs , visual identity packages , business
                       cards, brochure, catalogues and marketing materials and
                       many more.
