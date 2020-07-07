@@ -12,7 +12,7 @@ export default function Custom404() {
         <div className="col-12">
           <div className="d-flex justify-content-center flex-column text-black">
             <h1 className="mx-auto text-center">
-              <span className="secondary-color">You're</span>
+              <span className="twertiary-color">You're</span>
               <span className="primary-color"> welcome to get in </span>
               <span className="text-black d-none d-lg-inline">{"touch &"}</span>
             </h1>
@@ -21,7 +21,7 @@ export default function Custom404() {
             </h1>
             <h1 className="mx-auto text-center">
               <span className="text-black">say </span>{" "}
-              <span className="secondary-color">"hello"</span>
+              <span className="twertiary-color">"hello"</span>
             </h1>
             {/* <h2 className="secondary-color mx-auto">
                             <span>experiences </span> </h2> */}
