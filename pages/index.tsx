@@ -1,66 +1,68 @@
-import Head from "next/head";
-import { NextSeo } from "next-seo";
-import { Button } from "reactstrap";
-import Link from "next/link";
-import OurClients from "../components/OurClients";
-import Testimonial from "../components/Testimonial";
+import Head from 'next/head';
+import { NextSeo } from 'next-seo';
+// import { Button } from 'reactstrap';
+import Button from '../components/Button';
+import Link from 'next/link';
+import OurClients from '../components/OurClients';
+import Testimonial from '../components/Testimonial';
 
 export default function Home() {
   return (
     <div>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <NextSeo
-        description="This will be the page meta description"
-        canonical="https://www.canonicalurl.ie/"
+        description='This will be the page meta description'
+        canonical='https://www.canonicalurl.ie/'
         openGraph={{
-          url: "https://www.exemblar.com.ng/",
+          url: 'https://www.exemblar.com.ng/',
 
-          description: "Open Graph Description",
+          description: 'Open Graph Description',
           images: [
             {
-              url: "https://www.example.ie/og-image-01.jpg",
+              url: 'https://www.example.ie/og-image-01.jpg',
               width: 800,
               height: 600,
-              alt: "Og Image Alt",
+              alt: 'Og Image Alt',
             },
             {
-              url: "https://www.example.ie/og-image-02.jpg",
+              url: 'https://www.example.ie/og-image-02.jpg',
               width: 900,
               height: 800,
-              alt: "Og Image Alt Second",
+              alt: 'Og Image Alt Second',
             },
-            { url: "https://www.example.ie/og-image-03.jpg" },
-            { url: "https://www.example.ie/og-image-04.jpg" },
+            { url: 'https://www.example.ie/og-image-03.jpg' },
+            { url: 'https://www.example.ie/og-image-04.jpg' },
           ],
         }}
       />
 
       {/**start*/}
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12">
-            <h3 className="hrd-1 tertiary-color">
-              We <span className="primary-color">design</span>{" "}
-              <span className="other">&</span>{" "}
-              <span className="primary-color">build</span> digital <br></br>{" "}
-              experiences{" "}
+      <div className='container'>
+        <div className='row'>
+          <div className='col-lg-12'>
+            <h3 className='hrd-1 tertiary-color'>
+              We <span className='primary-color'>design</span>{' '}
+              <span className='other'>&</span>{' '}
+              <span className='primary-color'>build</span> digital <br></br>{' '}
+              experiences{' '}
             </h3>
 
-            <div className="d-flex flex-row justify-content-center">
-              <img src="images/arrow.svg" className="img-fluid arrow mr-lg-3" />
-              <p className="p-1  lead">
-                We design, build and launch websites and products that <br></br>{" "}
+            <div className='d-flex flex-row justify-content-center'>
+              <img src='images/arrow.svg' className='img-fluid arrow mr-lg-3' />
+              <p className='p-1  lead'>
+                We design, build and launch websites and products that <br></br>{' '}
                 are simple, beautiful and helps businesses grow.
               </p>
             </div>
 
-            <button className="ex-btn">
+            <Button label='Discover Our Process' />
+            {/* <button className="ex-btn">
               Discover Our Process <img src="" />
-            </button>
+            </button> */}
 
-            <img src="images/imgcenter.png" className="img-fluid imgcenter" />
+            <img src='images/imgcenter.png' className='img-fluid imgcenter' />
           </div>
         </div>
       </div>
@@ -68,53 +70,53 @@ export default function Home() {
 
       {/**second section */}
 
-      <section className="bac-back">
-        <div className="container services-flex">
-          <div className="row">
-            <div className="col">
-              <h3 className="com tertiary-color">
+      <section className='bac-back'>
+        <div className='container services-flex'>
+          <div className='row'>
+            <div className='col'>
+              <h3 className='com tertiary-color'>
                 Communicate your designs like never before
               </h3>
-              <p className="com-1 tertiary-color lead">
+              <p className='com-1 tertiary-color lead'>
                 We build great products that help<br></br> businesses grow
               </p>
             </div>
           </div>
 
-          <div className="row d-flex justify-content-center ">
-            <div className="col-lg-4 mx-auto">
-              <div className="card-wat"> </div>
+          <div className='row d-flex justify-content-center '>
+            <div className='col-lg-4 mx-auto'>
+              <div className='card-wat'> </div>
             </div>
-            <div className="col-lg-4 mx-auto">
-              <div className="card-wat"></div>
+            <div className='col-lg-4 mx-auto'>
+              <div className='card-wat'></div>
             </div>
-            <div className="col-lg-4">
-              <div className="card-wat"></div>
+            <div className='col-lg-4'>
+              <div className='card-wat'></div>
             </div>
           </div>
 
-          <div className="row">
-            <div className="col-lg-4 mx-auto">
-              <div className="card-wat"> </div>
+          <div className='row'>
+            <div className='col-lg-4 mx-auto'>
+              <div className='card-wat'> </div>
             </div>
-            <div className="col-lg-4 mx-auto">
-              <div className="card-wat"></div>
+            <div className='col-lg-4 mx-auto'>
+              <div className='card-wat'></div>
             </div>
-            <div className="col-lg-4 mx-auto">
-              <div className="card-wat"></div>
+            <div className='col-lg-4 mx-auto'>
+              <div className='card-wat'></div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="my-5 bg-color-offwhite">
-        <h3 className="text-center mt-4 mb-4">
+      <section className='my-5 bg-color-offwhite'>
+        <h3 className='text-center mt-4 mb-4'>
           Here are some of the things our clients say about us
         </h3>
         <Testimonial />
       </section>
 
-      <section className="py-5 bg-color-offwhite">
+      <section className='py-5 bg-color-offwhite'>
         <OurClients />
       </section>
       {/*end*/}

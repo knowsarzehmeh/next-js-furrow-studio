@@ -20,7 +20,7 @@
     "**/*.ts",
     "**/*.tsx",
     "components/AppBar.jsx",
-    "components/layout/Default.js",
+    "components/layout/Default.tsx",
     "pages/_app.tsx",
     "pages/_document.tsx",
     "components/ContextInterface.x"

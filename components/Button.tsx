@@ -6,9 +6,58 @@ interface ButtonProps {
 
 const Button: React.FunctionComponent<ButtonProps> = (props: ButtonProps) => {
   const { label } = props;
+  // const btnLabel = {"--btnLabel": label } as React.CSSProperties;
   return (
-    <div>
-      <button className='btn btn-lg btn-secondary px-5'>{label}</button>
+    <div className='text-center'>
+      <button data-label={label} className='button'>
+        {label}
+      </button>
+
+      <style jsx>{`
+        /*Colors */
+        $pink: #f3356c;
+
+        .button::before {
+          align-items: center;
+          background-color: var(--blue);
+          border: none;
+          border-radius: calc(2 * 15px);
+          color: var(--white);
+          content: attr(data-label);
+          display: inline-flex;
+          font-size: 20px;
+          height: 64px;
+          justify-content: center;
+          left: 0;
+          position: absolute;
+          top: 0;
+          transition: all 0.5s ease-in-out;
+          width: 260px;
+        }
+
+        .button:hover::before {
+          left: -260px;
+        }
+
+        .button {
+          background-color: $pink;
+          border: none;
+          border-radius: calc(2 * 15px);
+          color: var(--white);
+          cursor: pointer;
+          font-size: 0px;
+          height: 64px;
+          outline: none;
+          overflow: hidden;
+          position: relative;
+          transition: all 0.5s ease-in-out;
+          width: 260px;
+        }
+
+        .button:hover {
+          font-size: 20px;
+        }
+      `}</style>
     </div>
   );
 };

@@ -1,12 +1,12 @@
 // import App from 'next/app'
-import SEO from "../seo.config";
-import { DefaultSeo } from "next-seo";
-import Head from "next/head";
-import Router from "next/router";
-import nprogress from "nprogress";
-import "../public/scss/app.scss";
+import SEO from '../seo.config';
+import { DefaultSeo } from 'next-seo';
+import Head from 'next/head';
+import Router from 'next/router';
+import nprogress from 'nprogress';
+import '../public/scss/app.scss';
 
-import Default from "../components/layout/Default";
+import Default from '../components/layout/Default';
 
 let progressBarTimeout = null;
 
@@ -33,7 +33,7 @@ const stopProgressBar = () => {
   nprogress.done();
 };
 
-Router.events.on("routeChangeStart", (url) => {
+Router.events.on('routeChangeStart', (url) => {
   console.log(`Loading: ${url}`);
   startProgressBar();
 });
@@ -45,18 +45,18 @@ const initialState: any = {
 //pure reducer function
 const Reducer = (state, action) => {
   switch (action.type) {
-    case "MUTATE_ACTIVE_NAV":
+    case 'MUTATE_ACTIVE_NAV':
       return { ...state, activeNav: action.payload };
-    case "CLOSE":
+    case 'CLOSE':
       return { ...state, activeNav: false };
-    case "FLIP_ACTIVE_NAV":
+    case 'FLIP_ACTIVE_NAV':
       return { ...state, activeNav: !state.activeNav };
     default:
       return state;
   }
 };
 
-import React, { createContext, useReducer } from "react";
+import React, { createContext, useReducer } from 'react';
 
 const MyApp = ({ Component, pageProps, router }) => {
   const [state, dispatch] = useReducer(Reducer, initialState);
@@ -69,7 +69,7 @@ const MyApp = ({ Component, pageProps, router }) => {
           Exemblar - Brand Indentity, User Experience Design & Web & App
           development
         </title> */}
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <DefaultSeo {...SEO} />
 
