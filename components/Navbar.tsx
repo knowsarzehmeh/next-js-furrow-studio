@@ -13,9 +13,9 @@ export default function Navbar(props) {
         state.activeNav ? "background-black" : ""
       }`}
     >
-      <div className="my-2">
+      <div className="my-0 my-lg-2">
         <div className="row padding-container">
-          <div className="col-lg-12 p-1 d-flex flex-direction-column justify-content-between">
+          <div className="col-lg-12 p-0 p-lg-1 d-flex flex-direction-column justify-content-between">
             <Link href="/">
               <a className="logo-wrapper">
                 <img

@@ -54,7 +54,7 @@ export default function Home() {
                 src="images/arrow.svg"
                 className="img-fluid d-none d-md-inline-block arrow mr-lg-3"
               />
-              <p className="p-1  lead text-center">
+              <p className="lead text-center">
                 We design, build and launch websites and products that <br></br>{" "}
                 are simple, beautiful and helps businesses grow.
               </p>
@@ -73,15 +73,17 @@ export default function Home() {
 
       {/**second section */}
 
-      <section className="bac-back">
+      <section className="bac-back py-5 my-auto d-flex justify-content-center">
         <div className="container-fluid px-md-5 px-lg-5 services-flex">
           <div className="row mb-3">
-            <div className="col-lg-9 m-auto ">
+            <div className="col-lg-9 mx-auto ">
               <h3 className="com tertiary-color">
-                Communicate your designs like never before
+                Reap the benefits of years of learning & experience <br /> while
+                building succesful products
               </h3>
               <p className="com-1 tertiary-color lead">
-                We build great products that help<br></br> businesses grow
+                Using latest Technologies and formal development process <br />
+                to give you the best experience
               </p>
             </div>
           </div>
@@ -90,37 +92,49 @@ export default function Home() {
             <div className="col-lg-9 m-auto">
               <div className="card-deck">
                 <div className="card card-wat">
-                  <div className="card-body d-flex flex-column justify-content-between p-lg-4 mx-auto align-items-center">
+                  <div className="card-body d-flex flex-column justify-content-between p-lg-3 mx-auto align-items-center text-white">
                     <div className="icon-div primary-bg"> </div>
                     <h3 className="text-center">Websites Design</h3>
                     <p className="lead mx-auto text-center">
-                      We create beutiful websites from scratch that portrays
-                      your business in a stylish and classy way, <br /> you
-                      think it and we build it
+                      We create beautiful responsive and user friendly websites
+                      from scratch to portrays your business ideas and
+                      marketting strategies in a stylish and classy way, <br />
+                      that shows the neccessary information using best
+                      development techniques you think it and we build it.
                     </p>
                   </div>
                 </div>
 
                 <div className="card card-wat text-center">
-                  <div className="card-body d-flex flex-column justify-content-between p-lg-4 mx-auto align-items-center">
+                  <div className="card-body d-flex flex-column justify-content-between p-lg-3 mx-auto align-items-center text-white">
                     <div className="icon-div primary-bg"> </div>
                     <h3>Mobile/Web Application</h3>
                     <p className="lead mx-auto text-center">
-                      We create beutiful websites from scratch that portrays
-                      your business in a stylish and classy way, <br /> you
-                      think it and we build it
+                      Using Conventional Technologies and architecture with the
+                      unique logic of the application, combined with a polished{" "}
+                      <br />
+                      Ui/Ux to deliver smooth and fast applications that reached
+                      the goals of our clients
+                      <br />
+                      and wins the hearts of users.
                     </p>
                   </div>
                 </div>
 
                 <div className="card card-wat">
-                  <div className="card-body d-flex flex-column justify-content-between p-lg-4 mx-auto align-items-center">
+                  <div className="card-body d-flex flex-column justify-content-between p-lg-3 mx-auto align-items-center text-white">
                     <div className="icon-div primary-bg"> </div>
-                    <h3>Ui/Ux</h3>
-                    <p className="lead mx-auto text-center">
-                      We create beutiful websites from scratch that portrays
-                      your business in a stylish and classy way, <br /> you
-                      think it and we build it
+                    <h3 className="text-center">Graphics Design & Branding</h3>
+                    <p className="lead mx-auto text-center text-white">
+                      Because a good visual representation is key to success of
+                      a company
+                      <br />
+                      we have experts that creates a range of design service
+                      such as;
+                      <br /> logo designs , visual identity packages , business
+                      cards, brochure, catalogues
+                      <br />
+                      marketing materials and many more.
                     </p>
                   </div>
                 </div>
@@ -128,6 +142,16 @@ export default function Home() {
             </div>
           </div>
 
+          {/* End of cards */}
+          <div className="row d-flex justify-content-center mt-3">
+            <div className="col-lg-9 m-auto">
+              <Link href="/service">
+                <button className="btn btn-outline-secondary">
+                  Read about all our services
+                </button>
+              </Link>
+            </div>
+          </div>
           {/* <div className="row">
             <div className="col-lg-4 mx-auto">
               <div className="card-wat"> </div>
@@ -242,7 +266,7 @@ export default function Home() {
         }
 
         .com {
-          margin-top: 100px;
+          //  margin-top: 100px;
         }
         .com-1 {
           margin-top: 30px;
@@ -250,9 +274,9 @@ export default function Home() {
         }
 
         .card-wat {
-          height: 400px;
+          min-height: 450px;
           border: none !important;
-          background-color: #fff;
+          background-color: var(--deepBlue);
           box-shadow: 0px 20px 40px 0px rgba(12, 0, 46, 0.06);
         }
       `}</style>
