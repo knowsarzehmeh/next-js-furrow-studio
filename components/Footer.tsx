@@ -2,19 +2,15 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <div>
-      <div className="container-fluid bg-grey px-lg-5">
+      <div className="container-fluid tertiary-bg px-lg-5">
         <div className="row px-lg-5 mx-lg-3 pb-4 mt-5 pt-5 mx-auto">
           <div className="col-12  col-lg-4 d-flex align-items-lg-center flex-column">
             <div className="mt-4 mb-4 mb-lg-0 text-white">
               <Link href="/">
-                <a className="logo-wrapper">
-                  <img
-                    src="images/exemblar-logo-white.png"
-                    className="img-fluid logo z-index-21 mx-auto mr-2"
-                    alt="logo"
-                  />
+                <a className="logo-wrapper mb-3">
+                  <span className="logo-footer z-index-21 mx-auto mr-2"></span>
 
-                  <h5 className="font-bold font-weight-bold">Exemblar</h5>
+                  <h5 className="font-bold font-weight-bold mt-n4">Exemblar</h5>
                 </a>
               </Link>
 
@@ -200,12 +196,25 @@ export default function Footer() {
         }
 
         .logo-footer {
-          display: inline-block;
-          background-image: url(http://localhost:3000/images/exemblar-logo-white.png);
-          background-position: left 0px top 0px;
-          width: 144.01px;
-          height: 30px;
-          position: relative;
+          // position: absolute;
+          width: 100%;
+          height: 100px;
+          left: 0;
+          z-index: 122222;
+          background: url(/images/exemblar-logo-white.png) no-repeat scroll
+            center top;
+          top: 0;
+          background-size: contain;
+        }
+
+        .logo-wrapper .logo-footer:hover {
+          width: 100%;
+          height: 100px;
+          left: 0;
+          z-index: 122222;
+          background: url(/images/exemblar-logo.png) no-repeat scroll center top;
+          top: 0;
+          background-size: contain;
         }
       `}</style>
 

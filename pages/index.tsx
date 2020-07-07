@@ -3,6 +3,7 @@ import { NextSeo } from "next-seo";
 import { Button } from "reactstrap";
 import Link from "next/link";
 import OurClients from "../components/OurClients";
+import Testimonial from "../components/Testimonial";
 
 export default function Home() {
   return (
@@ -105,12 +106,23 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-5">
+
+      <section className="my-5 bg-color-offwhite">
+        <h3 className="text-center mt-4 mb-4">
+          Here are some of the things our clients say about us
+        </h3>
+        <Testimonial />
+      </section>
+
+      <section className="py-5 bg-color-offwhite">
         <OurClients />
       </section>
       {/*end*/}
 
       <style jsx>{`
+        .bg-color-offwhite {
+          background: #fbfbfd !important;
+        }
         .services-flex {
           display: flex;
           justify-content: center;
