@@ -1,2 +1,2 @@
-command = "npm run build && npm run export"
+command = "yarn run build && yar run export"
 publish = "out"
