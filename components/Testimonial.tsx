@@ -1,12 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Default = (props) => {
+  let [index, setIndex] = useState(0);
+  const [testimonies, SetTeminonies] = useState([
+    {
+      name: "Agba mdm",
+      role: "Milo",
+      words:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit Voluptatum tempora non dignissimos nihil dolores quia Lorem ipsum dolor sit amet, consectetur adipisicing elit Voluptatum tempora non dignissimos nihil dolores quia",
+    },
+    {
+      name: "Osajumiie",
+      role: "CEO APPettite",
+      words:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit Voluptatum tempora non dignissimos nihil dolores quia Lorem ipsum dolor sit amet, consectetur adipisicing elit Voluptatum tempora non dignissimos nihil dolores quia",
+    },
+    {
+      name: "Jezzkid",
+      role: "Bournvita",
+      words:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit Voluptatum tempora non dignissimos nihil dolores quia Lorem ipsum dolor sit amet, consectetur adipisicing elit Voluptatum tempora non dignissimos nihil dolores quia",
+    },
+  ]);
+
+  useEffect(() => {
+    let timerFunc = setInterval(() => {
+      setIndex(index++);
+    }, 10000);
+    return clearInterval(timerFunc);
+  }, []);
+
   return (
     <div className="container b-color">
       <div className="row">
         <div className="col">
           <div className="d-flex justify-content-around flex-row">
-            <button className="prev-button-box my-auto d-none d-lg-inline-block">
+            <button
+              onClick={(): void => setIndex(index--)}
+              className="prev-button-box my-auto d-none d-lg-inline-block"
+            >
               <svg
                 width="1em"
                 height="1em"
@@ -28,22 +60,27 @@ const Default = (props) => {
                   <img className="author-img" src="/images/chispare.jpg" />
                 </div>
               </div>
+              {
+                <div className="m-0 m-lg-5 d-flex flex-column text-center">
+                  <h4 className="m-0 mb-lg-2">
+                    {testimonies[index % testimonies.length].name}
+                  </h4>
+                  <h6 className="color-feignt lead">
+                    {testimonies[index % testimonies.length].role}
+                  </h6>
 
-              <div className="m-0 m-lg-5 d-flex flex-column text-center">
-                <h4 className="m-0 mb-lg-2">ALber Marcurlu</h4>
-                <h6 className="color-feignt lead">CEO Appetite</h6>
-
-                <p className="color-feignt lead">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptatum tempora non dignissimos nihil dolores quia
-                  perspiciatis nisi, eum fugit facere, recusandae impedit
-                  ratione reiciendis cum sit doloremque in. Quo, corporis!
-                </p>
-              </div>
+                  <p className="color-feignt lead">
+                    {testimonies[index % testimonies.length].words}
+                  </p>
+                </div>
+              }
             </div>
           </div>
         </div>
-        <button className="next-button-box my-auto d-none d-lg-inline-block">
+        <button
+          onClick={(): void => setIndex(index++)}
+          className="next-button-box my-auto d-none d-lg-inline-block"
+        >
           <svg
             width="1em"
             height="1em"
