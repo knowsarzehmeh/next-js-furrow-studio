@@ -7,11 +7,15 @@ export default function Footer() {
           <div className="col-12  col-lg-4 d-flex align-items-lg-center flex-column">
             <div className="mt-4 mb-4 mb-lg-0 text-white">
               <Link href="/">
-                <img
-                  src="images/exemblar-logo.png"
-                  className="img logo-footer light mb-4 mb-lg-5 mt-2"
-                  alt="Responsive image"
-                />
+                <a className="logo-wrapper">
+                  <img
+                    src="images/exemblar-logo-white.png"
+                    className="img-fluid logo z-index-21 mx-auto mr-2"
+                    alt="logo"
+                  />
+
+                  <h5 className="font-bold font-weight-bold">Exemblar</h5>
+                </a>
               </Link>
 
               <p>
@@ -127,19 +131,19 @@ export default function Footer() {
             <div className="mt-4 mb-4 mb-lg-0 text-white d-flex flex-column justify-space-between">
               <h5 className="text-white mb-4">SITEMAP</h5>
               <Link href="/">
-                <a className="mb-3 mb-lg-4">Engineering</a>
+                <a className="mb-3 mb-lg-4">Home</a>
               </Link>
 
-              <Link href="/">
-                <a className="mb-3 mb-lg-4">Designers</a>
+              <Link href="/about-us">
+                <a className="mb-3 mb-lg-4">About us</a>
               </Link>
 
-              <Link href="/">
-                <a className="mb-3 mb-lg-4">Designers</a>
+              <Link href="/service">
+                <a className="mb-3 mb-lg-4">Our Services</a>
               </Link>
 
-              <Link href="/">
-                <a className="mb-3 mb-lg-4">Designers</a>
+              <Link href="/contact">
+                <a className="mb-3 mb-lg-4">Contact us</a>
               </Link>
             </div>
           </div>
@@ -184,10 +188,20 @@ export default function Footer() {
         footer a {
           color: inherit;
         }
+        .logo {
+          width: 60px;
+          float: left;
+        }
+
+        .logo-wrapper {
+          display: flex !important;
+          flex-direction: column;
+          width: 100px !important;
+        }
 
         .logo-footer {
           display: inline-block;
-          /* background: url(/home/tamoimages-footer-logo.svg) no-repeat transparent; */
+          background-image: url(http://localhost:3000/images/exemblar-logo-white.png);
           background-position: left 0px top 0px;
           width: 144.01px;
           height: 30px;

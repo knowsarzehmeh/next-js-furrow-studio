@@ -13,20 +13,22 @@ export default function Navbar(props) {
         state.activeNav ? "background-black" : ""
       }`}
     >
-      <div className="my-3">
+      <div className="my-2">
         <div className="row padding-container">
-          <div className="col-lg-12 p-1">
+          <div className="col-lg-12 p-1 d-flex flex-direction-column justify-content-between">
             <Link href="/">
-              <a>
+              <a className="logo-wrapper">
                 <img
                   src="images/exemblar-logo.png"
-                  className="img-fluid logo z-index-21"
+                  className="img-fluid logo z-index-21 mx-auto mr-2"
                   alt="logo"
                 />
+
+                <h5 className="font-bold font-weight-bold">Exemblar</h5>
               </a>
             </Link>
             <div
-              className="item-right z-index-21"
+              className="my-auto  z-index-21"
               onClick={async () => {
                 await dispatch({
                   type: "FLIP_ACTIVE_NAV", // The name of the reducer
@@ -119,12 +121,17 @@ export default function Navbar(props) {
         }
 
         .logo {
-          width: 170px;
+          width: 60px;
           float: left;
         }
 
         .mrg-head {
           margin-top: 30px;
+        }
+
+        .logo-wrapper {
+          display: flex !important;
+          flex-direction: column;
         }
       `}</style>
       {/*
