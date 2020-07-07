@@ -6,9 +6,12 @@ interface ButtonProps {
 
 const Button: React.FunctionComponent<ButtonProps> = (props: ButtonProps) => {
   const { label } = props;
+  // const btnLabel = {"--btnLabel": label } as React.CSSProperties;
   return (
-    <div>
-      <button className='button'>{label}</button>
+    <div className='text-center'>
+      <button data-label={label} className='button'>
+        {label}
+      </button>
 
       <style jsx>{`
         /*Colors */
@@ -20,7 +23,7 @@ const Button: React.FunctionComponent<ButtonProps> = (props: ButtonProps) => {
           border: none;
           border-radius: calc(2 * 15px);
           color: var(--white);
-          content: 'Contact Us';
+          content: attr(data-label);
           display: inline-flex;
           font-size: 20px;
           height: 64px;
