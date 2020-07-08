@@ -77,7 +77,7 @@ const MyApp = ({ Component, pageProps, router }) => {
 
       <Context.Provider value={[state, dispatch]}>
         <Layout path={router.route}>
-          <AnimatePresence>
+          <AnimatePresence exitBeforeEnter>
             <Component {...pageProps} key={router.route} />
           </AnimatePresence>
         </Layout>
