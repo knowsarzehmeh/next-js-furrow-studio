@@ -25,7 +25,7 @@ const Service: React.FunctionComponent = () => {
               Designing, building great solutions for startups{" "}
               <span className="primary-color">& </span>companies
             </h1>
-            <p className="my-3 lead text-center">
+            <p className="my-2 my-md-3 my-lg-5  px-lg-5 lead text-center">
               We work with amazing companies, startups and people to build great
               things
             </p>

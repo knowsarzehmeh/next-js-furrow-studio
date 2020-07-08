@@ -58,7 +58,7 @@ export default function Home() {
                 <br /> simple, beautiful and helps businesses grow.
               </p>
 
-              <p className="lead text-center  d-block d-lg-none px-lg-5">
+              <p className="lead text-center my-3 my-lg-2 d-block d-lg-none px-lg-5">
                 We design, build and launch websites and products that are
                 simple, beautiful and helps businesses grow.
               </p>
@@ -81,11 +81,11 @@ export default function Home() {
         <div className="container-fluid px-md-5 px-lg-5 services-flex">
           <div className="row mb-3">
             <div className="col-10 col-lg-9 mx-auto ">
-              <h3 className="com tertiary-color">
-                Reap the benefits of years of learning & experience <br /> while
+              <h3 className="com tertiary-color px-lg-5 text-center">
+                Reap the benefits of years of learning & experience while
                 building succesful products
               </h3>
-              <p className="com-1 tertiary-color lead">
+              <p className="com-1 tertiary-color lead text-center">
                 Using latest Technologies and formal development process <br />
                 to give you the best experience
               </p>
@@ -93,7 +93,7 @@ export default function Home() {
           </div>
 
           <div className="row d-flex justify-content-center ">
-            <div className="col-10 col-lg-9 m-auto ">
+            <div className="col-11 col-md-8 col-lg-10 m-auto ">
               <div className="card-deck flex-column flex-lg-row">
                 <div className="card card-wat mb-md-4">
                   <div className="card-body d-flex flex-column justify-content-between p-lg-3 mx-auto align-items-center text-white ">
@@ -140,7 +140,7 @@ export default function Home() {
           </div>
 
           {/* End of cards */}
-          <div className="row d-flex justify-content-center mt-3">
+          <div className="row d-flex justify-content-center mt-3 text-center">
             <div className="col-10 col-lg-9 m-auto">
               <Link href="/service">
                 <button className="btn btn-outline-secondary">
@@ -164,7 +164,7 @@ export default function Home() {
       </section>
 
       <section className="my-5 bg-color-offwhite p-2">
-        <h3 className="text-center mt-4 mb-4">
+        <h3 className="text-center mt-4 mb-4 px-5">
           Here are some of the things our clients say about us
         </h3>
         <Testimonial />

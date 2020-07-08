@@ -24,7 +24,9 @@ export default function Navbar(props) {
                   alt="logo"
                 />
 
-                <h5 className="font-bold font-weight-bold">Exemblar</h5>
+                <h5 className="font-bold font-weight-bold font-logo">
+                  Exemblar
+                </h5>
               </a>
             </Link>
             <div
@@ -55,6 +57,14 @@ export default function Navbar(props) {
             padding-right: calc(2vw) !important;
             padding-bottom: 0px;
             padding-left: calc(2vw) !important;
+          }
+
+          .logo {
+            width: 30px !important;
+            float: left;
+          }
+          font-logo {
+            font-size: 60px;
           }
         }
 
