@@ -2,11 +2,17 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Button } from 'reactstrap';
 
-import { onExit } from '../motion/animation';
+import { pageWrapperVariants, onExit } from '../motion/animation';
 
 export default function Home() {
   return (
-    <motion.div exit={onExit} className='container'>
+    <motion.div
+      variants={pageWrapperVariants}
+      initial='initial'
+      animate='animate'
+      exit='exit'
+      className='container'
+    >
       <Head>
         <title>
           Exemblar - Brand Indentity, User Experience Design & Web & Mobile
