@@ -1,42 +1,44 @@
 // import App from 'next/app'
 import SEO from '../seo.config';
-import { DefaultSeo } from 'next-seo';
 import Head from 'next/head';
 import Router from 'next/router';
+import { DefaultSeo } from 'next-seo';
 import nprogress from 'nprogress';
+import { AnimatePresence } from 'framer-motion';
+
 import '../public/scss/app.scss';
 
 import Default from '../components/layout/Default';
 
-let progressBarTimeout = null;
+// let progressBarTimeout = null;
 
-const clearProgressBarTimeout = () => {
-  if (progressBarTimeout) {
-    clearTimeout(progressBarTimeout);
-    progressBarTimeout = null;
-  }
-};
+// const clearProgressBarTimeout = () => {
+//   if (progressBarTimeout) {
+//     clearTimeout(progressBarTimeout);
+//     progressBarTimeout = null;
+//   }
+// };
 
-const startProgressBar = async () => {
-  clearProgressBarTimeout();
-  progressBarTimeout = await setTimeout(() => {
-    nprogress.start();
-  }, 500);
+// const startProgressBar = async () => {
+//   clearProgressBarTimeout();
+//   progressBarTimeout = await setTimeout(() => {
+//     nprogress.start();
+//   }, 500);
 
-  setTimeout(() => {
-    stopProgressBar();
-  }, 1000);
-};
+//   setTimeout(() => {
+//     stopProgressBar();
+//   }, 1000);
+// };
 
-const stopProgressBar = () => {
-  clearProgressBarTimeout();
-  nprogress.done();
-};
+// const stopProgressBar = () => {
+//   clearProgressBarTimeout();
+//   nprogress.done();
+// };
 
-Router.events.on('routeChangeStart', (url) => {
-  console.log(`Loading: ${url}`);
-  startProgressBar();
-});
+// Router.events.on('routeChangeStart', (url) => {
+//   console.log(`Loading: ${url}`);
+//   startProgressBar();
+// });
 
 const initialState: any = {
   activeNav: false,
@@ -75,7 +77,9 @@ const MyApp = ({ Component, pageProps, router }) => {
 
       <Context.Provider value={[state, dispatch]}>
         <Layout path={router.route}>
-          <Component {...pageProps} />
+          <AnimatePresence>
+            <Component {...pageProps} key={router.route} />
+          </AnimatePresence>
         </Layout>
       </Context.Provider>
     </>

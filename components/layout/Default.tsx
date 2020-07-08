@@ -1,11 +1,11 @@
 // import Link from "next/link";
 
-import { useState, useEffect, useContext } from "react";
-import AppBar from "../AppBar";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
-import NavItems from "../NavItems";
-import { Context } from "../../pages/_app";
+import { useState, useEffect, useContext } from 'react';
+import AppBar from '../AppBar';
+import Navbar from '../Navbar';
+import Footer from '../Footer';
+import NavItems from '../NavItems';
+import { Context } from '../../pages/_app';
 
 export default function (props) {
   const [scroll, setScroll] = useState(false);
@@ -22,8 +22,8 @@ export default function (props) {
   };
   useEffect(() => {
     setNavStateProps(true);
-    window.addEventListener("scroll", scrollAction);
-    return () => window.removeEventListener("scroll", scrollAction);
+    window.addEventListener('scroll', scrollAction);
+    return () => window.removeEventListener('scroll', scrollAction);
   }, []);
 
   const scrollAction = () => {
@@ -36,16 +36,16 @@ export default function (props) {
   };
   //  {/* <AppBar showBox={scroll} /> */}
   return (
-    <div className="">
+    <div className=''>
       <Navbar
-        className="mb-5 pb-5"
+        className='mb-5 pb-5'
         showBox={scroll}
         setStatePropsMethod={setNavStateAction}
       />
 
       <div
         className={`${
-          navStateProps ? "d-none" : "d-block"
+          navStateProps ? 'd-none' : 'd-block'
         } mt-lg-5 pt-lg-5 margin-top`}
       >
         <NavItems setStatePropsMethod2={setNavStateAction} path={path} />
@@ -53,14 +53,12 @@ export default function (props) {
 
       <div
         className={`${
-          !navStateProps ? "d-none" : "d-block"
+          !navStateProps ? 'd-none' : 'd-block'
         } mt-lg-5 pt-lg-5 margin-top`}
       >
         {props.children}
       </div>
-      <div
-        className={`${!navStateProps ? "d-none" : "d-block"} mt-lg-5 pt-lg-5`}
-      >
+      <div className={`${!navStateProps ? 'd-none' : 'd-block'} `}>
         <Footer />
       </div>
 
@@ -104,7 +102,7 @@ export default function (props) {
         #app,
         main {
           min-height: 100%;
-          background: ${!navStateProps ? "#121233 !important" : "inherit"};
+          background: ${!navStateProps ? '#121233 !important' : 'inherit'};
         }
       `}</style>
     </div>

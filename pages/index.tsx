@@ -1,75 +1,78 @@
-import Head from "next/head";
-import { NextSeo } from "next-seo";
+import Head from 'next/head';
+import { NextSeo } from 'next-seo';
+import { motion } from 'framer-motion';
 // import { Button } from 'reactstrap';
-import Button from "../components/Button";
-import Link from "next/link";
-import OurClients from "../components/OurClients";
-import Testimonial from "../components/Testimonial";
+import Button from '../components/Button';
+import Link from 'next/link';
+import OurClients from '../components/OurClients';
+import Testimonial from '../components/Testimonial';
+
+import { onExit } from '../motion/animation';
 
 export default function Home() {
   return (
-    <div>
+    <motion.div exit={onExit}>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <NextSeo
-        description="This will be the page meta description"
-        canonical="https://www.canonicalurl.ie/"
+        description='This will be the page meta description'
+        canonical='https://www.canonicalurl.ie/'
         openGraph={{
-          url: "https://www.exemblar.com.ng/",
+          url: 'https://www.exemblar.com.ng/',
 
-          description: "Open Graph Description",
+          description: 'Open Graph Description',
           images: [
             {
-              url: "https://www.example.ie/og-image-01.jpg",
+              url: 'https://www.example.ie/og-image-01.jpg',
               width: 800,
               height: 600,
-              alt: "Og Image Alt",
+              alt: 'Og Image Alt',
             },
             {
-              url: "https://www.example.ie/og-image-02.jpg",
+              url: 'https://www.example.ie/og-image-02.jpg',
               width: 900,
               height: 800,
-              alt: "Og Image Alt Second",
+              alt: 'Og Image Alt Second',
             },
-            { url: "https://www.example.ie/og-image-03.jpg" },
-            { url: "https://www.example.ie/og-image-04.jpg" },
+            { url: 'https://www.example.ie/og-image-03.jpg' },
+            { url: 'https://www.example.ie/og-image-04.jpg' },
           ],
         }}
       />
 
       {/**start*/}
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12">
-            <h1 className="text-center tertiary-color">
-              We <span className="">design</span>{" "}
-              <span className="other">&</span> <span className="">build</span>{" "}
-              digital <br></br> experiences{" "}
+      <div className='container'>
+        <div className='row'>
+          <div className='col-lg-12'>
+            <h1 className='text-center tertiary-color'>
+              We <span className=''>design</span>{' '}
+              <span className='other'>&</span> <span className=''>build</span>{' '}
+              digital <br></br> experiences{' '}
             </h1>
 
-            <div className="d-flex flex-row justify-content-center">
+            <div className='d-flex flex-row justify-content-center'>
               <img
-                src="images/arrow.svg"
-                className="img-fluid d-none d-md-inline-block arrow mr-lg-3"
+                src='images/arrow.svg'
+                className='img-fluid d-none d-md-inline-block arrow mr-lg-3'
               />
-              <p className="lead text-center d-none d-lg-block px-lg-5">
+              <p className='lead text-center d-none d-lg-block px-lg-5'>
                 We design, build and launch websites and products that are
                 <br /> simple, beautiful and helps businesses grow.
               </p>
 
-              <p className="lead text-center my-3 my-lg-2 d-block d-lg-none px-lg-5">
+              <p className='lead text-center my-3 my-lg-2 d-block d-lg-none px-lg-5'>
                 We design, build and launch websites and products that are
                 simple, beautiful and helps businesses grow.
               </p>
             </div>
 
-            <Button label="Discover Our Process" />
+            <Button label='Discover Our Process' />
             {/* <button className="ex-btn">
               Discover Our Process <img src="" />
             </button> */}
 
-            <img src="images/imgcenter.png" className="img-fluid imgcenter" />
+            <img src='images/imgcenter.png' className='img-fluid imgcenter' />
           </div>
         </div>
       </div>
@@ -77,29 +80,29 @@ export default function Home() {
 
       {/**second section */}
 
-      <section className="bac-back py-5 my-auto d-flex justify-content-center">
-        <div className="container-fluid px-md-5 px-lg-5 services-flex">
-          <div className="row mb-3">
-            <div className="col-10 col-lg-9 mx-auto ">
-              <h3 className="com tertiary-color px-lg-5 text-center">
+      <section className='bac-back py-5 my-auto d-flex justify-content-center'>
+        <div className='container-fluid px-md-5 px-lg-5 services-flex'>
+          <div className='row mb-3'>
+            <div className='col-10 col-lg-9 mx-auto '>
+              <h3 className='com tertiary-color px-lg-5 text-center'>
                 Reap the benefits of years of learning & experience while
                 building succesful products
               </h3>
-              <p className="com-1 tertiary-color lead text-center">
+              <p className='com-1 tertiary-color lead text-center'>
                 Using latest Technologies and formal development process <br />
                 to give you the best experience
               </p>
             </div>
           </div>
 
-          <div className="row d-flex justify-content-center ">
-            <div className="col-11 col-md-8 col-lg-10 m-auto ">
-              <div className="card-deck flex-column flex-lg-row">
-                <div className="card card-wat mb-md-4">
-                  <div className="card-body d-flex flex-column justify-content-between p-lg-3 mx-auto align-items-center text-white ">
-                    <div className="icon-div primary-bg"> </div>
-                    <h3 className="text-center">Websites Design</h3>
-                    <p className="lead mx-auto text-center">
+          <div className='row d-flex justify-content-center '>
+            <div className='col-11 col-md-8 col-lg-10 m-auto '>
+              <div className='card-deck flex-column flex-lg-row'>
+                <div className='card card-wat mb-md-4'>
+                  <div className='card-body d-flex flex-column justify-content-between p-lg-3 mx-auto align-items-center text-white '>
+                    <div className='icon-div primary-bg'> </div>
+                    <h3 className='text-center'>Websites Design</h3>
+                    <p className='lead mx-auto text-center'>
                       We create beautiful responsive and user friendly websites
                       from scratch to portray your business ideas and marketing
                       strategies in a stylish and classy way, that shows the
@@ -109,11 +112,11 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="card card-wat text-center mb-md-4">
-                  <div className="card-body d-flex flex-column justify-content-between p-lg-3 mx-auto align-items-center text-white ">
-                    <div className="icon-div primary-bg"> </div>
+                <div className='card card-wat text-center mb-md-4'>
+                  <div className='card-body d-flex flex-column justify-content-between p-lg-3 mx-auto align-items-center text-white '>
+                    <div className='icon-div primary-bg'> </div>
                     <h3>Mobile/Web Application</h3>
-                    <p className="lead mx-auto text-center">
+                    <p className='lead mx-auto text-center'>
                       Using Conventional Technologies and architecture with the
                       unique logic of the application, combined with a polished
                       Ui/Ux to deliver smooth and fast applications that reached
@@ -122,11 +125,11 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="card card-wat mb-md-4">
-                  <div className="card-body d-flex flex-column justify-content-between p-lg-3 mx-auto align-items-center text-white ">
-                    <div className="icon-div primary-bg"> </div>
-                    <h3 className="text-center">Graphics Design & Branding</h3>
-                    <p className="lead mx-auto text-center text-white">
+                <div className='card card-wat mb-md-4'>
+                  <div className='card-body d-flex flex-column justify-content-between p-lg-3 mx-auto align-items-center text-white '>
+                    <div className='icon-div primary-bg'> </div>
+                    <h3 className='text-center'>Graphics Design & Branding</h3>
+                    <p className='lead mx-auto text-center text-white'>
                       Because a good visual representation is key to success of
                       a company we have experts that creates a range of design
                       service such as; logo designs , visual identity packages ,
@@ -140,10 +143,10 @@ export default function Home() {
           </div>
 
           {/* End of cards */}
-          <div className="row d-flex justify-content-center mt-3 text-center">
-            <div className="col-10 col-lg-9 m-auto">
-              <Link href="/service">
-                <button className="btn btn-outline-secondary">
+          <div className='row d-flex justify-content-center mt-3 text-center'>
+            <div className='col-10 col-lg-9 m-auto'>
+              <Link href='/service'>
+                <button className='btn btn-outline-secondary'>
                   Read about all our services
                 </button>
               </Link>
@@ -163,14 +166,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="my-5 bg-color-offwhite p-2">
-        <h3 className="text-center mt-4 mb-4 px-5">
+      <section className='my-5 bg-color-offwhite p-2'>
+        <h3 className='text-center mt-4 mb-4 px-5'>
           Here are some of the things our clients say about us
         </h3>
         <Testimonial />
       </section>
 
-      <section className="py-5 bg-color-offwhite">
+      <section className='py-5 bac-back'>
         <OurClients />
       </section>
       {/*end*/}
@@ -208,7 +211,7 @@ export default function Home() {
         }
         .bg-color-offwhite {
           // background-color: #fbfbfd !important;
-          background-image: url("images/team-meeting.jpg");
+          background-image: url('images/team-meeting.jpg');
         }
         .services-flex {
           display: flex;
@@ -270,7 +273,7 @@ export default function Home() {
         .bac-back {
           background-color: #edf4ff;
           width: 100%;
-          min-height: 800px;
+          /* min-height: 800px; */
         }
 
         .arrow {
@@ -307,6 +310,6 @@ export default function Home() {
       
       `}</style>
 */}
-    </div>
+    </motion.div>
   );
 }
