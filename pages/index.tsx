@@ -1,14 +1,17 @@
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
+import { motion } from 'framer-motion';
 // import { Button } from 'reactstrap';
 import Button from '../components/Button';
 import Link from 'next/link';
 import OurClients from '../components/OurClients';
 import Testimonial from '../components/Testimonial';
 
+import { onExit } from '../motion/animation';
+
 export default function Home() {
   return (
-    <div>
+    <motion.div exit={onExit}>
       <Head>
         <link rel='icon' href='/favicon.ico' />
       </Head>
@@ -116,7 +119,7 @@ export default function Home() {
         <Testimonial />
       </section>
 
-      <section className='py-5 bg-color-offwhite'>
+      <section className='py-5 bac-back'>
         <OurClients />
       </section>
       {/*end*/}
@@ -230,6 +233,6 @@ export default function Home() {
       
       `}</style>
 */}
-    </div>
+    </motion.div>
   );
 }
