@@ -25,9 +25,9 @@ const Service: React.FunctionComponent = () => {
               Designing, building great solutions for startups{" "}
               <span className="primary-color">& </span>companies
             </h1>
-            <p className="my-5 lead">
-              We work with amazing companies, startups and people <br /> to
-              build great things
+            <p className="my-3 lead text-center">
+              We work with amazing companies, startups and people to build great
+              things
             </p>
             <Button label="Projects" />
           </div>
@@ -92,7 +92,7 @@ const Service: React.FunctionComponent = () => {
           </div>
           <div className="row">
             <div className="container">
-              <div className="tabs text-center">
+              <div className="tabs text-center overflow-auto">
                 <div
                   className={
                     activeTab === "1"
@@ -140,7 +140,7 @@ const Service: React.FunctionComponent = () => {
               </div>
 
               {/* Tab contents */}
-              <TabContent activeTab={activeTab}>
+              <TabContent activeTab={activeTab} className="overflow-y-auto">
                 <TabPane tabId="1">
                   <div className="row py-5">
                     <div className="col-12 col-md-4">

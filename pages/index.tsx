@@ -42,21 +42,25 @@ export default function Home() {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <h3 className="hrd-1 tertiary-color">
-              We <span className="primary-color">design</span>{" "}
-              <span className="other">&</span>{" "}
-              <span className="primary-color">build</span> digital <br></br>{" "}
-              experiences{" "}
-            </h3>
+            <h1 className="text-center tertiary-color">
+              We <span className="">design</span>{" "}
+              <span className="other">&</span> <span className="">build</span>{" "}
+              digital <br></br> experiences{" "}
+            </h1>
 
             <div className="d-flex flex-row justify-content-center">
               <img
                 src="images/arrow.svg"
                 className="img-fluid d-none d-md-inline-block arrow mr-lg-3"
               />
-              <p className="lead text-center">
-                We design, build and launch websites and products that <br></br>{" "}
-                are simple, beautiful and helps businesses grow.
+              <p className="lead text-center d-none d-lg-block px-lg-5">
+                We design, build and launch websites and products that are
+                <br /> simple, beautiful and helps businesses grow.
+              </p>
+
+              <p className="lead text-center  d-block d-lg-none px-lg-5">
+                We design, build and launch websites and products that are
+                simple, beautiful and helps businesses grow.
               </p>
             </div>
 
@@ -76,7 +80,7 @@ export default function Home() {
       <section className="bac-back py-5 my-auto d-flex justify-content-center">
         <div className="container-fluid px-md-5 px-lg-5 services-flex">
           <div className="row mb-3">
-            <div className="col-lg-9 mx-auto ">
+            <div className="col-10 col-lg-9 mx-auto ">
               <h3 className="com tertiary-color">
                 Reap the benefits of years of learning & experience <br /> while
                 building succesful products
@@ -89,7 +93,7 @@ export default function Home() {
           </div>
 
           <div className="row d-flex justify-content-center ">
-            <div className="col-12 col-lg-9 m-auto ">
+            <div className="col-10 col-lg-9 m-auto ">
               <div className="card-deck flex-column flex-lg-row">
                 <div className="card card-wat mb-md-4">
                   <div className="card-body d-flex flex-column justify-content-between p-lg-3 mx-auto align-items-center text-white ">
@@ -125,10 +129,9 @@ export default function Home() {
                     <p className="lead mx-auto text-center text-white">
                       Because a good visual representation is key to success of
                       a company we have experts that creates a range of design
-                      service such as;
-                      <br /> logo designs , visual identity packages , business
-                      cards, brochure, catalogues and marketing materials and
-                      many more.
+                      service such as; logo designs , visual identity packages ,
+                      business cards, brochure, catalogues and marketing
+                      materials and many more.
                     </p>
                   </div>
                 </div>
@@ -138,7 +141,7 @@ export default function Home() {
 
           {/* End of cards */}
           <div className="row d-flex justify-content-center mt-3">
-            <div className="col-lg-9 m-auto">
+            <div className="col-10 col-lg-9 m-auto">
               <Link href="/service">
                 <button className="btn btn-outline-secondary">
                   Read about all our services
@@ -160,7 +163,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="my-5 bg-color-offwhite">
+      <section className="my-5 bg-color-offwhite p-2">
         <h3 className="text-center mt-4 mb-4">
           Here are some of the things our clients say about us
         </h3>
@@ -173,6 +176,29 @@ export default function Home() {
       {/*end*/}
 
       <style jsx>{`
+        // Extra small devices (portrait phones, less than 576px)
+        @media (max-width: 575.98px) {
+        }
+
+        // Small devices (landscape phones, less than 768px)
+        @media (max-width: 767.98px) {
+          .icon-div {
+            height: 60px !important;
+            width: 60px !important;
+          }
+        }
+
+        // Medium devices (tablets, less than 992px)
+        @media (max-width: 991.98px) {
+          .icon-div {
+            height: 70px !important;
+            width: 70px !important;
+          }
+        }
+
+        // Large devices (desktops, less than 1200px)
+        @media (max-width: 1199.98px) {
+        }
         .icon-div {
           border-radius: 50%;
           height: 90px;
@@ -269,7 +295,7 @@ export default function Home() {
         }
 
         .card-wat {
-          min-height: 450px;
+          //  min-height: 450px;
           border: none !important;
           background-color: var(--blue);
           box-shadow: 0px 20px 40px 0px rgba(12, 0, 46, 0.06);
