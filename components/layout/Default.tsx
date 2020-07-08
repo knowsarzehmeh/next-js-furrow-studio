@@ -66,7 +66,7 @@ export default function (props) {
 
       <style jsx>{`
         .margin-top {
-          margin-top: 5rem !important;
+          margin-top: 8rem !important;
         }
         .opacity-none {
           opacity: 0 !important;
