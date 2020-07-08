@@ -1,3 +1,4 @@
+// All Pages Animation
 export const pageWrapperVariants = {
   initial: {
     opacity: 0,
@@ -10,8 +11,4 @@ export const pageWrapperVariants = {
   exit: {
     opacity: 0,
   },
-};
-
-export const onExit = {
-  opacity: 0,
 };
