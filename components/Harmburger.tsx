@@ -16,13 +16,81 @@ const Harmburger = (props) => {
         <span className="hamburger-box">
           <span className="hamburger-inner"></span>
         </span>
-        <span className="hamburger-label primary-color">
-          {!props.activeState ? "MENU" : "CLOSE"}
+        <span className="hamburger-label primary-color d-none d-md-inline-block">
+          {!props.activeState ? "Menu" : "Close"}
         </span>
       </div>
       {/* </div> */}
 
       <style jsx>{`
+        @media (max-width: 767.98px) {
+          .hamburger-inner {
+            font-size: 5px !important;
+          }
+
+          hamburger {
+            padding: 8px 8px;
+            display: inline-block;
+            cursor: pointer;
+            transition-property: opacity, filter;
+            transition-duration: 0.15s;
+            transition-timing-function: linear;
+            font: inherit;
+            color: pink;
+            text-transform: none;
+            background-color: transparent;
+            border: 0;
+            margin: 0;
+            overflow: visible;
+          }
+          .hamburger:hover {
+            opacity: 0.7;
+          }
+          .hamburger.is-active:hover {
+            opacity: 0.7;
+          }
+          .hamburger.is-active .hamburger-inner,
+          .hamburger.is-active .hamburger-inner::before,
+          .hamburger.is-active .hamburger-inner::after {
+            background-color: var(--pink);
+          }
+
+          .hamburger-box {
+            width: 40px;
+            height: 24px;
+            display: inline-block;
+            position: relative;
+          }
+
+          .hamburger-inner {
+            display: block;
+            top: 50%;
+            margin-top: -2px;
+          }
+          .hamburger-inner,
+          .hamburger-inner::before,
+          .hamburger-inner::after {
+            width: 30px;
+            height: 2px;
+            background-color: var(--pink);
+            border-radius: 4px;
+            position: absolute;
+            transition-property: transform;
+            transition-duration: 0.15s;
+            transition-timing-function: ease;
+          }
+          .hamburger-inner::before,
+          .hamburger-inner::after {
+            content: "";
+            display: block;
+          }
+          .hamburger-inner::before {
+            top: -10px;
+          }
+          .hamburger-inner::after {
+            bottom: -10px;
+          }
+        }
         .hamburger-label {
           font-weight: 600;
           display: inline-block;

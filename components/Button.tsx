@@ -8,8 +8,8 @@ const Button: React.FunctionComponent<ButtonProps> = (props: ButtonProps) => {
   const { label } = props;
   // const btnLabel = {"--btnLabel": label } as React.CSSProperties;
   return (
-    <div className='text-center'>
-      <button data-label={label} className='button'>
+    <div className="text-center">
+      <button data-label={label} className="button">
         {label}
       </button>
 
@@ -21,12 +21,12 @@ const Button: React.FunctionComponent<ButtonProps> = (props: ButtonProps) => {
           align-items: center;
           background-color: var(--blue);
           border: none;
-          border-radius: calc(2 * 15px);
+          border-radius: calc(2 * 17px);
           color: var(--white);
           content: attr(data-label);
           display: inline-flex;
-          font-size: 20px;
-          height: 64px;
+          font-size: 17px;
+          height: 55px;
           justify-content: center;
           left: 0;
           position: absolute;
@@ -42,11 +42,11 @@ const Button: React.FunctionComponent<ButtonProps> = (props: ButtonProps) => {
         .button {
           background-color: $pink;
           border: none;
-          border-radius: calc(2 * 15px);
+          border-radius: calc(2 * 17px);
           color: var(--white);
           cursor: pointer;
           font-size: 0px;
-          height: 64px;
+          height: 55px;
           outline: none;
           overflow: hidden;
           position: relative;
@@ -55,7 +55,7 @@ const Button: React.FunctionComponent<ButtonProps> = (props: ButtonProps) => {
         }
 
         .button:hover {
-          font-size: 20px;
+          font-size: 17px;
         }
       `}</style>
     </div>

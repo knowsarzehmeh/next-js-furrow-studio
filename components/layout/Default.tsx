@@ -21,7 +21,6 @@ export default function (props) {
     return;
   };
   useEffect(() => {
-    console.log(state);
     setNavStateProps(true);
     window.addEventListener('scroll', scrollAction);
     return () => window.removeEventListener('scroll', scrollAction);
@@ -29,7 +28,6 @@ export default function (props) {
 
   const scrollAction = () => {
     const offset = window.scrollY;
-    console.log(offset);
     if (offset > 40) {
       setScroll(true);
     } else {
@@ -66,7 +64,7 @@ export default function (props) {
 
       <style jsx>{`
         .margin-top {
-          margin-top: 5rem !important;
+          margin-top: 8rem !important;
         }
         .opacity-none {
           opacity: 0 !important;

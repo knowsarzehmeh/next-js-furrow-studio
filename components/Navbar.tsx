@@ -13,9 +13,9 @@ export default function Navbar(props) {
         state.activeNav ? "background-black" : ""
       }`}
     >
-      <div className="my-2">
+      <div className="my-0 my-lg-2 px-0 px-md-0 px-lg-2">
         <div className="row padding-container">
-          <div className="col-lg-12 p-1 d-flex flex-direction-column justify-content-between">
+          <div className="col-lg-12 px-0 px-md-5 px-lg-1 d-flex flex-direction-column justify-content-between">
             <Link href="/">
               <a className="logo-wrapper">
                 <img
@@ -24,7 +24,9 @@ export default function Navbar(props) {
                   alt="logo"
                 />
 
-                <h5 className="font-bold font-weight-bold">Exemblar</h5>
+                <h5 className="font-bold font-weight-bold font-logo">
+                  Exemblar
+                </h5>
               </a>
             </Link>
             <div
@@ -55,6 +57,14 @@ export default function Navbar(props) {
             padding-right: calc(2vw) !important;
             padding-bottom: 0px;
             padding-left: calc(2vw) !important;
+          }
+
+          .logo {
+            width: 30px !important;
+            float: left;
+          }
+          font-logo {
+            font-size: 60px;
           }
         }
 
