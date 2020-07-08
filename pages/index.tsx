@@ -273,7 +273,7 @@ export default function Home() {
         .bac-back {
           background-color: #edf4ff;
           width: 100%;
-          min-height: 800px;
+          /* min-height: 800px; */
         }
 
         .arrow {
