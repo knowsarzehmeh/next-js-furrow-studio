@@ -124,6 +124,15 @@ to create and make every imaginations a reality.
                   
                   </div>
                 </div>
+
+                <div className='card card-wat mb-md-1'>
+                <div className='card-body d-flex flex-column justify-content-center p-lg-3 mx-auto align-items-center'>
+                    <div className='icon-div primary-bg'> </div>
+                    <h3 className='text-center'>Meduoye Oluwasegun</h3>
+                    <p className='lead font-weight-bold text-center'>PARTNER / AGILE & SCRUM MASTER</p>
+                  
+                  </div>
+                </div>
               </div>
             </div>
           </div>
