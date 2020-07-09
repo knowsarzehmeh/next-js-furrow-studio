@@ -2,207 +2,148 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Button } from 'reactstrap';
 
-import { pageWrapperVariants, onExit } from '../motion/animation';
-
+import { pageWrapperVariants,  } from '../motion/animation';
+// variants={pageWrapperVariants}
+// initial='initial'
+// animate='animate'
+// exit='exit'
+// className='container'
 export default function Home() {
   return (
-    <motion.div
-      variants={pageWrapperVariants}
-      initial='initial'
-      animate='animate'
-      exit='exit'
-      className='container'
-    >
+    <motion.div variants={pageWrapperVariants}
+    initial='initial'
+    animate='animate'
+    exit='exit'
+    className=''>
+      <section>
       <Head>
-        <title>
-          Exemblar - Brand Indentity, User Experience Design & Web & Mobile
-          development
-        </title>
-        <link rel='icon' href='/favicon.ico' />
+        <title>exemblar contact us</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1 className='title'>
-          Welcome to <a href='https://nextjs.org'>Next.js!</a>
-        </h1>
-        <button className='btn btn-primary'>Hello</button>
-        <Button>Heelod</Button>
-        <p className='description'>
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className='grid'>
-          <a href='https://nextjs.org/docs' className='card'>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href='https://nextjs.org/learn' className='card'>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href='https://github.com/vercel/next.js/tree/master/examples'
-            className='card'
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href='https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-            className='card'
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+<div className='container-fluid tertiary-bg position-about'>
+      <div className="row text-center">
+        <div className="col-12">
+          <div className="">
+            <h1 className="m-auto text-center text-white">
+              Creating experiences that matters
+            </h1>
+           
+          
+          </div>
         </div>
-      </main>
+      </div>
 
-      <footer>
-        <a
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Powered by{' '}
-          <img src='/vercel.svg' alt='Vercel Logo' className='logo' />
-        </a>
-      </footer>
+     
+      </div>
+
+      <div className='container justify-content-center'>
+      <div className="row  flex-row padding-container">
+        <div className="col-4">
+            <h3 className="m-auto ">
+              Creating experiences that matters
+            </h3>
+
+           
+        </div>
+        <div className="col-8">
+           
+
+            <p className="m-auto lead-large font-weight-bold">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, rerum eum similique quam dignissimos repudiandae, odio saepe nulla necessitatibus iusto nihil, quia excepturi sunt culpa officiis aperiam veritatis enim soluta.
+            </p>
+           
+        </div>
+      </div>
+      </div>
+      </section>
+
+  
+    
 
       <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+      .text-white {
+        color: white !important;
+        z-index: 100000;
+        margin: auto;
+      }
+      .position-about {
+        min-height: -webkit-fill-available !important;
+        height: 100vh;
+        display: flex;
+      flex-direction:column;
+        justify-content: center;
+        align-items: center;
+      }
+
+        .max-height {
+            /* height : 100vh!important; */
         }
 
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
+        .padding-container{
+          padding : 10rem 0 10rem 0;
         }
 
         @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
+          
         }
       `}</style>
+       <style jsx global>{`
+            .margin-top {
+            margin-top: 0px !important;
+            }
+
+        html,
+        body,
+        #app,
+        main {
+          // min-height: 100%;
+          // background: var(--blue);
+        }
+        .hamburger-inner,
+        .hamburger-inner::before,
+        .hamburger-inner::after {
+          background-color: #ffffff !important;
+
+        }
+
+         .hamburger-color {
+          color: #ffffff !important
+        }
+       .background-black {
+        background: var(--deepBlue) !important;
+      }
+      .position-fix {
+        position: relative;
+        height: -webkit-fill-available !important;
+      }
+      .font-logo {
+        color: white !important;
+      }
+
+      .logo {
+        padding-top: -3rem !important;
+        width: 70px;
+        height: 25px;
+        left: 0;
+        background: url(/images/exemblar-logo-white.png) no-repeat scroll center top;
+        background-size: contain;
+
+      }
+
+  
+        
+        .header-container.box-shadow-shade {
+          // box-shadow: 0 0 1.8rem transparent;
+          background: var(--deepBlue) !important;
+        //   z-index: 21 !important;
+        }
+
+    
+
+      `}</style>
+     
+
     </motion.div>
   );
 }

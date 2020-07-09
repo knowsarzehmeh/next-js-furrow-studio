@@ -46,7 +46,7 @@ export default function (props) {
       <div
         className={`${
           navStateProps ? 'd-none' : 'd-block'
-        } mt-lg-5 pt-lg-5 margin-top`}
+        } margin-top-nav`}
       >
         <NavItems setStatePropsMethod2={setNavStateAction} path={path} />
       </div>
@@ -54,17 +54,24 @@ export default function (props) {
       <div
         className={`${
           !navStateProps ? 'd-none' : 'd-block'
-        } mt-lg-5 pt-lg-5 margin-top`}
+        } margin-top `}
       >
         {props.children}
       </div>
-      <div className={`${!navStateProps ? 'd-none' : 'd-block'} `}>
+      <span className={`${!navStateProps ? 'd-none' : 'd-block'} `}>
         <Footer />
-      </div>
+      </span>
 
       <style jsx>{`
+      /* .footer-position {
+          position:absolute;
+      } */
         .margin-top {
-          margin-top: 8rem !important;
+          margin-top: 8rem;
+        }
+
+        .margin-top-nav {
+          margin-top: 8rem;
         }
         .opacity-none {
           opacity: 0 !important;
@@ -84,7 +91,7 @@ export default function (props) {
           top: 0px;
         }
         .width-full {
-          width: -web-kit-available-;
+          width: available;
           z-index: 1;
         }
         .getUp {
