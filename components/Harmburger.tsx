@@ -28,7 +28,7 @@ const Harmburger = (props) => {
             font-size: 5px !important;
           }
 
-          hamburger {
+          .hamburger {
             padding: 8px 8px;
             display: inline-block;
             cursor: pointer;

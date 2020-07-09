@@ -8,7 +8,7 @@ export default function Navbar(props) {
   const { showBox, path } = props;
   return (
     <div
-      className={`container-fluid header-container background-black mb-5
+      className={`container-fluid header-container background-black 
        ${showBox ? "box-shadow-shade" : ""}   ${
         state.activeNav ? "background-black" : ""
       }`}
@@ -18,10 +18,8 @@ export default function Navbar(props) {
           <div className="col-lg-12 px-0 px-md-5 px-lg-1 d-flex flex-direction-column justify-content-between">
             <Link href="/">
               <a className="logo-wrapper">
-                <img
-                  src="images/exemblar-logo.png"
-                  className="img-fluid logo z-index-21 mx-auto mr-2"
-                  alt="logo"
+                <div 
+                  className="img-fluid logo z-index-21 mx-auto mr-2"                  
                 />
 
                 <h5 className="font-bold font-weight-bold font-logo">
@@ -72,10 +70,10 @@ export default function Navbar(props) {
           z-index: 21 !important;
         }
 
-        .background-black {
+        /* .background-black {
           background: ${state.activeNav ? "transaparent !important" : "#fff"};
           z-index: ${-20 ? "#111 !important" : "inherit"};
-        }
+        } */
         .header-container {
           position: fixed;
           top: 0;
@@ -123,9 +121,10 @@ export default function Navbar(props) {
 
         .header-container.box-shadow-shade {
           box-shadow: 0 0 1.8rem rgba(0, 0, 0, 0.15) !important;
-
-          // background: green;
+          background: #ffffff;
+          z-index: 21 !important;
         }
+        
         .item-right {
           float: right;
         }
