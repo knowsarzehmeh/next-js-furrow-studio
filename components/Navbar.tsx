@@ -8,7 +8,7 @@ export default function Navbar(props) {
   const { showBox, path } = props;
   return (
     <div
-      className={`container-fluid header-container background-black 
+      className={`container-fluid header-container z-index-21 background-black 
        ${showBox ? "box-shadow-shade" : ""}   ${
         state.activeNav ? "background-black" : ""
       }`}
@@ -17,9 +17,9 @@ export default function Navbar(props) {
         <div className="row padding-container">
           <div className="col-lg-12 px-0 px-md-5 px-lg-1 d-flex flex-direction-column justify-content-between">
             <Link href="/">
-              <a className="logo-wrapper">
+              <a className="logo-wrapper z-index-nav-item">
                 <div 
-                  className="img-fluid logo nav z-index-21 mx-auto mr-2"                  
+                  className="img-fluid logo nav mx-auto z-index-nav-item mr-2"                  
                 />
 
                 <h5 className="font-bold font-weight-bold font-logo">
@@ -28,7 +28,7 @@ export default function Navbar(props) {
               </a>
             </Link>
             <div
-              className="my-auto  z-index-21"
+              className="my-auto  z-index-nav-item"
               onClick={async () => {
                 await dispatch({
                   type: "FLIP_ACTIVE_NAV", // The name of the reducer
@@ -69,6 +69,9 @@ export default function Navbar(props) {
         z-index-21 {
           z-index: 21 !important;
         }
+
+        
+
 
         /* .background-black {
           background: ${state.activeNav ? "transaparent !important" : "#fff"};
@@ -148,7 +151,9 @@ export default function Navbar(props) {
       `}</style>
       {/*
             <style jsx global>{`
-       
+       z-index-nav-item {
+          z-index: 50 !important;
+        }
       `}</style>
 */}
     </div>
