@@ -5,7 +5,7 @@ const Default = (props) => {
     <div className="">
       {props.children}
 
-      <style jsx>{`
+         <style jsx>{`
         .smoke-screen {
           background: #e5e5e5;
         }

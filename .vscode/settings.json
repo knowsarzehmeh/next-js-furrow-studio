@@ -1,0 +1,23 @@
+{
+    "eslint.alwaysShowStatus": true,
+    "eslint.debug": true,
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+    "eslint.onIgnoredFiles": "warn",
+    "eslint.packageManager": "yarn",
+    "eslint.run": "onSave",
+    "prettier.trailingComma": "all",
+    "prettier.tslintIntegration": true,
+    "prettier.useTabs": true,
+    "prettier.vueIndentScriptAndStyle": true,
+    "prettier.singleQuote": true,
+    "prettier.stylelintIntegration": true,
+    "prettier.proseWrap": "always",
+    "prettier.quoteProps": "consistent",
+    "prettier.jsxBracketSameLine": true,
+    "prettier.jsxSingleQuote": true,
+    "prettier.eslintIntegration": true,
+    "prettier.parser": "babel",
+    "eslint.trace.server": "messages",
+    "prettier.htmlWhitespaceSensitivity": "strict"
+}
