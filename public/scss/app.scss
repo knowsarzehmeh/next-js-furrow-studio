@@ -275,30 +275,30 @@ textarea {
 }
 @include media-breakpoint-down(md) {
   h1 {
-    font-size: 1.6rem !important;
-    letter-spacing: 0.3px !important;
-    font-weight: 100 !important;
-  }
-
-  h2 {
     font-size: 1.5rem !important;
     letter-spacing: 0.3px !important;
     font-weight: 100 !important;
   }
 
+  h2 {
+    font-size: 1.4rem !important;
+    letter-spacing: 0.3px !important;
+    font-weight: 100 !important;
+  }
+
   h3 {
-    font-size: 1.1rem !important;
+    font-size: 1.3rem !important;
     letter-spacing: 0.3px !important;
     font-weight: 100 !important;
   }
   h4 {
-    font-size: 1.15rem !important;
+    font-size: 1.2rem !important;
     letter-spacing: 0.3px !important;
     font-weight: 100 !important;
   }
 
   h5 {
-    font-size: 1rem !important;
+    font-size: 1.1rem !important;
     letter-spacing: 0.3px !important;
     font-weight: 100 !important;
   }
