@@ -31,26 +31,26 @@ export default function Home() {
             <h1 className="m-auto text-center text-white px-lg-5 ">
               Creating experiences that matters is what Exemblar is all about
             </h1>
-           
-          
+
+
           </div>
         </div>
       </div>
 
-     
+
       </div>
 
       <div className='container justify-content-center'>
       <div className="row  flex-row padding-container">
         <div className="col-12 col-lg-4">
             <h3 className="m-auto ">
-            Brands are like stories, some you remember some you don't. We can make sure your story is never forgotten. 
+            Brands are like stories, some you remember some you don't. We can make sure your story is never forgotten.
             </h3>
 
-           
+
         </div>
         <div className="col-12 col-lg-8 mt-3 mt-lg-0">
-           
+
 
             <p className="m-auto lead font-weight-bold">
             Exemblar is a web design , app development and related technologies company that creates a platform for business
@@ -59,10 +59,10 @@ passion to a greater level of connection with the world at large. Our team is ma
 professional in diverse fields of software development and graphic designing, working together
 to create and make every imaginations a reality.
             </p>
-           
+
         </div>
 
-        
+
       </div>
 
       <div className='row mt-5'>
@@ -80,14 +80,14 @@ to create and make every imaginations a reality.
         </div>
 
         <div className='row d-flex justify-content-center '>
-            <div className='col-11 col-md-8 col-lg-10 m-auto '>
-              <div className='card-deck flex-column flex-lg-row'>
+            <div className='col-11 col-md-8 col-lg-12 mx-auto'>
+              <div className='card-deck flex-column flex-lg-column flex-xl-row'>
                 <div className='card card-wat mb-md-1'>
                   <div className='card-body d-flex flex-column justify-content-center p-lg-3 mx-auto align-items-center'>
                     <div className='icon-div primary-bg'> </div>
                     <h3 className='text-center'>Meduoye Oluwafemi</h3>
                     <p className='lead font-weight-bold text-center'>CEO / SOFTWARE ENGINEER</p>
-                  
+
                   </div>
                 </div>
 
@@ -96,7 +96,7 @@ to create and make every imaginations a reality.
                     <div className='icon-div primary-bg'> </div>
                     <h3 className='text-center'>Nosazeme Glory</h3>
                     <p className='lead font-weight-bold text-center'>CTO  / SOFTWARE ENGINEER</p>
-                  
+
                   </div>
                 </div>
 
@@ -105,7 +105,7 @@ to create and make every imaginations a reality.
                     <div className='icon-div primary-bg'> </div>
                     <h3 className='text-center'>Stephanie Nsa</h3>
                     <p className='lead font-weight-bold text-center'>MARKETING & CONTENT MANAGER/ SOCIAL MEDIA EXPERT</p>
-                  
+
                   </div>
                 </div>
 
@@ -114,7 +114,7 @@ to create and make every imaginations a reality.
                     <div className='icon-div primary-bg'> </div>
                     <h3 className='text-center'>Johnson Chidubem</h3>
                     <p className='lead font-weight-bold text-center'>PRODUCT DESIGNER/ UI/UX / SOFTWARE ENGINEER</p>
-                  
+
                   </div>
                 </div>
 
@@ -123,7 +123,7 @@ to create and make every imaginations a reality.
                     <div className='icon-div primary-bg'> </div>
                     <h3 className='text-center'>Emmanuel Adegeye</h3>
                     <p className='lead font-weight-bold text-center'>PRODUCT DESIGNER/ GRAPHICS & MOTION ENGINEER</p>
-                  
+
                   </div>
                 </div>
 
@@ -132,7 +132,7 @@ to create and make every imaginations a reality.
                     <div className='icon-div primary-bg'> </div>
                     <h3 className='text-center'>Meduoye Oluwasegun</h3>
                     <p className='lead font-weight-bold text-center'>PARTNER / AGILE & SCRUM MASTER</p>
-                  
+
                   </div>
                 </div>
               </div>
@@ -141,8 +141,8 @@ to create and make every imaginations a reality.
       </div>
       </section>
 
-  
-    
+
+
 
       <style jsx>{`
  .icon-div {
@@ -152,12 +152,12 @@ to create and make every imaginations a reality.
           margin: 10px;
           // background-color: #fff;
         }
-        
+
       .card-wat {
         border : none;
       }
       .team-heading:after {
-        content: '';
+    content: '';
     border-bottom: 5px solid var(--pink);
     margin-bottom: 9px;
     display: flex;
@@ -177,15 +177,14 @@ to create and make every imaginations a reality.
       }
 
       .bg-img {
-         min-width: -webkit-fill-available !important;
-         position:absolute;
-         min-height: -webkit-fill-available !important;
-       
+        min-width: -webkit-fill-available !important;
+        position:absolute;
+        min-height: -webkit-fill-available !important;
         background-image: url(/images/spiral.png);
         background-repeat: no-repeat;
         background-size: cover;
         /* z-index: 10; */
-         
+
       }
       .position-about {
         background: transaparent !important;
@@ -208,7 +207,7 @@ to create and make every imaginations a reality.
         }
 
         @media (max-width: 600px) {
-          
+
         }
       `}</style>
        <style jsx global>{`
@@ -249,7 +248,7 @@ to create and make every imaginations a reality.
          .hamburger-color {
           color: #ffffff !important
         }
-        
+
        .header-container.background-black {
         background: var(--deepBlue);
       }
@@ -267,10 +266,10 @@ to create and make every imaginations a reality.
         z-index: 23 !important;
         }
 
-    
+
 
       `}</style>
-     
+
 
     </motion.div>
   );
