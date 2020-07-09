@@ -10,7 +10,7 @@ const NavItems = (props) => {
   const { path } = props;
   const [state, dispatch] = useContext(Context);
   return (
-    <div className=' mx-auto z-index-20'>
+    <div className='mx-auto z-index-20'>
       <div className='list-group p-1 m-auto'>
         <Link href='/'>
           <a
@@ -19,7 +19,7 @@ const NavItems = (props) => {
                 type: 'FLIP_ACTIVE_NAV', // The name of the reducer
                 payload: '', // Notice in this reducer, the string is appended to the todos array
               });
-              props.setStatePropsMethod2(true);
+              
             }}
             className={`${
               path == '/' ? 'active' : ''
@@ -38,7 +38,7 @@ const NavItems = (props) => {
                 type: 'FLIP_ACTIVE_NAV', // The name of the reducer
                 payload: '', // Notice in this reducer, the string is appended to the todos array
               });
-              props.setStatePropsMethod2(true);
+              
             }}
             className={`${
               path.includes('about-us') ? 'active' : ''
@@ -57,7 +57,6 @@ const NavItems = (props) => {
                 type: 'FLIP_ACTIVE_NAV', // The name of the reducer
                 payload: '', // Notice in this reducer, the string is appended to the todos array
               });
-              props.setStatePropsMethod2(true);
             }}
             className={`${
               path.includes('service') ? 'active' : ''
@@ -76,7 +75,7 @@ const NavItems = (props) => {
                 type: 'FLIP_ACTIVE_NAV', // The name of the reducer
                 payload: '', // Notice in this reducer, the string is appended to the todos array
               });
-              props.setStatePropsMethod2(true);
+              
             }}
             className={`${
               path.includes('contact') ? 'active' : ''

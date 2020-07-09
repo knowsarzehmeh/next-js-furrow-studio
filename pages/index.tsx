@@ -305,12 +305,15 @@ export default function Home() {
         .card-wat {
           //  min-height: 450px;
           border: none !important;
+          border-radius: 15px;
           background-color: var(--blue);
           box-shadow: 0px 20px 40px 0px rgba(12, 0, 46, 0.06);
         }
 
         .card-wat__alternate {
+          border-radius: 15px;
           background-color: var(--pink) !important;
+          box-shadow: 0px 20px 40px 0px rgba(12, 0, 46, 0.06);
         }
       `}</style>
 
