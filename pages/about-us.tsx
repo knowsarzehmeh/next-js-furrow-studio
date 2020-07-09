@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Button } from 'reactstrap';
 
-import { pageWrapperVariants, onExit } from '../motion/animation';
+import { pageWrapperVariants } from '../motion/animation';
 
 export default function Home() {
   return (
