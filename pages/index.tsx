@@ -10,6 +10,7 @@ import OurClients from '../components/OurClients';
 import Testimonial from '../components/Testimonial';
 
 import { pageWrapperVariants } from '../motion/animation';
+
 import {
   headingOneVariants,
   subheadingVariants,
@@ -17,6 +18,7 @@ import {
   serviceSectionVariants,
   childCardVariants,
 } from '../motion/home';
+
 
 export default function Home() {
   const sectionRef = useRef();
@@ -73,12 +75,14 @@ export default function Home() {
       <div className='container'>
         <div className='row'>
           <div className='col-lg-12'>
+
             <motion.h1
               variants={headingOneVariants}
               className='text-center tertiary-color'
             >
+
               We <span className=''>design</span>{' '}
-              <span className='other'>&</span> <span className=''>build</span>{' '}
+              <span className='primary-color'>&</span> <span className=''>build</span>{' '}
               digital <br></br> experiences{' '}
             </motion.h1>
 
@@ -87,10 +91,12 @@ export default function Home() {
                 src='images/arrow.svg'
                 className='img-fluid d-none d-md-inline-block arrow mr-lg-3'
               />
+
               <motion.p
                 variants={subheadingVariants}
                 className='lead text-center d-none d-lg-block px-lg-5'
               >
+
                 We design, build and launch websites and products that are
                 <br /> simple, beautiful and helps businesses grow.
               </motion.p>
@@ -347,12 +353,15 @@ export default function Home() {
         .card-wat {
           //  min-height: 450px;
           border: none !important;
+          border-radius: 15px;
           background-color: var(--blue);
           box-shadow: 0px 20px 40px 0px rgba(12, 0, 46, 0.06);
         }
 
         .card-wat__alternate {
+          border-radius: 15px;
           background-color: var(--pink) !important;
+          box-shadow: 0px 20px 40px 0px rgba(12, 0, 46, 0.06);
         }
       `}</style>
 

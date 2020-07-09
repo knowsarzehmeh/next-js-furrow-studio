@@ -1,7 +1,6 @@
 // import Link from "next/link";
 
 import { useState, useEffect, useContext } from 'react';
-import AppBar from '../AppBar';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import NavItems from '../NavItems';
@@ -9,19 +8,15 @@ import { Context } from '../../pages/_app';
 
 export default function (props) {
   const [scroll, setScroll] = useState(false);
-  const [navStateProps, setNavStateProps] = useState(false);
   const { path } = props;
   const [state, dispatch] = useContext(Context);
 
   // interface ParentCompProps {
   //   clickFunction: (data: boolean) => void;
   // }
-  const setNavStateAction = (childp) => {
-    setNavStateProps(childp);
-    return;
-  };
+
   useEffect(() => {
-    setNavStateProps(true);
+    console.log(state)
     window.addEventListener('scroll', scrollAction);
     return () => window.removeEventListener('scroll', scrollAction);
   }, []);
@@ -34,37 +29,43 @@ export default function (props) {
       setScroll(false);
     }
   };
-  //  {/* <AppBar showBox={scroll} /> */}
+
   return (
     <div className=''>
       <Navbar
         className='mb-5 pb-5'
         showBox={scroll}
-        setStatePropsMethod={setNavStateAction}
       />
 
-      <div
-        className={`${
-          navStateProps ? 'd-none' : 'd-block'
-        } mt-lg-5 pt-lg-5 margin-top`}
-      >
-        <NavItems setStatePropsMethod2={setNavStateAction} path={path} />
-      </div>
 
       <div
         className={`${
-          !navStateProps ? 'd-none' : 'd-block'
-        } mt-lg-5 pt-lg-5 margin-top`}
+          state.activeNav ? 'd-block' : 'd-none'
+        } margin-top-nav `}>
+        <NavItems path={path} />
+        </div>   
+
+      <div
+        className={`${
+          !state.activeNav ? 'd-block' : 'd-none'
+        } margin-top `}
       >
         {props.children}
       </div>
-      <div className={`${!navStateProps ? 'd-none' : 'd-block'} `}>
+      <span className={`${ !state.activeNav ? 'd-block' : 'd-none'} `}>
         <Footer />
-      </div>
+      </span>
 
       <style jsx>{`
+      /* .footer-position {
+          position:absolute;
+      } */
         .margin-top {
-          margin-top: 8rem !important;
+          margin-top: 8rem;
+        }
+
+        .margin-top-nav {
+          margin-top: 8rem;
         }
         .opacity-none {
           opacity: 0 !important;
@@ -84,7 +85,7 @@ export default function (props) {
           top: 0px;
         }
         .width-full {
-          width: -web-kit-available-;
+          width: available;
           z-index: 1;
         }
         .getUp {
@@ -102,7 +103,7 @@ export default function (props) {
         #app,
         main {
           min-height: 100%;
-          background: ${!navStateProps ? '#121233 !important' : 'inherit'};
+          background: ${state.activeNav ? '#121233 !important' : 'inherit'};
         }
       `}</style>
     </div>

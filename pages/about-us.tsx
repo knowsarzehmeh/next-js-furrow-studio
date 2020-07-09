@@ -2,207 +2,276 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Button } from 'reactstrap';
 
-import { pageWrapperVariants } from '../motion/animation';
+
+import { pageWrapperVariants,  } from '../motion/animation';
+// variants={pageWrapperVariants}
+// initial='initial'
+// animate='animate'
+// exit='exit'
+// className='container'
 
 export default function Home() {
   return (
-    <motion.div
-      variants={pageWrapperVariants}
-      initial='initial'
-      animate='animate'
-      exit='exit'
-      className='container'
-    >
+    <motion.div variants={pageWrapperVariants}
+    initial='initial'
+    animate='animate'
+    exit='exit'
+    className=''>
+      <section>
       <Head>
-        <title>
-          Exemblar - Brand Indentity, User Experience Design & Web & Mobile
-          development
-        </title>
-        <link rel='icon' href='/favicon.ico' />
+        <title>exemblar contact us</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1 className='title'>
-          Welcome to <a href='https://nextjs.org'>Next.js!</a>
-        </h1>
-        <button className='btn btn-primary'>Hello</button>
-        <Button>Heelod</Button>
-        <p className='description'>
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className='grid'>
-          <a href='https://nextjs.org/docs' className='card'>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href='https://nextjs.org/learn' className='card'>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href='https://github.com/vercel/next.js/tree/master/examples'
-            className='card'
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href='https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-            className='card'
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+<div className='container-fluid tertiary-bg position-about'>
+  <div className='bg-img'></div>
+      <div className="row text-center">
+        <div className="col-12">
+          <div className="px-lg-5">
+            <h1 className="m-auto text-center text-white px-lg-5 ">
+              Creating experiences that matters is what Exemblar is all about
+            </h1>
+           
+          
+          </div>
         </div>
-      </main>
+      </div>
 
-      <footer>
-        <a
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Powered by{' '}
-          <img src='/vercel.svg' alt='Vercel Logo' className='logo' />
-        </a>
-      </footer>
+     
+      </div>
+
+      <div className='container justify-content-center'>
+      <div className="row  flex-row padding-container">
+        <div className="col-12 col-lg-4">
+            <h3 className="m-auto ">
+            Brands are like stories, some you remember some you don't. We can make sure your story is never forgotten. 
+            </h3>
+
+           
+        </div>
+        <div className="col-12 col-lg-8 mt-3 mt-lg-0">
+           
+
+            <p className="m-auto lead font-weight-bold">
+            Exemblar is a web design , app development and related technologies company that creates a platform for business
+owners, individuals, group of companies etc that are ready to take their business, ideas or
+passion to a greater level of connection with the world at large. Our team is made up of
+professional in diverse fields of software development and graphic designing, working together
+to create and make every imaginations a reality.
+            </p>
+           
+        </div>
+
+        
+      </div>
+
+      <div className='row mt-5'>
+        <div className='col'>
+          <h3 className='mx-auto text-center'>Our Services</h3>
+        </div>
+      </div>
+      </div>
+
+      <div className='container-fluid mb-5'>
+        <div className='row d-flex justify-content-center'>
+          <div className='col-9 col-md-4 col-lg-3'>
+          <h2 className='mx-auto text-center team-heading'>Management Team</h2>
+          </div>
+        </div>
+
+        <div className='row d-flex justify-content-center '>
+            <div className='col-11 col-md-8 col-lg-10 m-auto '>
+              <div className='card-deck flex-column flex-lg-row'>
+                <div className='card card-wat mb-md-1'>
+                  <div className='card-body d-flex flex-column justify-content-center p-lg-3 mx-auto align-items-center'>
+                    <div className='icon-div primary-bg'> </div>
+                    <h3 className='text-center'>Meduoye Oluwafemi</h3>
+                    <p className='lead font-weight-bold text-center'>CEO / SOFTWARE ENGINEER</p>
+                  
+                  </div>
+                </div>
+
+                <div className='card card-wat text-center mb-md-1'>
+                <div className='card-body d-flex flex-column justify-content-center p-lg-3 mx-auto align-items-center'>
+                    <div className='icon-div primary-bg'> </div>
+                    <h3 className='text-center'>Nosazeme Glory</h3>
+                    <p className='lead font-weight-bold text-center'>CTO  / SOFTWARE ENGINEER</p>
+                  
+                  </div>
+                </div>
+
+                <div className='card card-wat mb-md-1'>
+                <div className='card-body d-flex flex-column justify-content-center p-lg-3 mx-auto align-items-center'>
+                    <div className='icon-div primary-bg'> </div>
+                    <h3 className='text-center'>Stephanie Nsa</h3>
+                    <p className='lead font-weight-bold text-center'>MARKETING & CONTENT MANAGER/ SOCIAL MEDIA EXPERT</p>
+                  
+                  </div>
+                </div>
+
+                <div className='card card-wat mb-md-1'>
+                <div className='card-body d-flex flex-column justify-content-center p-lg-3 mx-auto align-items-center'>
+                    <div className='icon-div primary-bg'> </div>
+                    <h3 className='text-center'>Johnson Chidubem</h3>
+                    <p className='lead font-weight-bold text-center'>PRODUCT DESIGNER/ UI/UX / SOFTWARE ENGINEER</p>
+                  
+                  </div>
+                </div>
+
+                <div className='card card-wat mb-md-1'>
+                <div className='card-body d-flex flex-column justify-content-center p-lg-3 mx-auto align-items-center'>
+                    <div className='icon-div primary-bg'> </div>
+                    <h3 className='text-center'>Emmanuel Adegeye</h3>
+                    <p className='lead font-weight-bold text-center'>PRODUCT DESIGNER/ GRAPHICS & MOTION ENGINEER</p>
+                  
+                  </div>
+                </div>
+
+                <div className='card card-wat mb-md-1'>
+                <div className='card-body d-flex flex-column justify-content-center p-lg-3 mx-auto align-items-center'>
+                    <div className='icon-div primary-bg'> </div>
+                    <h3 className='text-center'>Meduoye Oluwasegun</h3>
+                    <p className='lead font-weight-bold text-center'>PARTNER / AGILE & SCRUM MASTER</p>
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </section>
+
+  
+    
 
       <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+ .icon-div {
+          border-radius: 50%;
+          height: 190px;
+          width: 190px;
+          margin: 10px;
+          // background-color: #fff;
+        }
+        
+      .card-wat {
+        border : none;
+      }
+      .team-heading:after {
+        content: '';
+    border-bottom: 5px solid var(--pink);
+    margin-bottom: 9px;
+    display: flex;
+    align-items: center;
+    align-content: unset;
+    padding-top: 1rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin: 0 25px;
+      }
+
+
+      .text-white {
+        color: white !important;
+        /* z-index: 100000; */
+        margin: auto;
+      }
+
+      .bg-img {
+         min-width: -webkit-fill-available !important;
+         position:absolute;
+         min-height: -webkit-fill-available !important;
+       
+        background-image: url(/images/spiral.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* z-index: 10; */
+         
+      }
+      .position-about {
+        background: transaparent !important;
+        z-index:23;
+        min-height: -webkit-fill-available !important;
+        /* background-image: url(/images/spiral.png) no-repeat center; */
+        height: 100vh;
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+      }
+
+        .max-height {
+            /* height : 100vh!important; */
         }
 
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
+        .padding-container{
+          padding : 3rem 0 3rem 0;
         }
 
         @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
+          
         }
       `}</style>
+       <style jsx global>{`
+       .header-container {
+          background: transparent !important;
+       }
+            .margin-top {
+            margin-top: 0px !important;
+            z-index: 300;
+            }
+
+            .margin-top-nav {
+              margin-top: 8rem !important;
+
+              }
+
+        html,
+        body,
+        #app,
+        main {
+          // min-height: 100%;
+          // background: var(--blue);
+        }
+        .hamburger-inner,
+        .hamburger-inner::before,
+        .hamburger-inner::after {
+          background-color: #ffffff !important;
+
+        }
+        .logo.nav{
+          width: 70px;
+          height: 25px;
+          left: 0;
+          background: url(/images/exemblar-logo-white.png) no-repeat center;
+          background-size: contain;
+          }
+
+         .hamburger-color {
+          color: #ffffff !important
+        }
+        
+       .header-container.background-black {
+        background: var(--deepBlue);
+      }
+      .position-fix {
+        position: relative;
+        height: -webkit-fill-available !important;
+      }
+      .font-logo {
+        color: white !important;
+      }
+
+        .header-container.box-shadow-shade {
+         box-shadow: 0 0 2.8rem var(--deepBlue);
+          background: var(--deepBlue) !important;
+        z-index: 23 !important;
+        }
+
+    
+
+      `}</style>
+     
+
     </motion.div>
   );
 }

@@ -10,7 +10,7 @@ export default function Contact() {
       initial='initial'
       animate='animate'
       exit='exit'
-      className='container mt-5 mt-lg-2 pt-5  pt-lg-0'
+      className='container'
     >
       <Head>
         <title>exemblar contact us</title>

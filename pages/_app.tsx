@@ -53,6 +53,9 @@ const Reducer = (state, action) => {
       return { ...state, activeNav: false };
     case 'FLIP_ACTIVE_NAV':
       return { ...state, activeNav: !state.activeNav };
+
+      case 'FLIP_NAVBAR_STATE':
+      return { ...state, navBarState: !state.navBarState };
     default:
       return state;
   }

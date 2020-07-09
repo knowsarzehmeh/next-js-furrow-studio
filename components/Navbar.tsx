@@ -8,7 +8,7 @@ export default function Navbar(props) {
   const { showBox, path } = props;
   return (
     <div
-      className={`container-fluid header-container background-black mb-5
+      className={`container-fluid header-container z-index-21 background-black 
        ${showBox ? "box-shadow-shade" : ""}   ${
         state.activeNav ? "background-black" : ""
       }`}
@@ -17,11 +17,9 @@ export default function Navbar(props) {
         <div className="row padding-container">
           <div className="col-lg-12 px-0 px-md-5 px-lg-1 d-flex flex-direction-column justify-content-between">
             <Link href="/">
-              <a className="logo-wrapper">
-                <img
-                  src="images/exemblar-logo.png"
-                  className="img-fluid logo z-index-21 mx-auto mr-2"
-                  alt="logo"
+              <a className="logo-wrapper z-index-nav-item">
+                <div 
+                  className="img-fluid logo nav mx-auto z-index-nav-item mr-2"                  
                 />
 
                 <h5 className="font-bold font-weight-bold font-logo">
@@ -30,16 +28,16 @@ export default function Navbar(props) {
               </a>
             </Link>
             <div
-              className="my-auto  z-index-21"
+              className="my-auto  z-index-nav-item"
               onClick={async () => {
                 await dispatch({
                   type: "FLIP_ACTIVE_NAV", // The name of the reducer
                   payload: "", // Notice in this reducer, the string is appended to the todos array
                 });
-                props.setStatePropsMethod(state.activeNav);
+                
               }}
             >
-              <Harmburger activeState={state.activeNav} />
+              <Harmburger />
             </div>
 
             {/* <div className="item-right">
@@ -61,7 +59,7 @@ export default function Navbar(props) {
 
           .logo {
             width: 30px !important;
-            float: left;
+            /* float: left; */
           }
           font-logo {
             font-size: 60px;
@@ -72,10 +70,13 @@ export default function Navbar(props) {
           z-index: 21 !important;
         }
 
-        .background-black {
+        
+
+
+        /* .background-black {
           background: ${state.activeNav ? "transaparent !important" : "#fff"};
           z-index: ${-20 ? "#111 !important" : "inherit"};
-        }
+        } */
         .header-container {
           position: fixed;
           top: 0;
@@ -123,16 +124,20 @@ export default function Navbar(props) {
 
         .header-container.box-shadow-shade {
           box-shadow: 0 0 1.8rem rgba(0, 0, 0, 0.15) !important;
-
-          // background: green;
+          background: #ffffff;
+          z-index: 21 !important;
         }
+
         .item-right {
           float: right;
         }
 
-        .logo {
-          width: 60px;
-          float: left;
+        .logo{
+        width: 70px;
+        height: 25px;
+        left: 0;
+        background: url(/images/exemblar-logo.png) no-repeat center;
+        background-size: contain;
         }
 
         .mrg-head {
@@ -146,7 +151,9 @@ export default function Navbar(props) {
       `}</style>
       {/*
             <style jsx global>{`
-       
+       z-index-nav-item {
+          z-index: 50 !important;
+        }
       `}</style>
 */}
     </div>
