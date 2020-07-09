@@ -19,7 +19,7 @@ export default function Navbar(props) {
             <Link href="/">
               <a className="logo-wrapper">
                 <div 
-                  className="img-fluid logo z-index-21 mx-auto mr-2"                  
+                  className="img-fluid logo nav z-index-21 mx-auto mr-2"                  
                 />
 
                 <h5 className="font-bold font-weight-bold font-logo">
@@ -34,10 +34,10 @@ export default function Navbar(props) {
                   type: "FLIP_ACTIVE_NAV", // The name of the reducer
                   payload: "", // Notice in this reducer, the string is appended to the todos array
                 });
-                props.setStatePropsMethod(state.activeNav);
+                
               }}
             >
-              <Harmburger activeState={state.activeNav} />
+              <Harmburger />
             </div>
 
             {/* <div className="item-right">
@@ -59,7 +59,7 @@ export default function Navbar(props) {
 
           .logo {
             width: 30px !important;
-            float: left;
+            /* float: left; */
           }
           font-logo {
             font-size: 60px;
@@ -124,14 +124,17 @@ export default function Navbar(props) {
           background: #ffffff;
           z-index: 21 !important;
         }
-        
+
         .item-right {
           float: right;
         }
 
-        .logo {
-          width: 60px;
-          float: left;
+        .logo{
+        width: 70px;
+        height: 25px;
+        left: 0;
+        background: url(/images/exemblar-logo.png) no-repeat center;
+        background-size: contain;
         }
 
         .mrg-head {

@@ -62,6 +62,9 @@ export default function Home() {
     
 
       <style jsx>{`
+
+
+
       .text-white {
         color: white !important;
         z-index: 100000;
@@ -93,6 +96,10 @@ export default function Home() {
             margin-top: 0px !important;
             }
 
+            .margin-top-nav {
+              margin-top: 8rem !important;
+              }
+
         html,
         body,
         #app,
@@ -106,6 +113,13 @@ export default function Home() {
           background-color: #ffffff !important;
 
         }
+        .logo.nav{
+          width: 70px;
+          height: 25px;
+          left: 0;
+          background: url(/images/exemblar-logo-white.png) no-repeat center;
+          background-size: contain;
+          }
 
          .hamburger-color {
           color: #ffffff !important
@@ -121,20 +135,8 @@ export default function Home() {
         color: white !important;
       }
 
-      .logo {
-        padding-top: -3rem !important;
-        width: 70px;
-        height: 25px;
-        left: 0;
-        background: url(/images/exemblar-logo-white.png) no-repeat scroll center top;
-        background-size: contain;
-
-      }
-
-  
-        
         .header-container.box-shadow-shade {
-          // box-shadow: 0 0 1.8rem transparent;
+         box-shadow: 0 0 2.8rem var(--deepBlue);
           background: var(--deepBlue) !important;
         //   z-index: 21 !important;
         }

@@ -1,23 +1,23 @@
-import React, { useState } from "react";
-
-// import { Sidebar } from "semantic-ui-react";
+import React, { useState, useContext } from "react";
+import { Context } from '../pages/_app';
 
 // import Link from "next/link";
 
 const Harmburger = (props) => {
+  const [state, dispatch] = useContext(Context);
   return (
     <div className=" background-transparent">
       {/* <div className="hamburger-wrap"> */}
       <div
         className={`btn btn-outline-primary my-auto pb-1 border-none hamburger hamburger--collapse hamburger--accessible js-hamburger ${
-          props.activeState ? "is-active" : ""
+          state.activeNav ? "is-active" : ""
         }`}
       >
         <span className="hamburger-box hamburger-color">
           <span className="hamburger-inner"></span>
         </span>
         <span className="hamburger-label hamburger-color d-none d-md-inline-block">
-          {!props.activeState ? "Menu" : "Close"}
+          {!state.activeNav ? "Menu" : "Close"}
         </span>
       </div>
       {/* </div> */}
