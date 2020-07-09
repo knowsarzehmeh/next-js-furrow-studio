@@ -13,10 +13,10 @@ const Harmburger = (props) => {
           props.activeState ? "is-active" : ""
         }`}
       >
-        <span className="hamburger-box">
+        <span className="hamburger-box hamburger-color">
           <span className="hamburger-inner"></span>
         </span>
-        <span className="hamburger-label primary-color d-none d-md-inline-block">
+        <span className="hamburger-label hamburger-color d-none d-md-inline-block">
           {!props.activeState ? "Menu" : "Close"}
         </span>
       </div>
@@ -121,6 +121,10 @@ const Harmburger = (props) => {
  * @site https://jonsuh.com/hamburgers
  * @link https://github.com/jonsuh/hamburgers
  */
+
+        .hamburger-color {
+          color: var(--pink);
+        }
         .hamburger {
           padding: 8px 8px;
           display: inline-block;

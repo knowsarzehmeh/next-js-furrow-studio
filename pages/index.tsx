@@ -7,11 +7,16 @@ import Link from 'next/link';
 import OurClients from '../components/OurClients';
 import Testimonial from '../components/Testimonial';
 
-import { onExit } from '../motion/animation';
+import { pageWrapperVariants, onExit } from '../motion/animation';
 
 export default function Home() {
   return (
-    <motion.div exit={onExit}>
+    <motion.div
+      variants={pageWrapperVariants}
+      initial='initial'
+      animate='animate'
+      exit='exit'
+    >
       <Head>
         <link rel='icon' href='/favicon.ico' />
       </Head>
@@ -113,8 +118,8 @@ export default function Home() {
                 </div>
 
                 <div className='card card-wat text-center mb-md-4'>
-                  <div className='card-body d-flex flex-column justify-content-between p-lg-3 mx-auto align-items-center text-white '>
-                    <div className='icon-div primary-bg'> </div>
+                  <div className='card-body card-wat__alternate d-flex flex-column justify-content-between p-lg-3 mx-auto align-items-center text-white '>
+                    <div className='icon-div secondary-bg'> </div>
                     <h3>Mobile/Web Application</h3>
                     <p className='lead mx-auto text-center'>
                       Using Conventional Technologies and architecture with the
@@ -302,6 +307,10 @@ export default function Home() {
           border: none !important;
           background-color: var(--blue);
           box-shadow: 0px 20px 40px 0px rgba(12, 0, 46, 0.06);
+        }
+
+        .card-wat__alternate {
+          background-color: var(--pink) !important;
         }
       `}</style>
 
