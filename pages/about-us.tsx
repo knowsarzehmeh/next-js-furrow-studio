@@ -2,12 +2,14 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Button } from 'reactstrap';
 
+
 import { pageWrapperVariants,  } from '../motion/animation';
 // variants={pageWrapperVariants}
 // initial='initial'
 // animate='animate'
 // exit='exit'
 // className='container'
+
 export default function Home() {
   return (
     <motion.div variants={pageWrapperVariants}
