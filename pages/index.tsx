@@ -78,7 +78,7 @@ export default function Home() {
 
             <motion.h1
               variants={headingOneVariants}
-              className='text-center tertiary-color'
+              className='text-center secondary-color'
             >
 
               We <span className=''>design</span>{' '}
