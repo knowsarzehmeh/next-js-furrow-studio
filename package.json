@@ -25,6 +25,8 @@
     "nprogress": "^0.2.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-intersection-observer": "^8.26.2",
+    "react-use": "^15.3.2",
     "reactstrap": "^8.4.1",
     "sass": "^1.26.8",
     "styled-jsx-plugin-sass": "^1.0.0",

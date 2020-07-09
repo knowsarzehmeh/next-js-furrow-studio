@@ -1,15 +1,40 @@
+import { useRef, useEffect } from 'react';
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
-import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { motion, useAnimation } from 'framer-motion';
+import { useIntersection } from 'react-use';
 // import { Button } from 'reactstrap';
 import Button from '../components/Button';
-import Link from 'next/link';
 import OurClients from '../components/OurClients';
 import Testimonial from '../components/Testimonial';
 
 import { pageWrapperVariants } from '../motion/animation';
 
+import {
+  headingOneVariants,
+  subheadingVariants,
+  headerButtonVariant,
+  serviceSectionVariants,
+  childCardVariants,
+} from '../motion/home';
+
+
 export default function Home() {
+  const sectionRef = useRef();
+  const animation = useAnimation();
+  const intersection = useIntersection(sectionRef, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.4,
+  });
+
+  useEffect(() => {
+    intersection && intersection.intersectionRatio < 0.4
+      ? animation.start('initial')
+      : animation.start('animate');
+  }, [animation, intersection]);
+
   return (
     <motion.div
       variants={pageWrapperVariants}
@@ -50,21 +75,31 @@ export default function Home() {
       <div className='container'>
         <div className='row'>
           <div className='col-lg-12'>
-            <h1 className='text-center secondary-color'>
+
+            <motion.h1
+              variants={headingOneVariants}
+              className='text-center tertiary-color'
+            >
+
               We <span className=''>design</span>{' '}
               <span className='primary-color'>&</span> <span className=''>build</span>{' '}
               digital <br></br> experiences{' '}
-            </h1>
+            </motion.h1>
 
             <div className='d-flex flex-row justify-content-center'>
               <img
                 src='images/arrow.svg'
                 className='img-fluid d-none d-md-inline-block arrow mr-lg-3'
               />
-              <p className='lead text-center d-none d-lg-block px-lg-5 '>
+
+              <motion.p
+                variants={subheadingVariants}
+                className='lead text-center d-none d-lg-block px-lg-5'
+              >
+
                 We design, build and launch websites and products that are
                 <br /> simple, beautiful and helps businesses grow.
-              </p>
+              </motion.p>
 
               <p className='lead text-center my-3 my-lg-2 d-block d-lg-none px-lg-5'>
                 We design, build and launch websites and products that are
@@ -72,7 +107,9 @@ export default function Home() {
               </p>
             </div>
 
-            <Button label='Discover Our Process' />
+            <motion.div variants={headerButtonVariant}>
+              <Button label='Discover Our Process' />
+            </motion.div>
             {/* <button className="ex-btn">
               Discover Our Process <img src="" />
             </button> */}
@@ -85,14 +122,20 @@ export default function Home() {
 
       {/**second section */}
 
-      <section className='bac-back py-5 my-auto d-flex justify-content-center'>
+      <motion.section className='bac-back py-5 my-auto d-flex justify-content-center'>
         <div className='container-fluid px-md-5 px-lg-5 services-flex'>
           <div className='row mb-3'>
             <div className='col-10 col-lg-9 mx-auto '>
-              <h3 className='com tertiary-color px-lg-5 text-center'>
+              <motion.h2
+                variants={serviceSectionVariants}
+                animate={animation}
+                initial='initial'
+                ref={sectionRef}
+                className='com tertiary-color px-lg-5  mt-5 text-center'
+              >
                 Reap the benefits of years of learning & experience while
                 building succesful products
-              </h3>
+              </motion.h2>
               <p className='com-1 tertiary-color lead text-center'>
                 Using latest Technologies and formal development process <br />
                 to give you the best experience
@@ -117,7 +160,12 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className='card card-wat text-center mb-md-4'>
+                <motion.div
+                  variants={childCardVariants}
+                  initial='initial'
+                  animate='animate'
+                  className='card card-wat text-center mb-md-4'
+                >
                   <div className='card-body card-wat__alternate d-flex flex-column justify-content-between p-lg-3 mx-auto align-items-center text-white '>
                     <div className='icon-div secondary-bg'> </div>
                     <h3>Mobile/Web Application</h3>
@@ -128,7 +176,7 @@ export default function Home() {
                       the goals of our clients and wins the hearts of users.
                     </p>
                   </div>
-                </div>
+                </motion.div>
 
                 <div className='card card-wat mb-md-4'>
                   <div className='card-body d-flex flex-column justify-content-between p-lg-3 mx-auto align-items-center text-white '>
@@ -169,7 +217,7 @@ export default function Home() {
             </div>
           </div> */}
         </div>
-      </section>
+      </motion.section>
 
       <section className='my-5 bg-color-offwhite p-2'>
         <h3 className='text-center mt-4 mb-4 px-5'>
