@@ -27,7 +27,7 @@ const Service: React.FunctionComponent = () => {
       <section className='container'>
         <div className='row pb-5'>
           <div className='col-12 text-center'>
-            <h1 className='tertiary-color'>
+            <h1 className='secondary-color'>
               Designing, building great solutions for startups{' '}
               <span className='primary-color'>& </span>companies
             </h1>

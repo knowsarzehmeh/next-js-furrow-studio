@@ -50,9 +50,9 @@ export default function Home() {
       <div className='container'>
         <div className='row'>
           <div className='col-lg-12'>
-            <h1 className='text-center tertiary-color'>
+            <h1 className='text-center secondary-color'>
               We <span className=''>design</span>{' '}
-              <span className='other'>&</span> <span className=''>build</span>{' '}
+              <span className='primary-color'>&</span> <span className=''>build</span>{' '}
               digital <br></br> experiences{' '}
             </h1>
 
@@ -61,7 +61,7 @@ export default function Home() {
                 src='images/arrow.svg'
                 className='img-fluid d-none d-md-inline-block arrow mr-lg-3'
               />
-              <p className='lead text-center d-none d-lg-block px-lg-5'>
+              <p className='lead text-center d-none d-lg-block px-lg-5 '>
                 We design, build and launch websites and products that are
                 <br /> simple, beautiful and helps businesses grow.
               </p>
