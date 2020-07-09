@@ -4,7 +4,7 @@ import { TabContent, TabPane } from 'reactstrap';
 import { motion } from 'framer-motion';
 
 import Button from '../components/Button';
-import { pageWrapperVariants, onExit } from '../motion/animation';
+import { pageWrapperVariants } from '../motion/animation';
 
 const Service: React.FunctionComponent = () => {
   const [activeTab, setActiveTab] = useState<string>('1');

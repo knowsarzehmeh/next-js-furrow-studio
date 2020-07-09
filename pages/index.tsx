@@ -7,7 +7,7 @@ import Link from 'next/link';
 import OurClients from '../components/OurClients';
 import Testimonial from '../components/Testimonial';
 
-import { pageWrapperVariants, onExit } from '../motion/animation';
+import { pageWrapperVariants } from '../motion/animation';
 
 export default function Home() {
   return (
