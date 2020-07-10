@@ -19,18 +19,18 @@ export default function Contact() {
 
       <div className='row'>
         <div className='col-12'>
-          <div className='d-flex justify-content-center flex-column text-black'>
+          <div className='d-flex justify-content-center flex-column secondary-color'>
             <h1 className='mx-auto text-center'>
-              <span className='twertiary-color'>You're</span>
-              <span className='primary-color'> welcome to get in </span>
-              <span className='text-black d-none d-lg-inline'>{'touch &'}</span>
+              <span className=''>You're</span>
+              <span className=''> welcome to get in touch </span>
+              <span className='text-black d-none d-lg-inline primary-color'>{' &'}</span>
             </h1>
-            <h1 className='text-black mx-auto d-lg-none text-center'>
-              {'touch &'}
+            <h1 className='primary-color mx-auto d-lg-none text-center'>
+              {'&'}
             </h1>
             <h1 className='mx-auto text-center'>
               <span className='text-black'>say </span>{' '}
-              <span className='twertiary-color'>"hello"</span>
+              <span className='secondary-color'>"hello"</span>
             </h1>
             {/* <h2 className="secondary-color mx-auto">
                             <span>experiences </span> </h2> */}
