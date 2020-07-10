@@ -9,7 +9,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head></Head>
+        <Head>
+        <link rel='icon' href='/images/fav-icon.png' />
+        </Head>
 
         <body>
           <Main />

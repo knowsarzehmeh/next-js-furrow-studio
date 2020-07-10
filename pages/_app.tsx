@@ -74,7 +74,7 @@ const MyApp = ({ Component, pageProps, router }) => {
           Exemblar - Brand Indentity, User Experience Design & Web & App
           development
         </title> */}
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/fav-icon.png' />
       </Head>
       <DefaultSeo {...SEO} />
 
