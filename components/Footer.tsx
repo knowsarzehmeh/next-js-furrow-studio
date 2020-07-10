@@ -14,9 +14,9 @@ export default function Footer() {
                 </a>
               </Link>
 
-              <p>
-                Exemblar Technologies is a parent company that deos this and
-                that to hep tjatydbbmakdbfj
+              <p className='my-3 pr-5'>
+              Exemblar is a web design , app development and related technologies company 
+              that creates a platform for business owners, individuals, group of companies.
               </p>
 
               <ul className='list-inline mt-3 mb-0'>
@@ -80,7 +80,7 @@ export default function Footer() {
                     />
                   </svg>
                 </p>
-                <p>64, ABusi Eduenm , Ipajn , La</p>
+                <p>12, Hon Ajayi Alaba Street, Ilasan Lekki, Lagos, Nigeria</p>
               </span>
 
               <span className='d-flex'>
