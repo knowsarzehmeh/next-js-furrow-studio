@@ -79,7 +79,11 @@ export default function Home() {
             </div>
 
             <motion.div variants={headerButtonVariant}>
-              <Button label='Discover Our Process' />
+              <Button
+                foreLabel='Discover Our Process'
+                backLabel='Enter'
+                clickHandler={() => console.log('i was tapped')}
+              />
             </motion.div>
             {/* <button className="ex-btn">
               Discover Our Process <img src="" />

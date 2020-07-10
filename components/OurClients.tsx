@@ -24,7 +24,7 @@ const Default = (props) => {
             Trust us to take your ideation to realisation
           </p>
 
-          <Button label='Contact us' />
+          <Button foreLabel='Contact us' backLabel="Let's work together" />
         </div>
       </div>
 
