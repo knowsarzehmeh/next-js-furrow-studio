@@ -17,7 +17,7 @@ export default function Navbar(props) {
         <div className="row padding-container">
           <div className="col-lg-12 px-0 px-md-5 px-lg-1 d-flex flex-direction-column justify-content-between">
             <Link href="/">
-              <a className="logo-wrapper z-index-nav-item">
+              <a className="logo-wrapper z-index-nav-item ml-1 ml-lg-0">
                 <div 
                   className="img-fluid logo nav mx-auto z-index-nav-item mr-2"                  
                 />

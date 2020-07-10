@@ -48,12 +48,12 @@ export default function Home() {
         <div className="col-12 col-lg-8 mt-3 mt-lg-0">
 
 
-            <p className="m-auto lead-large font-weight-bold">
+            <p className="m-auto lead font-weight-bold">
             Exemblar is a web design , app development and related technologies company that creates a platform for business
-owners, individuals, group of companies etc that are ready to take their business, ideas or
-passion to a greater level of connection with the world at large. Our team is made up of
-professional in diverse fields of software development and graphic designing, working together
-to create and make every imaginations a reality.
+            owners, individuals, group of companies etc that are ready to take their business, ideas or
+            passion to a greater level of connection with the world at large. Our team is made up of
+            professional in diverse fields of software development and graphic designing, working together
+            to create and make every imaginations a reality.
             </p>
 
         </div>
@@ -176,7 +176,7 @@ to create and make every imaginations a reality.
           border-radius: 50%;
           height: 190px;
           width: 190px;
-          margin: 10px;
+          margin: 10px 5px 20px 5px;
           // background-color: #fff;
         }
 
@@ -184,16 +184,16 @@ to create and make every imaginations a reality.
         border : none;
       }
       .team-heading:after {
-    content: '';
-    border-bottom: 5px solid var(--pink);
-    margin-bottom: 9px;
-    display: flex;
-    align-items: center;
-    align-content: unset;
-    padding-top: 1rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    margin: 0 25px;
+        content: '';
+        border-bottom: 5px solid var(--pink);
+        margin-bottom: 9px;
+        display: flex;
+        align-items: center;
+        align-content: unset;
+        padding-top: 1rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        margin: 0 25px;
       }
 
 
