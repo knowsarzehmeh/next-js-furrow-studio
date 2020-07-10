@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { Button } from 'reactstrap';
+import Link from 'next/link';
 
 
 import { pageWrapperVariants,  } from '../motion/animation';
@@ -23,26 +23,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-<div className='container-fluid tertiary-bg position-about'>
+    <div className='container-fluid tertiary-bg position-about'>
   <div className='bg-img'></div>
-      <div className="row text-center">
+      <div className="row text-center mx-auto">
         <div className="col-12">
           <div className="px-lg-5">
             <h1 className="m-auto text-center text-white px-lg-5 ">
               Creating experiences that matters is what Exemblar is all about
             </h1>
-
-
           </div>
         </div>
       </div>
+  </div>
 
-
-      </div>
-
-      <div className='container justify-content-center'>
-      <div className="row  flex-row padding-container">
-        <div className="col-12 col-lg-4">
+      <div className='container-fluid '>
+      <div className="row  flex-row justify-content-center padding-container mx-auto px-lg-5 ">
+        <div className="col-12 col-lg-3">
             <h3 className="m-auto ">
             Brands are like stories, some you remember some you don't. We can make sure your story is never forgotten.
             </h3>
@@ -52,7 +48,7 @@ export default function Home() {
         <div className="col-12 col-lg-8 mt-3 mt-lg-0">
 
 
-            <p className="m-auto lead font-weight-bold">
+            <p className="m-auto lead-large font-weight-bold">
             Exemblar is a web design , app development and related technologies company that creates a platform for business
 owners, individuals, group of companies etc that are ready to take their business, ideas or
 passion to a greater level of connection with the world at large. Our team is made up of
@@ -65,9 +61,34 @@ to create and make every imaginations a reality.
 
       </div>
 
-      <div className='row mt-5'>
-        <div className='col'>
-          <h3 className='mx-auto text-center'>Our Services</h3>
+      <div className='row mt-5 pb-5 mb-5'>
+        <div className='col-12 mx-auto d-flex flex-column justify-content-center'>
+          <h2 className='mx-auto text-center heading mb-5'>Our Services</h2>
+          <div className='d-flex justify-content-between flex-column flex-lg-row text-center px-lg-5'>
+            <div className='d-block mb-5 mb-lg-0 px-lg-3 mx-lg-2'>
+            <img src='/images/webdesign-icon.png' className='img-fluid asset-img pb-3' />
+            <h3>Web Design and <br />App Development</h3>
+            </div>
+
+            <div className='d-block mb-5 mb-lg-0 px-lg-3 mx-lg-2'>
+            <img src='/images/graphics-design.png' className='img-fluid asset-img pb-3' />
+            <h3>Graphics Design / <br />Branding / UI/UX</h3>
+            </div>
+
+            <div className='d-block mb-5 mb-lg-0 px-lg-3 mx-lg-2'>
+            <img src='/images/server-devops.png' className='img-fluid asset-img pb-3' />
+            <h3>DevOps Services</h3>
+            </div>
+          </div>
+
+              <Link href='/service'>
+                <button className='btn btn-outline-secondary mx-auto mt-1 mt-lg-5'>
+                Click to read more about our services <svg width="1em" height="1em" viewBox="0 0 16 16" 
+                className="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+               <path fillRule="evenodd" d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z"/>
+              <path fillRule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z"/>
+            </svg></button>
+              </Link>
         </div>
       </div>
       </div>
@@ -145,7 +166,13 @@ to create and make every imaginations a reality.
 
 
       <style jsx>{`
- .icon-div {
+
+      .asset-img {
+        width: 100px;
+        height: auto;
+      }
+
+        .icon-div {
           border-radius: 50%;
           height: 190px;
           width: 190px;
@@ -178,20 +205,23 @@ to create and make every imaginations a reality.
 
       .bg-img {
         min-width: -webkit-fill-available !important;
+        width: -webkit-fill-available !important;
         position:absolute;
-        min-height: -webkit-fill-available !important;
+        min-height: 500px !important;
+        height: 55vh;
         background-image: url(/images/spiral.png);
         background-repeat: no-repeat;
         background-size: cover;
+        background-repeat: round;
         /* z-index: 10; */
 
       }
       .position-about {
         background: transaparent !important;
         z-index:23;
-        min-height: -webkit-fill-available !important;
+        min-height: 500px !important;
         /* background-image: url(/images/spiral.png) no-repeat center; */
-        height: 100vh;
+        height: 55vh;
         display: flex;
         flex-direction:column;
         justify-content: center;
