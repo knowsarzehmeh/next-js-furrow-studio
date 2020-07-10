@@ -1,8 +1,8 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, MutableRefObject } from 'react';
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 import Link from 'next/link';
-import { motion, useAnimation } from 'framer-motion';
+import { motion, useAnimation, AnimationControls } from 'framer-motion';
 import { useIntersection } from 'react-use';
 // import { Button } from 'reactstrap';
 import Button from '../components/Button';
@@ -19,11 +19,10 @@ import {
   childCardVariants,
 } from '../motion/home';
 
-
 export default function Home() {
-  const sectionRef = useRef();
-  const animation = useAnimation();
-  const intersection = useIntersection(sectionRef, {
+  const sectionRef: MutableRefObject<any> = useRef(null);
+  const animation: AnimationControls = useAnimation();
+  const intersection: IntersectionObserverEntry = useIntersection(sectionRef, {
     root: null,
     rootMargin: '0px',
     threshold: 0.4,
@@ -45,21 +44,18 @@ export default function Home() {
       <Head>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-    
 
       {/**start*/}
       <div className='container'>
         <div className='row'>
           <div className='col-lg-12'>
-
             <motion.h1
               variants={headingOneVariants}
               className='text-center secondary-color'
             >
-
               We <span className=''>design</span>{' '}
-              <span className='primary-color'>&</span> <span className=''>build</span>{' '}
-              digital <br></br> experiences{' '}
+              <span className='primary-color'>&</span>{' '}
+              <span className=''>build</span> digital <br></br> experiences{' '}
             </motion.h1>
 
             <div className='d-flex flex-row justify-content-center'>
@@ -72,7 +68,6 @@ export default function Home() {
                 variants={subheadingVariants}
                 className='lead text-center d-none d-lg-block px-lg-5'
               >
-
                 We design, build and launch websites and products that are
                 <br /> simple, beautiful and helps businesses grow.
               </motion.p>
@@ -98,15 +93,15 @@ export default function Home() {
 
       {/**second section */}
 
-      <motion.section className='bac-back py-5 my-auto d-flex justify-content-center'>
+      <section className='bac-back py-5 my-auto d-flex justify-content-center'>
         <div className='container-fluid px-md-5 px-lg-5 services-flex'>
           <div className='row mb-3'>
             <div className='col-10 col-lg-9 mx-auto '>
               <motion.h2
-                variants={serviceSectionVariants}
-                animate={animation}
-                initial='initial'
                 ref={sectionRef}
+                variants={subheadingVariants}
+                initial='initial'
+                animate={animation}
                 className='com tertiary-color px-lg-5  mt-5 text-center'
               >
                 Reap the benefits of years of learning & experience while
@@ -193,7 +188,7 @@ export default function Home() {
             </div>
           </div> */}
         </div>
-      </motion.section>
+      </section>
 
       <section className='my-5 bg-color-offwhite p-2'>
         <h3 className='text-center mt-4 mb-4 px-5'>
