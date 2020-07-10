@@ -19,7 +19,6 @@ const NavItems = (props) => {
                 type: 'FLIP_ACTIVE_NAV', // The name of the reducer
                 payload: '', // Notice in this reducer, the string is appended to the todos array
               });
-              
             }}
             className={`${
               path == '/' ? 'active' : ''
@@ -38,7 +37,6 @@ const NavItems = (props) => {
                 type: 'FLIP_ACTIVE_NAV', // The name of the reducer
                 payload: '', // Notice in this reducer, the string is appended to the todos array
               });
-              
             }}
             className={`${
               path.includes('about-us') ? 'active' : ''
@@ -75,7 +73,6 @@ const NavItems = (props) => {
                 type: 'FLIP_ACTIVE_NAV', // The name of the reducer
                 payload: '', // Notice in this reducer, the string is appended to the todos array
               });
-              
             }}
             className={`${
               path.includes('contact') ? 'active' : ''
@@ -89,62 +86,71 @@ const NavItems = (props) => {
       </div>
 
       <div className='col-12  col-lg-4 d-flex align-items-lg-center flex-column mx-auto text-center'>
-            <div className='mt-1 mt-4 mb-lg-0 text-white'>
-              <Link href='/'>
-                <a className='logo-wrapper mb-0'>
-                  <span className='logo-footer z-index-21 mx-auto'></span>
-                </a>
-              </Link>
 
-              <p className='my-1'>
-              Exemblar is a web design , app development and related technologies company 
-              that creates a platform for business owners, individuals, group of companies.
-              </p>
+        <div className='mt-4 mb-lg-0 text-white'>
+          <Link href='/'>
+            <a className='logo-wrapper mb-3'>
+              <span className='logo-footer z-index-21 mx-auto'></span>
+            </a>
+          </Link>
 
-              <ul className='list-inline mt-3 mb-0'>
-                <li className='list-inline-item mr-3'>
-                  <a
-                    href='https://web.facebook.com/exemblar/'
-                    className='social facebook'
-                  >
-                    <img
-                      src='/icons/facebook-logo.svg'
-                      className='img'
-                      alt='Responsive image'
-                    />
-                  </a>
-                </li>
-                <li className='list-inline-item mr-3'>
-                  <a
-                    href='https://twitter.com/exemblarTech'
-                    className='social twitter'
-                  >
-                    <img
-                      src='/icons/twitter-logo.svg'
-                      className='img'
-                      alt='Responsive image'
-                    />
-                  </a>
-                </li>
-                <li className='list-inline-item mr-3'>
-                  <a
-                    href='https://www.instagram.com/exemblar/'
-                    className='social linkedin'
-                  >
-                    <img
-                      src='/icons/instagram-logo.svg'
-                      className='img'
-                      alt='Responsive image'
-                    />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <p className='my-3'>
+            Exemblar is a web design , app development and related technologies
+            company that creates a platform for business owners, individuals,
+            group of companies.
+          </p>
 
-          <div className='col-12  col-lg-4 d-flex align-items-lg-center flex-column mx-auto text-center'>
-            <div className='mt-4 mb-4 mb-lg-0 text-white d-flex flex-column justify-space-between text-center'>
-              <span className='d-flex justify-content-center'>
+          <ul className='list-inline mt-3 mb-0'>
+            <li className='list-inline-item mr-3'>
+              <a
+                href='https://web.facebook.com/exemblar/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='social facebook'
+              >
+                <img
+                  src='/icons/facebook-logo.svg'
+                  className='img'
+                  alt='Responsive image'
+                />
+              </a>
+            </li>
+            <li className='list-inline-item mr-3'>
+              <a
+                href='https://twitter.com/exemblarTech'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='social twitter'
+              >
+                <img
+                  src='/icons/twitter-logo.svg'
+                  className='img'
+                  alt='Responsive image'
+                />
+              </a>
+            </li>
+            <li className='list-inline-item mr-3'>
+              <a
+                href='https://www.instagram.com/exemblar/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='social linkedin'
+              >
+                <img
+                  src='/icons/instagram-logo.svg'
+                  className='img'
+                  alt='Responsive image'
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div className='col-12  col-lg-4 d-flex align-items-lg-center flex-column mx-auto text-center'>
+        <div className='mt-4 mb-4 mb-lg-0 text-white d-flex flex-column justify-space-between text-center'>
+          {/* <span className='d-flex justify-content-center'>
                 <p className='mr-2 mr-lg-3'>
                   <svg
                     width='1em'
@@ -161,47 +167,47 @@ const NavItems = (props) => {
                   </svg>
                 </p>
                 <p>12, Hon Ajayi Alaba Street, Ilasan Lekki, Lagos, Nigeria</p>
-              </span>
+              </span> */}
 
-              <span className='d-flex justify-content-center'>
-                <p className='mr-2 mr-lg-3'>
-                  <svg
-                    width='1em'
-                    height='1em'
-                    viewBox='0 0 16 16'
-                    className='bi bi-envelope-fill'
-                    fill='currentColor'
-                    xmlns='http://www.w3.org/2000/svg'
-                  >
-                    <path
-                      fillRule='evenodd'
-                      d='M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z'
-                    />
-                  </svg>
-                </p>
-                <a href='exemblar@gmail.com'>exemblar@gmail.com</a>
-              </span>
+          <span className='d-flex justify-content-center'>
+            <p className='mr-2 mr-lg-3'>
+              <svg
+                width='1em'
+                height='1em'
+                viewBox='0 0 16 16'
+                className='bi bi-envelope-fill'
+                fill='currentColor'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  fillRule='evenodd'
+                  d='M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z'
+                />
+              </svg>
+            </p>
+            <a href='exemblar@gmail.com'>exemblar@gmail.com</a>
+          </span>
 
-              <span className='d-flex text-center justify-content-center'>
-                <p className='mr-2 mr-lg-3'>
-                  <svg
-                    width='1em'
-                    height='1em'
-                    viewBox='0 0 16 16'
-                    className='bi bi-telephone-inbound-fill'
-                    fill='currentColor'
-                    xmlns='http://www.w3.org/2000/svg'
-                  >
-                    <path
-                      fillRule='evenodd'
-                      d='M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.471 17.471 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969zM15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0z'
-                    />
-                  </svg>
-                </p>
-                <p>+234 901 143 02</p>
-              </span>
-            </div>
-          </div>
+          <span className='d-flex text-center justify-content-center'>
+            <p className='mr-2 mr-lg-3'>
+              <svg
+                width='1em'
+                height='1em'
+                viewBox='0 0 16 16'
+                className='bi bi-telephone-inbound-fill'
+                fill='currentColor'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  fillRule='evenodd'
+                  d='M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.471 17.471 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969zM15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0z'
+                />
+              </svg>
+            </p>
+            <p>+234 901 143 02</p>
+          </span>
+        </div>
+      </div>
 
       <style jsx>{`
         //.z-index-20 {
