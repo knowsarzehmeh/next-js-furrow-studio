@@ -1,2 +1,6 @@
 command = "npm run build && npm run export"
-publish = "out"
+publish = "out"## netlify.toml
+
+[build]
+  publish = "out"
+  command = "next build && next export"
