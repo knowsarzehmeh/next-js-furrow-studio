@@ -22,12 +22,14 @@ module.exports = withFonts(
         // withCSS(
         // withSass(
         {
-            target: 'serverless',
-            exportPathMap: function () {
-                return {
-                    '/': { page: '/' }
-                }
-            },
+            // target: 'serverless',
+            // exportPathMap: function () {
+            //     return {
+            //         '/': { page: '/' },
+            //          '/about-us' : { page: '/about-us'},
+                     
+            //     }
+            // },
             publicRuntimeConfig: {
                 API_URL: process.env.API_URL
             },
