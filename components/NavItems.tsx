@@ -10,8 +10,8 @@ const NavItems = (props) => {
   const { path } = props;
   const [state, dispatch] = useContext(Context);
   return (
-    <div className='mx-auto z-index-20'>
-      <div className='list-group p-1 m-auto'>
+    <div className='mx-auto z-index-20 mt-sm-n5 mt-md-n3 mt-0'>
+      <div className='list-group p-1 m-auto mt-sm-n5 mt-md-n3 mt-0'>
         <Link href='/'>
           <a
             onClick={async () => {
@@ -22,7 +22,7 @@ const NavItems = (props) => {
             }}
             className={`${
               path == '/' ? 'active' : ''
-            } list-group-item list-group-item-action mt-2 border-none mx-auto`}
+            } list-group-item list-group-item-action mt-1 mt-0 border-none mx-auto`}
           >
             <div className='d-flex w-100 justify-content-between'>
               <h2 className='mb-1 mx-auto'>HOME</h2>
@@ -40,7 +40,7 @@ const NavItems = (props) => {
             }}
             className={`${
               path.includes('about-us') ? 'active' : ''
-            } list-group-item list-group-item-action mt-2 border-none mx-auto`}
+            } list-group-item list-group-item-action mt-1 border-none mx-auto`}
           >
             <div className='d-flex w-100 justify-content-between'>
               <h2 className='mb-1 mx-auto'>ABOUT US</h2>
@@ -58,7 +58,7 @@ const NavItems = (props) => {
             }}
             className={`${
               path.includes('service') ? 'active' : ''
-            } list-group-item list-group-item-action mt-2 border-none mx-auto`}
+            } list-group-item list-group-item-action mt-1 border-none mx-auto`}
           >
             <div className='d-flex w-100 justify-content-between'>
               <h2 className='mb-1 mx-auto'>OUR SERVICES</h2>
@@ -76,7 +76,7 @@ const NavItems = (props) => {
             }}
             className={`${
               path.includes('contact') ? 'active' : ''
-            } list-group-item list-group-item-action mt-2 border-none mx-auto`}
+            } list-group-item list-group-item-action mt-1 border-none mx-auto`}
           >
             <div className='d-flex w-100 justify-content-between'>
               <h2 className='mb-1 mx-auto'>CONTACT US</h2>
@@ -86,6 +86,7 @@ const NavItems = (props) => {
       </div>
 
       <div className='col-12  col-lg-4 d-flex align-items-lg-center flex-column mx-auto text-center'>
+
         <div className='mt-4 mb-lg-0 text-white'>
           <Link href='/'>
             <a className='logo-wrapper mb-3'>
@@ -145,6 +146,7 @@ const NavItems = (props) => {
           </ul>
         </div>
       </div>
+
 
       <div className='col-12  col-lg-4 d-flex align-items-lg-center flex-column mx-auto text-center'>
         <div className='mt-4 mb-4 mb-lg-0 text-white d-flex flex-column justify-space-between text-center'>

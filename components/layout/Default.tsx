@@ -65,7 +65,8 @@ export default function (props) {
         }
 
         .margin-top-nav {
-          margin-top: 8rem;
+          margin-top: 4rem !important;
+          z-index: 30 !important;
         }
         .opacity-none {
           opacity: 0 !important;

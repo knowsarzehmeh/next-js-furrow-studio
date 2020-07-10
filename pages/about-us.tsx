@@ -67,17 +67,17 @@ export default function Home() {
           <div className='d-flex justify-content-between flex-column flex-lg-row text-center px-lg-5'>
             <div className='d-block mb-5 mb-lg-0 px-lg-3 mx-lg-2'>
             <img src='/images/webdesign-icon.png' className='img-fluid asset-img pb-3' />
-            <h3>Web Design and <br />App Development</h3>
+            <h5>Web Design and <br />App Development</h5>
             </div>
 
             <div className='d-block mb-5 mb-lg-0 px-lg-3 mx-lg-2'>
             <img src='/images/graphics-design.png' className='img-fluid asset-img pb-3' />
-            <h3>Graphics Design / <br />Branding / UI/UX</h3>
+            <h5>Graphics Design / <br />Branding / UI/UX</h5>
             </div>
 
             <div className='d-block mb-5 mb-lg-0 px-lg-3 mx-lg-2'>
             <img src='/images/server-devops.png' className='img-fluid asset-img pb-3' />
-            <h3>DevOps Services</h3>
+            <h5>DevOps Services</h5>
             </div>
           </div>
 
@@ -106,7 +106,7 @@ export default function Home() {
                 <div className='card card-wat mb-md-1'>
                   <div className='card-body d-flex flex-column justify-content-center p-lg-3 mx-auto align-items-center'>
                     <div className='icon-div primary-bg'> </div>
-                    <h3 className='text-center'>Meduoye Oluwafemi</h3>
+                    <h5 className='text-center'>Meduoye Oluwafemi</h5>
                     <p className='lead font-weight-bold text-center'>CEO / SOFTWARE ENGINEER</p>
 
                   </div>
@@ -115,7 +115,7 @@ export default function Home() {
                 <div className='card card-wat text-center mb-md-1'>
                 <div className='card-body d-flex flex-column justify-content-center p-lg-3 mx-auto align-items-center'>
                     <div className='icon-div primary-bg'> </div>
-                    <h3 className='text-center'>Nosazeme Glory</h3>
+                    <h5 className='text-center'>Nosazeme Glory</h5>
                     <p className='lead font-weight-bold text-center'>CTO  / SOFTWARE ENGINEER</p>
 
                   </div>
@@ -124,8 +124,8 @@ export default function Home() {
                 <div className='card card-wat mb-md-1'>
                 <div className='card-body d-flex flex-column justify-content-center p-lg-3 mx-auto align-items-center'>
                     <div className='icon-div primary-bg'> </div>
-                    <h3 className='text-center'>Stephanie Nsa</h3>
-                    <p className='lead font-weight-bold text-center'>MARKETING & CONTENT MANAGER/ SOCIAL MEDIA EXPERT</p>
+                    <h5 className='text-center'>Stephanie Nsa</h5>
+                    <p className='lead font-weight-bold text-center'>MARKETING & CONTENT / SOCIAL MEDIA EXPERT</p>
 
                   </div>
                 </div>
@@ -133,7 +133,7 @@ export default function Home() {
                 <div className='card card-wat mb-md-1'>
                 <div className='card-body d-flex flex-column justify-content-center p-lg-3 mx-auto align-items-center'>
                     <div className='icon-div primary-bg'> </div>
-                    <h3 className='text-center'>Johnson Chidubem</h3>
+                    <h5 className='text-center'>Johnson Chidubem</h5>
                     <p className='lead font-weight-bold text-center'>PRODUCT DESIGNER/ UI/UX / SOFTWARE ENGINEER</p>
 
                   </div>
@@ -142,7 +142,7 @@ export default function Home() {
                 <div className='card card-wat mb-md-1'>
                 <div className='card-body d-flex flex-column justify-content-center p-lg-3 mx-auto align-items-center'>
                     <div className='icon-div primary-bg'> </div>
-                    <h3 className='text-center'>Emmanuel Adegeye</h3>
+                    <h5 className='text-center'>Emmanuel Adegeye</h5>
                     <p className='lead font-weight-bold text-center'>PRODUCT DESIGNER/ GRAPHICS & MOTION ENGINEER</p>
 
                   </div>
@@ -151,7 +151,7 @@ export default function Home() {
                 <div className='card card-wat mb-md-1'>
                 <div className='card-body d-flex flex-column justify-content-center p-lg-3 mx-auto align-items-center'>
                     <div className='icon-div primary-bg'> </div>
-                    <h3 className='text-center'>Meduoye Oluwasegun</h3>
+                    <h5 className='text-center'>Meduoye Oluwasegun</h5>
                     <p className='lead font-weight-bold text-center'>PARTNER / AGILE & SCRUM MASTER</p>
 
                   </div>
