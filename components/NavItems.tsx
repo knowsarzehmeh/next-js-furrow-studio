@@ -25,7 +25,7 @@ const NavItems = (props) => {
             } list-group-item list-group-item-action mt-1 mt-0 border-none mx-auto`}
           >
             <div className='d-flex w-100 justify-content-between'>
-              <h2 className='mb-1 mx-auto'>HOME</h2>
+              <h5 className='mb-1 mx-auto'>HOME</h5>
             </div>
           </a>
         </Link>
@@ -43,7 +43,7 @@ const NavItems = (props) => {
             } list-group-item list-group-item-action mt-1 border-none mx-auto`}
           >
             <div className='d-flex w-100 justify-content-between'>
-              <h2 className='mb-1 mx-auto'>ABOUT US</h2>
+              <h5 className='mb-1 mx-auto'>ABOUT US</h5>
             </div>
           </a>
         </Link>
@@ -61,7 +61,7 @@ const NavItems = (props) => {
             } list-group-item list-group-item-action mt-1 border-none mx-auto`}
           >
             <div className='d-flex w-100 justify-content-between'>
-              <h2 className='mb-1 mx-auto'>OUR SERVICES</h2>
+              <h5 className='mb-1 mx-auto'>OUR SERVICES</h5>
             </div>
           </a>
         </Link>
@@ -79,95 +79,24 @@ const NavItems = (props) => {
             } list-group-item list-group-item-action mt-1 border-none mx-auto`}
           >
             <div className='d-flex w-100 justify-content-between'>
-              <h2 className='mb-1 mx-auto'>CONTACT US</h2>
+              <h5 className='mb-1 mx-auto'>CONTACT US</h5>
             </div>
           </a>
         </Link>
       </div>
 
       <div className='col-12  col-lg-4 d-flex align-items-lg-center flex-column mx-auto text-center'>
-
-        <div className='mt-4 mb-lg-0 text-white'>
-          <Link href='/'>
-            <a className='logo-wrapper mb-3'>
-              <span className='logo-footer z-index-21 mx-auto'></span>
-            </a>
-          </Link>
-
-          <p className='my-3'>
-            Exemblar is a web design , app development and related technologies
-            company that creates a platform for business owners, individuals,
-            group of companies.
-          </p>
-
-          <ul className='list-inline mt-3 mb-0'>
-            <li className='list-inline-item mr-3'>
-              <a
-                href='https://web.facebook.com/exemblar/'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='social facebook'
-              >
-                <img
-                  src='/icons/facebook-logo.svg'
-                  className='img'
-                  alt='Responsive image'
-                />
-              </a>
-            </li>
-            <li className='list-inline-item mr-3'>
-              <a
-                href='https://twitter.com/exemblarTech'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='social twitter'
-              >
-                <img
-                  src='/icons/twitter-logo.svg'
-                  className='img'
-                  alt='Responsive image'
-                />
-              </a>
-            </li>
-            <li className='list-inline-item mr-3'>
-              <a
-                href='https://www.instagram.com/exemblar/'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='social linkedin'
-              >
-                <img
-                  src='/icons/instagram-logo.svg'
-                  className='img'
-                  alt='Responsive image'
-                />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+              <p className='my-1 word-wrap'>
+              Exemblar is a web design , app development and related technologies company 
+              that creates a platform for business owners, individuals, group of companies.
+              </p>
 
 
-      <div className='col-12  col-lg-4 d-flex align-items-lg-center flex-column mx-auto text-center'>
-        <div className='mt-4 mb-4 mb-lg-0 text-white d-flex flex-column justify-space-between text-center'>
-          {/* <span className='d-flex justify-content-center'>
-                <p className='mr-2 mr-lg-3'>
-                  <svg
-                    width='1em'
-                    height='1em'
-                    viewBox='0 0 16 16'
-                    className='bi bi-geo-alt'
-                    fill='currentColor'
-                    xmlns='http://www.w3.org/2000/svg'
-                  >
-                    <path
-                      fillRule='evenodd'
-                      d='M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z'
-                    />
-                  </svg>
-                </p>
-                <p>12, Hon Ajayi Alaba Street, Ilasan Lekki, Lagos, Nigeria</p>
-              </span> */}
+
+
+          <div className='col-12  col-lg-4 d-flex align-items-lg-center flex-column mx-auto text-center'>
+            <div className='mt-4 mb-4 mb-lg-0 text-white d-flex flex-column justify-space-between text-center'>
+
 
           <span className='d-flex justify-content-center'>
             <p className='mr-2 mr-lg-3'>
@@ -210,6 +139,28 @@ const NavItems = (props) => {
       </div>
 
       <style jsx>{`
+          // Extra small devices (portrait phones, less than 576px)
+          @media (max-width: 575.98px) {  }
+
+          // Small devices (landscape phones, less than 768px)
+          @media (max-width: 767.98px) {  }
+
+          // Medium devices (tablets, less than 992px)
+          @media (max-width: 991.98px) { 
+              .word-wrap {
+                max-width : 400px !important;
+              }
+
+           }
+
+          // Large devices (desktops, less than 1200px)
+          @media (max-width: 1199.98px) { 
+            .word-wrap {
+                max-width : 900px;
+              }
+           }
+
+          
         //.z-index-20 {
         //  z-index: 20 !important;
         // position: absolute !important;
@@ -223,6 +174,7 @@ const NavItems = (props) => {
         }
 
         .list-group-item {
+          font-size: 10px !important;
           width: fit-content !important;
         }
         .list-group-item.active {

@@ -35,7 +35,7 @@ const Service: React.FunctionComponent = () => {
               We work with amazing companies, startups and people to build great
               things
             </p>
-            <Button label='Projects' />
+            <Button label='Our Projects'></Button>
           </div>
         </div>
       </section>

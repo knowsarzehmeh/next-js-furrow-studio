@@ -40,8 +40,8 @@ export default function (props) {
 
       <div
         className={`${
-          state.activeNav ? 'd-block' : 'd-none'
-        } margin-top-nav `}>
+          state.activeNav ? 'd-flex' : 'd-none'
+        } margin-top-nav align-items-center mt-md-5 pt-md-5 `}>
         <NavItems path={path} />
         </div>   
 

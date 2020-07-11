@@ -77,7 +77,7 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className='row mt-2 mt-lg-3 mb-5'>
+      <div className='row mb-5'>
         <div className='col-12 lead mx-auto d-flex  justify-content-center'>
             <FORM />
       
