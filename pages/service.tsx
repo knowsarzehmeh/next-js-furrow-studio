@@ -2,7 +2,9 @@ import { useState } from 'react';
 import Head from 'next/head';
 import { TabContent, TabPane } from 'reactstrap';
 import { motion } from 'framer-motion';
+
 import Button from '../components/Button';
+import OurClients from '../components/OurClients';
 import { pageWrapperVariants } from '../motion/animation';
 
 const Service: React.FunctionComponent = () => {
@@ -34,10 +36,11 @@ const Service: React.FunctionComponent = () => {
               We work with amazing companies, startups and people to build great
               things
             </p>
-            <Button 
-                foreLabel='Our Projects'
-                backLabel='Explore'
-                clickHandler={() => console.log('i was tapped')}></Button>
+            <Button
+              foreLabel='Our Projects'
+              backLabel='Explore'
+              clickHandler={() => console.log('i was tapped')}
+            ></Button>
           </div>
         </div>
       </section>
@@ -110,7 +113,7 @@ const Service: React.FunctionComponent = () => {
         <div className='container'>
           <div className='row py-5'>
             <div className='col-12'>
-              <h3 className='text-center'>Technologies</h3>
+              <h3 className='text-center'>What we offer</h3>
             </div>
           </div>
           <div className='row'>
@@ -167,20 +170,22 @@ const Service: React.FunctionComponent = () => {
                 <TabPane tabId='1'>
                   <div className='row py-5'>
                     <div className='col-12 col-md-4'>
-                      <div className='h-100' style={{ background: 'pink' }}>
-                        Image Asset 1
+                      <div>
+                        <img
+                          className='w-100'
+                          src='/images/designs.jpg'
+                          alt='Designs'
+                        />
                       </div>
                     </div>
                     <div className='col-12 col-md-8'>
                       <p className='lead'>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Perspiciatis, nulla vero. Minima explicabo unde
-                        omnis esse necessitatibus illo debitis error nam
-                        accusantium. Nostrum iure maiores reiciendis
-                        perspiciatis rerum alias dolore, eos aspernatur omnis
-                        adipisci tempora, eaque culpa iusto officiis vero
-                        tenetur distinctio! Illo eum nulla similique temporibus
-                        qui voluptates in.
+                        From strategy to implementation, we collaborate with you
+                        to design experiences that build successful products and
+                        businesses. We pay close attention to flows and not
+                        individual screens because we know that is what builds a
+                        great user experience. Each of our team members has a
+                        design mindset; all keeping your users top of mind.
                       </p>
                     </div>
                   </div>
@@ -188,8 +193,12 @@ const Service: React.FunctionComponent = () => {
                 <TabPane tabId='2'>
                   <div className='row py-5'>
                     <div className='col-12 col-md-4'>
-                      <div className='h-100' style={{ background: 'pink' }}>
-                        Image Asset 2
+                      <div>
+                        <img
+                          className='w-100'
+                          src='/images/frontend.jpg'
+                          alt='Frontend'
+                        />
                       </div>
                     </div>
                     <div className='col-12 col-md-8'>
@@ -251,6 +260,10 @@ const Service: React.FunctionComponent = () => {
         </div>
       </section>
 
+      <section className='clients py-5'>
+        <OurClients />
+      </section>
+
       {/* StyleSheet */}
       <style jsx>
         {`
@@ -295,6 +308,10 @@ const Service: React.FunctionComponent = () => {
           }
           .tabs__title-border {
             border-bottom: 4px solid $pink !important;
+          }
+
+          .clients {
+            background-color: var(--light-blue);
           }
         `}
       </style>
