@@ -2,8 +2,37 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import { pageWrapperVariants } from '../motion/animation';
+import { useEffect , useState } from 'react';
+import ContactUsForm from '../components/ContactUsForm';
+
+import dynamic from 'next/dynamic'
+
+const FORM = dynamic(
+  () => import('../components/ContactUsForm'),
+  { ssr: false }
+)
 
 export default function Contact() {
+  
+  const [state, setstate] = useState(true)
+
+    // useEffect(()=> {
+    //   setstate(true)
+    // },[])
+  // useEffect(()=> {
+  //   embedEmail();
+  // })
+
+  // function embedEmail() { 
+  //     var qs,js,q,s,d=document,
+  //     gi=d.getElementById, ce=d.createElement, 
+  //     gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/";
+  //     if(!gi.call(d,id)){ js=ce.call(d,"script"); 
+  //     js.id=id; js.src=b+"embed.js";
+  //     q=gt.call(d,"script")[0]; 
+  //     q.parentNode.insertBefore(js,q) } }
+
+
   return (
     <motion.section
       variants={pageWrapperVariants}
@@ -48,9 +77,21 @@ export default function Contact() {
         </div>
       </div>
 
+      <div className='row mt-2 mt-lg-3 mb-5'>
+        <div className='col-12 lead mx-auto d-flex  justify-content-center'>
+            <FORM />
+      
+        
+        </div>
+      </div>
+
       <style jsx>{``}</style>
 
-      <style jsx global>{``}</style>
+      <style jsx global>{`
+      .footer__FooterWrapper {
+        display: none !important;
+      }
+      `}</style>
     </motion.section>
   );
 }

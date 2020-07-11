@@ -4,13 +4,13 @@ export default function Footer() {
     <div>
       <div className='container-fluid tertiary-bg px-lg-5'>
         <div className='row px-lg-5 mx-lg-3 py-5 mx-auto'>
-          <div className='col-12  col-lg-4 d-flex align-items-lg-center flex-column'>
-            <div className='mt-4 mb-4 mb-lg-0 text-white'>
+          <div className='col-12  col-md-4 col-lg-4 d-flex align-items-md-center flex-column'>
+            <div className='mt-4 mb-4 mb-md-0 text-white'>
               <Link href='/'>
                 <a className='logo-wrapper mb-3'>
-                  <span className='logo-footer z-index-21 mx-auto mr-2'></span>
+                  <span className='logo-footer z-index-21 mx-auto'></span>
 
-                  <h5 className='font-bold font-weight-bold mt-n4'>Exemblar</h5>
+                  <h5 className='font-bold font-weight-bold mt-n4 text-center'>Exemblar</h5>
                 </a>
               </Link>
 
@@ -60,7 +60,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className='col-12  col-lg-4 d-flex align-items-lg-center flex-column '>
+          <div className='col-12  col-md-4 col-lg-4 d-flex align-items-md-center flex-column '>
             <div className='mt-4 mb-4 mb-lg-0 text-white d-flex flex-column justify-space-between'>
               <h5 className='text-white mb-4'>LOCATION</h5>
 
@@ -123,7 +123,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className='col-12  col-lg-4 d-flex align-items-lg-center flex-column '>
+          <div className='col-12  col-md-4 col-lg-4 d-flex align-items-md-center flex-column '>
             <div className='mt-4 mb-4 mb-lg-0 text-white d-flex flex-column justify-space-between'>
               <h5 className='text-white mb-4'>SITEMAP</h5>
               <Link href='/'>
@@ -205,6 +205,7 @@ export default function Footer() {
             center top;
           top: 0;
           background-size: contain;
+          margin-bottom: 12px;
         }
 
         .logo-wrapper .logo-footer:hover {
