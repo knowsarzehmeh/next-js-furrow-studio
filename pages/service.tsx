@@ -35,7 +35,10 @@ const Service: React.FunctionComponent = () => {
               We work with amazing companies, startups and people to build great
               things
             </p>
-            <Button label='Our Projects'></Button>
+            <Button 
+                foreLabel='Pur Projects'
+                backLabel='Explore'
+                clickHandler={() => console.log('i was tapped')}></Button>
           </div>
         </div>
       </section>
