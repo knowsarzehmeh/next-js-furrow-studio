@@ -8,7 +8,7 @@ import { useIntersection } from 'react-use';
 import Button from '../components/Button';
 import OurClients from '../components/OurClients';
 import Testimonial from '../components/Testimonial';
-
+import { useRouter } from 'next/router';
 import { pageWrapperVariants } from '../motion/animation';
 
 import {
@@ -20,6 +20,7 @@ import {
 } from '../motion/home';
 
 export default function Home() {
+  const router = useRouter();
   const sectionRef: MutableRefObject<any> = useRef(null);
   const animation: AnimationControls = useAnimation();
   const intersection: IntersectionObserverEntry = useIntersection(sectionRef, {
@@ -80,9 +81,9 @@ export default function Home() {
 
             <motion.div variants={headerButtonVariant}>
               <Button
-                foreLabel='Discover Our Process'
-                backLabel='Enter'
-                clickHandler={() => console.log('i was tapped')}
+                foreLabel='Get In Touch'
+                backLabel='Contact Us'
+                clickHandler={() => router.push('/contact')}
               />
             </motion.div>
             {/* <button className="ex-btn">
@@ -173,16 +174,14 @@ export default function Home() {
           {/* End of cards */}
           <div className='row d-flex justify-content-center mt-3 text-center'>
             <div className='col-10 col-lg-9 m-auto'>
-              <Link href='/service'>
-                <button className='btn btn-outline-secondary'>
-                  Read about all our services 
-                   <svg width="1em" height="1em" viewBox="0 0 16 16" 
-                className="bi bi-arrow-right ml-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-               <path fillRule="evenodd" d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z"/>
-              <path fillRule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z"/>
-            </svg>
-                </button>
-              </Link>
+            <Button
+                foreLabel='Explore Our Services'
+                backLabel='Learn More'
+                clickHandler={() => router.push('/service')}
+              />
+                   
+              
+              
             </div>
           </div>
           {/* <div className="row">

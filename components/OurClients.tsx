@@ -1,8 +1,9 @@
 import React from 'react';
-
+import { useRouter } from 'next/router';
 import Button from './Button';
 
 const Default = (props) => {
+  const router = useRouter();
   return (
     <div className='container'>
       <div className='row py-3'>
@@ -34,7 +35,11 @@ const Default = (props) => {
             Trust us to take your ideation to realisation
           </p>
 
-          <Button foreLabel='Contact us' backLabel="Let's work together" />
+          <Button
+                foreLabel='Get In Touch'
+                backLabel='Contact Us'
+                clickHandler={() => router.push('/contact')}
+              />
         </div>
       </div>
 
