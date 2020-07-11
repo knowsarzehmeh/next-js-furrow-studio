@@ -1,34 +1,48 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const Default = (props) => {
   let [index, setIndex] = useState(0);
   const [testimonies, SetTeminonies] = useState([
     {
-      name: "Agba mdm",
-      role: "Milo",
+      name: "Ajala Bayo",
+      pic : "../images/adebayo_ajala.jpeg",
+      role: "Manager Interratku",
       words:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit Voluptatum tempora non dignissimos nihil dolores quia Lorem ipsum dolor sit amet, consectetur adipisicing elit Voluptatum tempora non dignissimos nihil dolores quia",
+        "Exemblar Technologies staffs are great to work with, they listen to your ideas and make something more from it. The project was a total Success",
     },
     {
-      name: "Osajumiie",
-      role: "CEO APPettite",
+      name: "Adesanya Mark",
+      pic : "../images/Adesanya.jpeg",
+      role: "Software Engineer",
       words:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit Voluptatum tempora non dignissimos nihil dolores quia Lorem ipsum dolor sit amet, consectetur adipisicing elit Voluptatum tempora non dignissimos nihil dolores quia",
+        "Collaborating with Exemblar on the appetite E-Commerce project was a smooth experience, The team always available to address issue.",
     },
     {
-      name: "Jezzkid",
-      role: "Bournvita",
+      name: "Tobi Adebule",
+      pic : "../images/tobi_adebule.jpeg",
+      role: "Founder Tamoimages",
       words:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit Voluptatum tempora non dignissimos nihil dolores quia Lorem ipsum dolor sit amet, consectetur adipisicing elit Voluptatum tempora non dignissimos nihil dolores quia",
+        "Exemblar Technologies analysis of problems , and provision of useable logic and solutions contributed to the success of tamoimages.com",
     },
+  
   ]);
 
   useEffect(() => {
     let timerFunc = setInterval(() => {
-      setIndex(index++);
-    }, 10000);
-    return clearInterval(timerFunc);
+
+      setIndex(()=> ( index++ % testimonies.length) );
+      // }
+    }, 5000);
+    // return clearInterval(timerFunc);
   }, []);
+
+  const check = () => {
+   if(index == 2 ) {
+     setIndex(0)
+   }else return
+    
+  };
 
   return (
     <div className="container b-color">
@@ -36,8 +50,11 @@ const Default = (props) => {
         <div className="col">
           <div className="d-flex justify-content-around flex-row">
             <button
-              onClick={(): void => setIndex(index--)}
-              className="prev-button-box my-auto d-none d-lg-inline-block"
+              onClick={(): void => {
+                if(index == 0) return;
+                setIndex(index--)
+              }}
+              className="prev-button-box my-auto d-none d-lg-inline-block mr-3"
             >
               <svg
                 width="1em"
@@ -53,32 +70,42 @@ const Default = (props) => {
                 />
               </svg>
             </button>
+                      {testimonies && testimonies.map((testimony, idx) => (
+                ( index == idx) && ( 
+                        <motion.div 
+                        key={idx} className={`testimonial-box p-5`}
+                        initial={{opacity:0 , boxShadow:'transparent' }}
+                        animate={{display:'block', opacity:1, boxShadow: '0px 20px 40px 0px rgba(12, 0, 46, 0.06)'}}
+                        >
+                        <div className="text-center my-auto m-lg-3 p-lg-1">
+                          <div>
+                            <img className="author-img" src={testimony.pic}/>
+                          </div>
+                        </div>
 
-            <div className="testimonial-box">
-              <div className="text-center my-auto m-lg-5 p-lg-4">
-                <div>
-                  <img className="author-img" src="/images/chispare.jpg" />
-                </div>
-              </div>
-              {
-                <div className="m-0 m-lg-5 d-flex flex-column text-center">
-                  <h4 className="m-0 mb-lg-2">
-                    {testimonies[index % testimonies.length].name}
-                  </h4>
-                  <h6 className="color-feignt lead">
-                    {testimonies[index % testimonies.length].role}
-                  </h6>
+                          <div className="m-0 m-lg-5 d-flex flex-column text-center">
+                            <h4 className="m-0 mb-lg-2">
+                              {testimony.name}
+                            </h4>
+                            <h6 className="color-feignt lead">
+                              {testimony.role}
+                            </h6>
 
-                  <p className="color-feignt lead">
-                    {testimonies[index % testimonies.length].words}
-                  </p>
-                </div>
-              }
-            </div>
+                            <p className="color-feignt lead">
+                              {testimony.words}
+                            </p>
+                          </div>
+                      </motion.div>
+                      )))}
+          
           </div>
         </div>
         <button
-          onClick={(): void => setIndex(index++)}
+          onClick={(): void => { 
+            if(index == (testimonies.length -1)) return;
+            setIndex(index++)
+                
+          } }
           className="next-button-box my-auto d-none d-lg-inline-block"
         >
           <svg
@@ -102,8 +129,9 @@ const Default = (props) => {
           color: #959cb1;
         }
         .author-img {
-          max-width: 100px;
-          width: 100px;
+          max-width: 150px;
+          height: 150px;
+          width: 150px;
           display: inline-block;
           border-radius: 50%;
         }
@@ -119,13 +147,13 @@ const Default = (props) => {
         }
 
         .prev-button-box {
-          width: 50px;
+          min-width: 50px;
           height: 50px;
           line-height: 50px;
           border-radius: 50%;
           border: 1px solid #f3f5f8;
           background-color: white;
-
+          -webkit-box-shadow: 0px 20px 30px 0px rgba(12, 0, 46, 0.06);
           box-shadow: 0px 25px 35px 0px rgba(12, 0, 46, 0.06);
           // position: absolute;
           //top: 50%;

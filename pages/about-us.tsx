@@ -105,7 +105,9 @@ export default function Home() {
               <div className='card-deck flex-column flex-lg-column flex-xl-row'>
                 <div className='card card-wat mb-md-1'>
                   <div className='card-body d-flex flex-column justify-content-center p-lg-3 mx-auto align-items-center'>
-                    <div className='icon-div primary-bg'> </div>
+                    <div className='icon-div primary-bg'> 
+                    <img src='/images/femiM.jpeg' className='img border-50'/>
+                    </div>
                     <h5 className='text-center'>Meduoye Oluwafemi</h5>
                     <p className='lead font-weight-bold text-center'>CEO / SOFTWARE ENGINEER</p>
 
@@ -114,7 +116,9 @@ export default function Home() {
 
                 <div className='card card-wat text-center mb-md-1'>
                 <div className='card-body d-flex flex-column justify-content-center p-lg-3 mx-auto align-items-center'>
-                    <div className='icon-div primary-bg'> </div>
+                    <div className='icon-div primary-bg'> 
+                    <img src='/images/osazO.jpeg' className='img border-50'/>
+                    </div>
                     <h5 className='text-center'>Nosazeme Glory</h5>
                     <p className='lead font-weight-bold text-center'>CTO  / SOFTWARE ENGINEER</p>
 
@@ -123,7 +127,7 @@ export default function Home() {
 
                 <div className='card card-wat mb-md-1'>
                 <div className='card-body d-flex flex-column justify-content-center p-lg-3 mx-auto align-items-center'>
-                    <div className='icon-div primary-bg'> </div>
+                    <div className='icon-div primary-bg'>  <img src='/images/stephN.jpeg' className='img border-50'/> </div>
                     <h5 className='text-center'>Stephanie Nsa</h5>
                     <p className='lead font-weight-bold text-center'>MARKETING & CONTENT / SOCIAL MEDIA EXPERT</p>
 
@@ -132,7 +136,9 @@ export default function Home() {
 
                 <div className='card card-wat mb-md-1'>
                 <div className='card-body d-flex flex-column justify-content-center p-lg-3 mx-auto align-items-center'>
-                    <div className='icon-div primary-bg'> </div>
+                    <div className='icon-div primary-bg'> 
+                    <img src='/images/jezzO.jpeg' className='img border-50'/>
+                    </div>
                     <h5 className='text-center'>Johnson Chidubem</h5>
                     <p className='lead font-weight-bold text-center'>PRODUCT DESIGNER/ UI/UX / SOFTWARE ENGINEER</p>
 
@@ -141,7 +147,7 @@ export default function Home() {
 
                 <div className='card card-wat mb-md-1'>
                 <div className='card-body d-flex flex-column justify-content-center p-lg-3 mx-auto align-items-center'>
-                    <div className='icon-div primary-bg'> </div>
+                    <div className='icon-div primary-bg'>  <img src='/images/emlexA.jpeg' className='img border-50'/></div>
                     <h5 className='text-center'>Emmanuel Adegeye</h5>
                     <p className='lead font-weight-bold text-center'>PRODUCT DESIGNER/ GRAPHICS & MOTION ENGINEER</p>
 
@@ -150,7 +156,7 @@ export default function Home() {
 
                 <div className='card card-wat mb-md-1'>
                 <div className='card-body d-flex flex-column justify-content-center p-lg-3 mx-auto align-items-center'>
-                    <div className='icon-div primary-bg'> </div>
+                    <div className='icon-div primary-bg'> <img src='/images/segunM.jpeg' className='img border-50'/> </div>
                     <h5 className='text-center'>Meduoye Oluwasegun</h5>
                     <p className='lead font-weight-bold text-center'>PARTNER / AGILE & SCRUM MASTER</p>
 
@@ -166,6 +172,11 @@ export default function Home() {
 
 
       <style jsx>{`
+      .border-50 {
+        height: 190px;
+        width: 190px;
+        border-radius: 50%;
+      }
 
       .asset-img {
         width: 100px;

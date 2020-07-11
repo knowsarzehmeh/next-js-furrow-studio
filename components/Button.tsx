@@ -4,7 +4,7 @@ interface ButtonProps {
   clickHandler?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Button: React.FunctionComponent<ButtonProps> = (props: ButtonProps) => {
+const Button: React.FunctionComponent<ButtonProps> = (props) => {
   const { label } = props;
   // const btnLabel = {"--btnLabel": label } as React.CSSProperties;
   return (

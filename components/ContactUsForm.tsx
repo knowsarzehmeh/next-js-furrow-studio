@@ -14,7 +14,7 @@ const ContactUsForm: React.FunctionComponent= () => {
    const effect = () => {
     typeformEmbed.makeWidget(
         el.current,
-        'https://exemblar.typeform.com/to/IYrSaFNi',
+        'https://exemblar.typeform.com/to/hWxKUEnC',
         {
         // autoOpen:false,
           opacity: 55,
@@ -32,7 +32,7 @@ const ContactUsForm: React.FunctionComponent= () => {
    }
 
 
-    return  ( <div ref={el} style={{width: '80vh', height: '80vh'}}> </div>)
+    return  ( <div ref={el} style={{width: '50vh', height: '300px'}}> </div>)
 
   
 }
