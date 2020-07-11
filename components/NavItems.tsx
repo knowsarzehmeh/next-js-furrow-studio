@@ -85,7 +85,7 @@ const NavItems = (props) => {
         </Link>
       </div>
 
-      <div className='col-12  col-lg-4 d-flex align-items-lg-center flex-column mx-auto text-center'>
+      <div className='col-12  col-lg-4 d-flex align-items-lg-center flex-column mx-auto text-center text-white'>
               <p className='my-1 word-wrap'>
               Exemblar is a web design , app development and related technologies company 
               that creates a platform for business owners, individuals, group of companies.
@@ -135,7 +135,46 @@ const NavItems = (props) => {
             </p>
             <p>+234 901 143 02</p>
           </span>
+          <ul className='list-inline mt-3 mb-0'>
+                <li className='list-inline-item mr-3'>
+                  <a
+                    href='https://web.facebook.com/exemblar/'
+                    className='social facebook'
+                  >
+                    <img
+                      src='/icons/facebook-logo.svg'
+                      className='img'
+                      alt='Responsive image'
+                    />
+                  </a>
+                </li>
+                <li className='list-inline-item mr-3'>
+                  <a
+                    href='https://twitter.com/exemblar'
+                    className='social twitter'
+                  >
+                    <img
+                      src='/icons/twitter-logo.svg'
+                      className='img'
+                      alt='Responsive image'
+                    />
+                  </a>
+                </li>
+                <li className='list-inline-item mr-3'>
+                  <a
+                    href='https://www.instagram.com/exemblar/'
+                    className='social linkedin'
+                  >
+                    <img
+                      src='/icons/instagram-logo.svg'
+                      className='img'
+                      alt='Responsive image'
+                    />
+                  </a>
+                </li>
+              </ul>
         </div>
+      </div>
       </div>
 
       <style jsx>{`

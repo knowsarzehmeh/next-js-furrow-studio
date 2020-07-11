@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Head from 'next/head';
 import { TabContent, TabPane } from 'reactstrap';
 import { motion } from 'framer-motion';
-
 import Button from '../components/Button';
 import { pageWrapperVariants } from '../motion/animation';
 
@@ -35,7 +34,10 @@ const Service: React.FunctionComponent = () => {
               We work with amazing companies, startups and people to build great
               things
             </p>
-            <Button label='Our Projects'></Button>
+            <Button 
+                foreLabel='Our Projects'
+                backLabel='Explore'
+                clickHandler={() => console.log('i was tapped')}></Button>
           </div>
         </div>
       </section>
