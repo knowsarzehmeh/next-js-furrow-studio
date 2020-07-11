@@ -1,16 +1,28 @@
 interface ButtonProps {
-  label?: string;
+  foreLabel?: string;
+  backLabel?: string;
+  sm?: boolean;
   // children?: React.ReactNode;
   clickHandler?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Button: React.FunctionComponent<ButtonProps> = (props) => {
-  const { label } = props;
+const Button: React.FunctionComponent<ButtonProps> = (props: ButtonProps) => {
+  const { foreLabel, backLabel, sm, clickHandler } = props;
   // const btnLabel = {"--btnLabel": label } as React.CSSProperties;
+  let height: string = '55px';
+  if (sm) {
+    height = '30px';
+  }
+
   return (
-    <div className="text-center">
-      <button data-label={label} className="button">
-        {label}
+    <div className='text-center'>
+      <button
+        data-label={foreLabel}
+        style={{ height }}
+        className='button'
+        onClick={clickHandler}
+      >
+        {backLabel}
       </button>
 
       <style jsx>{`

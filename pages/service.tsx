@@ -40,7 +40,7 @@ const Service: React.FunctionComponent = () => {
         </div>
       </section>
       <section className='workflow'>
-        <div className='container'>
+        <div className='container '>
           <div className='row'>
             <div className='col-12 text-center mt-5'>
               <h1 className='my-4 workflow__header'>
@@ -54,35 +54,50 @@ const Service: React.FunctionComponent = () => {
           </div>
           <div className='row pt-5'>
             <div className='col-md-3 col-sm-6'>
-              <div className='workflow__sub-section-avatar'></div>
-              <h5 className='my-4'>Test</h5>
+              <div className='workflow__sub-section-avatar'>
+                <img className='w-100' src='/images/idea.svg' alt='idea' />
+              </div>
+              <h5 className='process__header my-4'>Ideate</h5>
               <p className='lead'>
-                Helping you achieve greateness is what we strive for by
-                carefully building amazing solutions
+                Once we have a clear sense of what challenges and needs are, we
+                begin the brainstorming ideas to solve those problems.
               </p>
             </div>
             <div className='col-md-3 col-sm-6'>
-              <div className='workflow__sub-section-avatar'></div>
-              <h5 className='my-4'>Test</h5>
+              <div className='workflow__sub-section-avatar'>
+                <img
+                  className='w-100'
+                  src='/images/decision-making.svg'
+                  alt='idea'
+                />
+              </div>
+              <h5 className='process__header my-4'>Decide</h5>
               <p className='lead'>
-                Helping you achieve greateness is what we strive for by
-                carefully building amazing solutions
+                We carefully analyse and disect every ideas as we go through the
+                process of ultimately align on one idea.
+                {/* and identify its
+                must-have features to build out our minimum viable product. */}
               </p>
             </div>
             <div className='col-md-3 col-sm-6'>
-              <div className='workflow__sub-section-avatar'></div>
-              <h5 className='my-4'>Test</h5>
+              <div className='workflow__sub-section-avatar'>
+                <img className='w-100' src='/images/prototype.svg' alt='idea' />
+              </div>
+              <h5 className='process__header my-4'>Prototype</h5>
               <p className='lead'>
-                Helping you achieve greateness is what we strive for by
-                carefully building amazing solutions
+                we will create an early version of the product to give a simple
+                glimpse of its look and feel.
               </p>
             </div>
             <div className='col-md-3 col-sm-6'>
-              <div className='workflow__sub-section-avatar'></div>
-              <h5 className='my-4'>Test</h5>
+              <div className='workflow__sub-section-avatar'>
+                <img className='w-100' src='/images/accept.svg' alt='idea' />
+              </div>
+              <h5 className='process__header my-4'>Validate</h5>
               <p className='lead'>
-                Helping you achieve greateness is what we strive for by
-                carefully building amazing solutions
+                Before moving into the development phase, we’ll ask a variety of
+                users to test out the prototype, and collect their feedback on
+                the process
               </p>
             </div>
           </div>
@@ -253,11 +268,15 @@ const Service: React.FunctionComponent = () => {
           }
 
           .workflow__sub-section-avatar {
-            background: #fff;
+            /* background: #fff; */
             border: 1px solid $grey;
             border-radius: 50%;
-            height: 50px;
-            width: 50px;
+            height: 60px;
+            width: 60px;
+          }
+
+          .process__header {
+            color: $pink !important;
           }
 
           .tabs {
