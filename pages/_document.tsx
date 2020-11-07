@@ -1,25 +1,30 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document from 'next/document'
+import { ServerStyleSheet } from 'styled-components'
 
-class MyDocument extends Document {
+export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
-  }
+    const sheet = new ServerStyleSheet()
+    const originalRenderPage = ctx.renderPage
 
-  render() {
-    return (
-      <Html>
-        <Head>
-        <link rel='icon' href='/images/fav-icon.png' />
-        </Head>
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App) => (props) =>
+            sheet.collectStyles(<App {...props} />),
+        })
 
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
+      const initialProps = await Document.getInitialProps(ctx)
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        ),
+      }
+    } finally {
+      sheet.seal()
+    }
   }
 }
-
-export default MyDocument;

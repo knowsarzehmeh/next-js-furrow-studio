@@ -3,69 +3,16 @@ import SEO from '../seo.config';
 import Head from 'next/head';
 import Router from 'next/router';
 import { DefaultSeo } from 'next-seo';
-import nprogress from 'nprogress';
 import { AnimatePresence } from 'framer-motion';
 
-import '../public/scss/app.scss';
 
-import Default from '../components/layout/Default';
+import Layout from '../layouts/default';
 
-// let progressBarTimeout = null;
-
-// const clearProgressBarTimeout = () => {
-//   if (progressBarTimeout) {
-//     clearTimeout(progressBarTimeout);
-//     progressBarTimeout = null;
-//   }
-// };
-
-// const startProgressBar = async () => {
-//   clearProgressBarTimeout();
-//   progressBarTimeout = await setTimeout(() => {
-//     nprogress.start();
-//   }, 500);
-
-//   setTimeout(() => {
-//     stopProgressBar();
-//   }, 1000);
-// };
-
-// const stopProgressBar = () => {
-//   clearProgressBarTimeout();
-//   nprogress.done();
-// };
-
-// Router.events.on('routeChangeStart', (url) => {
-//   console.log(`Loading: ${url}`);
-//   startProgressBar();
-// });
-
-const initialState: any = {
-  activeNav: false,
-};
-
-//pure reducer function
-const Reducer = (state, action) => {
-  switch (action.type) {
-    case 'MUTATE_ACTIVE_NAV':
-      return { ...state, activeNav: action.payload };
-    case 'CLOSE':
-      return { ...state, activeNav: false };
-    case 'FLIP_ACTIVE_NAV':
-      return { ...state, activeNav: !state.activeNav };
-
-      case 'FLIP_NAVBAR_STATE':
-      return { ...state, navBarState: !state.navBarState };
-    default:
-      return state;
-  }
-};
-
-import React, { createContext, useReducer } from 'react';
+// Global States
+import { GlobalProvider } from '../context/globalContext';
 
 const MyApp = ({ Component, pageProps, router }) => {
-  const [state, dispatch] = useReducer(Reducer, initialState);
-  const Layout = Default;
+ 
 
   return (
     <>
@@ -78,26 +25,17 @@ const MyApp = ({ Component, pageProps, router }) => {
       </Head>
       <DefaultSeo {...SEO} />
 
-      <Context.Provider value={[state, dispatch]}>
-        <Layout path={router.route}>
-          <AnimatePresence exitBeforeEnter>
-            <Component {...pageProps} key={router.route} />
+        <GlobalProvider>
+         <AnimatePresence exitBeforeEnter>
+            <Layout>
+                  <Component {...pageProps} key={router.route} />
+            </Layout>
           </AnimatePresence>
-        </Layout>
-      </Context.Provider>
+        </GlobalProvider>
+    
     </>
   );
 };
-export const Context = createContext(initialState);
+
 export default MyApp;
-// Only uncomment this method if you have blocking data requirements for
-// every single page in your application. This disables the ability to
-// perform automatic static optimization, causing every page in your app to
-// be server-side rendered.
-//
-// MyApp.getInitialProps = async (appContext) => {
-//   // calls page's `getInitialProps` and fills `appProps.pageProps`
-//   const appProps = await App.getInitialProps(appContext);
-//
-//   return { ...appProps }
-// }
+
