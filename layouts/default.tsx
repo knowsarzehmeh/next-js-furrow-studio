@@ -32,38 +32,33 @@ const GlobalStyle = createGlobalStyle`
         overscroll-behavior: none;
         overflow-x: hidden;
     }
-    /* div a {
-        color: ${props => props.theme.text} !important;
-    }
-
-    div span {
-        background: ${props => props.theme.text} !important;
-    } */
-
 `;
 
 
 
 function Layout({ children}) {
 
+    const { currentTheme, cursorStyles } = useGlobalStateContext();
+    const onCursor = useCursorDispatchContext();
+    const [toggleMenu, setToggleMenu] = useState(false)
+    const [hamburgerPosition, setHamburgerPosition] = useState({ x: 0, y: 0})
+    //     const dispatch = useGlobalDispatchContext();
+    
     const darkTheme = {
         background: '#000',
         text: '#fff',
         red: '#ea295e',
+        left: `${hamburgerPosition.x}px`,
+        top: `${hamburgerPosition.y}px`,
     }
     
     const lightTheme = {
         background: '#fff',
         text: '#000',
         red: '#ea295e',
+        left: `${hamburgerPosition.x}px`,
+        top: `${hamburgerPosition.y}px`,
     }
-
-    
-
-    const { currentTheme, cursorStyles } = useGlobalStateContext();
-    const onCursor = useCursorDispatchContext();
-    const [toggleMenu, setToggleMenu] = useState(false)
-    //     const dispatch = useGlobalDispatchContext();
     
     // const onCursor = cursorType => {
         //     cursorType = (cursorStyles.includes(cursorType) && cursorType) || false;
@@ -80,6 +75,8 @@ function Layout({ children}) {
             onCursor={onCursor} 
             toggleMenu={toggleMenu}
             setToggleMenu={setToggleMenu}
+            hamburgerPosition={hamburgerPosition}
+            setHamburgerPosition={setHamburgerPosition}
              />
             <Navigation 
              onCursor={onCursor} 
